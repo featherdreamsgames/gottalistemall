@@ -1,0 +1,10082 @@
+{
+  "bulbasaur": {
+    "number": 1,
+    "display": "Bulbasaur",
+    "subs": null,
+    "synonyms": []
+  },
+  "ivysaur": {
+    "number": 2,
+    "display": "Ivysaur",
+    "subs": null,
+    "synonyms": []
+  },
+  "venusaur": {
+    "number": 3,
+    "display": "Venusaur",
+    "subs": [
+      {
+        "name": "Mega Venusaur",
+        "synonyms": []
+      },
+      {
+        "name": "Gigantamax Venusaur",
+        "synonyms": [
+          "Venusaur Gigantamax",
+          "Gigantamax Venusaur"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "charmander": {
+    "number": 4,
+    "display": "Charmander",
+    "subs": null,
+    "synonyms": []
+  },
+  "charmeleon": {
+    "number": 5,
+    "display": "Charmeleon",
+    "subs": null,
+    "synonyms": []
+  },
+  "charizard": {
+    "number": 6,
+    "display": "Charizard",
+    "subs": [
+      {
+        "name": "Mega Charizard X",
+        "synonyms": []
+      },
+      {
+        "name": "Mega Charizard Y",
+        "synonyms": []
+      },
+      {
+        "name": "Gigantamax Charizard",
+        "synonyms": [
+          "Charizard Gigantamax"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "squirtle": {
+    "number": 7,
+    "display": "Squirtle",
+    "subs": null,
+    "synonyms": []
+  },
+  "wartortle": {
+    "number": 8,
+    "display": "Wartortle",
+    "subs": null,
+    "synonyms": []
+  },
+  "blastoise": {
+    "number": 9,
+    "display": "Blastoise",
+    "subs": [
+      {
+        "name": "Mega Blastoise",
+        "synonyms": []
+      },
+      {
+        "name": "Gigantamax Blastoise",
+        "synonyms": [
+          "Blastoise Gigantamax"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "caterpie": {
+    "number": 10,
+    "display": "Caterpie",
+    "subs": null,
+    "synonyms": []
+  },
+  "metapod": {
+    "number": 11,
+    "display": "Metapod",
+    "subs": null,
+    "synonyms": []
+  },
+  "butterfree": {
+    "number": 12,
+    "display": "Butterfree",
+    "subs": [
+      {
+        "name": "Gigantamax Butterfree",
+        "synonyms": [
+          "Butterfree Gigantamax"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "weedle": {
+    "number": 13,
+    "display": "Weedle",
+    "subs": null,
+    "synonyms": []
+  },
+  "kakuna": {
+    "number": 14,
+    "display": "Kakuna",
+    "subs": null,
+    "synonyms": []
+  },
+  "beedrill": {
+    "number": 15,
+    "display": "Beedrill",
+    "subs": [
+      {
+        "name": "Mega Beedrill",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "pidgey": {
+    "number": 16,
+    "display": "Pidgey",
+    "subs": null,
+    "synonyms": []
+  },
+  "pidgeotto": {
+    "number": 17,
+    "display": "Pidgeotto",
+    "subs": null,
+    "synonyms": []
+  },
+  "pidgeot": {
+    "number": 18,
+    "display": "Pidgeot",
+    "subs": [
+      {
+        "name": "Mega Pidgeot",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "rattata": {
+    "number": 19,
+    "display": "Rattata",
+    "subs": [
+      {
+        "name": "Alolan Rattata",
+        "synonyms": [
+          "Alolan Rattata",
+          "Rattata Alolan",
+          "Rattata Alola",
+          "Alola Rattata"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "raticate": {
+    "number": 20,
+    "display": "Raticate",
+    "subs": [
+      {
+        "name": "Alolan Raticate",
+        "synonyms": [
+          "Alolan Raticate",
+          "Raticate Alolan",
+          "Raticate Alola",
+          "Alola Raticate"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "spearow": {
+    "number": 21,
+    "display": "Spearow",
+    "subs": null,
+    "synonyms": []
+  },
+  "fearow": {
+    "number": 22,
+    "display": "Fearow",
+    "subs": null,
+    "synonyms": []
+  },
+  "ekans": {
+    "number": 23,
+    "display": "Ekans",
+    "subs": null,
+    "synonyms": []
+  },
+  "arbok": {
+    "number": 24,
+    "display": "Arbok",
+    "subs": null,
+    "synonyms": []
+  },
+  "pikachu": {
+    "number": 25,
+    "display": "Pikachu",
+    "subs": [
+      {
+        "name": "Partner Pikachu",
+        "synonyms": []
+      },
+      {
+        "name": "Cosplay Pikachu",
+        "synonyms": [],
+        "core": true,
+        "subs": [
+          {
+            "name": "Pikachu Rockstar",
+            "synonyms": []
+          },
+          {
+            "name": "Pikachu Belle",
+            "synonyms": []
+          },
+          {
+            "name": "Pikachu Pop Star",
+            "synonyms": []
+          },
+          {
+            "name": "Pikachu, Ph.D.",
+            "synonyms": []
+          },
+          {
+            "name": "Pikachu Libre",
+            "synonyms": []
+          }
+        ]
+      },
+      {
+        "name": "Cap Pikachu",
+        "synonyms": [],
+        "subs": [
+          {
+            "name": "Original Cap Pikachu",
+            "synonyms": [
+              "Pikachu Original Cap"
+            ]
+          },
+          {
+            "name": "Hoenn Cap Pikachu",
+            "synonyms": [
+              "Pikachu Hoenn Cap"
+            ]
+          },
+          {
+            "name": "Sinnoh Cap Pikachu",
+            "synonyms": [
+              "Pikachu Sinnoh Cap"
+            ]
+          },
+          {
+            "name": "Unova Cap Pikachu",
+            "synonyms": [
+              "Pikachu Unova Cap"
+            ]
+          },
+          {
+            "name": "Kalos Cap Pikachu",
+            "synonyms": [
+              "Pikachu Kalos Cap"
+            ]
+          },
+          {
+            "name": "Alola Cap Pikachu",
+            "synonyms": [
+              "Pikachu Alola Cap"
+            ]
+          },
+          {
+            "name": "Partner Cap Pikachu",
+            "synonyms": [
+              "Pikachu Partner Cap"
+            ]
+          },
+          {
+            "name": "World Cap Pikachu",
+            "synonyms": [
+              "Pikachu World Cap"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Gigantamax Pikachu",
+        "synonyms": [
+          "Pikachu Gigantamax"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "raichu": {
+    "number": 26,
+    "display": "Raichu",
+    "subs": [
+      {
+        "name": "Alolan Raichu",
+        "synonyms": [
+          "Alolan Raichu",
+          "Raichu Alolan",
+          "Raichu Alola",
+          "Alola Raichu"
+        ]
+      },
+      {
+        "name": "Mega Raichu X",
+        "synonyms": []
+      },
+      {
+        "name": "Mega Raichu Y",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "sandshrew": {
+    "number": 27,
+    "display": "Sandshrew",
+    "subs": [
+      {
+        "name": "Alolan Sandshrew",
+        "synonyms": [
+          "Alolan Sandshrew",
+          "Sandshrew Alolan",
+          "Sandshrew Alola",
+          "Alola Sandshrew"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "sandslash": {
+    "number": 28,
+    "display": "Sandslash",
+    "subs": [
+      {
+        "name": "Alolan Sandslash",
+        "synonyms": [
+          "Alolan Sandslash",
+          "Sandslash Alolan",
+          "Sandslash Alola",
+          "Alola Sandslash"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "nidoran-f": {
+    "number": 29,
+    "display": "Nidoran (Female)",
+    "subs": null,
+    "synonyms": [
+      "Female Nidoran",
+      "F Nidoran",
+      "Nidoran F",
+      "Nidoran ♀",
+      "♀ Nidoran"
+    ]
+  },
+  "nidorina": {
+    "number": 30,
+    "display": "Nidorina",
+    "subs": null,
+    "synonyms": []
+  },
+  "nidoqueen": {
+    "number": 31,
+    "display": "Nidoqueen",
+    "subs": null,
+    "synonyms": []
+  },
+  "nidoran-m": {
+    "number": 32,
+    "display": "Nidoran (Male)",
+    "subs": null,
+    "synonyms": [
+      "Male Nidoran",
+      "M Nidoran",
+      "Nidoran M",
+      "Nidoran ♂",
+      "♂ Nidoran"
+    ]
+  },
+  "nidorino": {
+    "number": 33,
+    "display": "Nidorino",
+    "subs": null,
+    "synonyms": []
+  },
+  "nidoking": {
+    "number": 34,
+    "display": "Nidoking",
+    "subs": null,
+    "synonyms": []
+  },
+  "clefairy": {
+    "number": 35,
+    "display": "Clefairy",
+    "subs": null,
+    "synonyms": []
+  },
+  "clefable": {
+    "number": 36,
+    "display": "Clefable",
+    "subs": [
+      {
+        "name": "Mega Clefable",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "vulpix": {
+    "number": 37,
+    "display": "Vulpix",
+    "subs": [
+      {
+        "name": "Alolan Vulpix",
+        "synonyms": [
+          "Alolan Vulpix",
+          "Vulpix Alolan",
+          "Vulpix Alola",
+          "Alola Vulpix"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "ninetales": {
+    "number": 38,
+    "display": "Ninetales",
+    "subs": [
+      {
+        "name": "Alolan Ninetales",
+        "synonyms": [
+          "Alolan Ninetales",
+          "Ninetales Alolan",
+          "Ninetales Alola",
+          "Alola Ninetales"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "jigglypuff": {
+    "number": 39,
+    "display": "Jigglypuff",
+    "subs": null,
+    "synonyms": []
+  },
+  "wigglytuff": {
+    "number": 40,
+    "display": "Wigglytuff",
+    "subs": null,
+    "synonyms": []
+  },
+  "zubat": {
+    "number": 41,
+    "display": "Zubat",
+    "subs": null,
+    "synonyms": []
+  },
+  "golbat": {
+    "number": 42,
+    "display": "Golbat",
+    "subs": null,
+    "synonyms": []
+  },
+  "oddish": {
+    "number": 43,
+    "display": "Oddish",
+    "subs": null,
+    "synonyms": []
+  },
+  "gloom": {
+    "number": 44,
+    "display": "Gloom",
+    "subs": null,
+    "synonyms": []
+  },
+  "vileplume": {
+    "number": 45,
+    "display": "Vileplume",
+    "subs": null,
+    "synonyms": []
+  },
+  "paras": {
+    "number": 46,
+    "display": "Paras",
+    "subs": null,
+    "synonyms": []
+  },
+  "parasect": {
+    "number": 47,
+    "display": "Parasect",
+    "subs": null,
+    "synonyms": []
+  },
+  "venonat": {
+    "number": 48,
+    "display": "Venonat",
+    "subs": null,
+    "synonyms": []
+  },
+  "venomoth": {
+    "number": 49,
+    "display": "Venomoth",
+    "subs": null,
+    "synonyms": []
+  },
+  "diglett": {
+    "number": 50,
+    "display": "Diglett",
+    "subs": [
+      {
+        "name": "Alolan Diglett",
+        "synonyms": [
+          "Alolan Diglett",
+          "Diglett Alolan",
+          "Diglett Alola",
+          "Alola Diglett"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "dugtrio": {
+    "number": 51,
+    "display": "Dugtrio",
+    "subs": [
+      {
+        "name": "Alolan Dugtrio",
+        "synonyms": [
+          "Alolan Dugtrio",
+          "Dugtrio Alolan",
+          "Dugtrio Alola",
+          "Alola Dugtrio"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "meowth": {
+    "number": 52,
+    "display": "Meowth",
+    "subs": [
+      {
+        "name": "Alolan Meowth",
+        "synonyms": [
+          "Alolan Meowth",
+          "Meowth Alolan",
+          "Meowth Alola",
+          "Alola Meowth"
+        ]
+      },
+      {
+        "name": "Galarian Meowth",
+        "synonyms": [
+          "Galarian Meowth",
+          "Meowth Galarian",
+          "Meowth Galar",
+          "Galar Meowth"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "persian": {
+    "number": 53,
+    "display": "Persian",
+    "subs": [
+      {
+        "name": "Alolan Persian",
+        "synonyms": [
+          "Alolan Persian",
+          "Persian Alolan",
+          "Persian Alola",
+          "Alola Persian"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "psyduck": {
+    "number": 54,
+    "display": "Psyduck",
+    "subs": null,
+    "synonyms": []
+  },
+  "golduck": {
+    "number": 55,
+    "display": "Golduck",
+    "subs": null,
+    "synonyms": []
+  },
+  "mankey": {
+    "number": 56,
+    "display": "Mankey",
+    "subs": null,
+    "synonyms": []
+  },
+  "primeape": {
+    "number": 57,
+    "display": "Primeape",
+    "subs": null,
+    "synonyms": []
+  },
+  "growlithe": {
+    "number": 58,
+    "display": "Growlithe",
+    "subs": [
+      {
+        "name": "Hisuian Growlithe",
+        "synonyms": [
+          "Hisuian Growlithe",
+          "Growlithe Hisuian",
+          "Growlithe Hisui",
+          "Hisui Growlithe"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "arcanine": {
+    "number": 59,
+    "display": "Arcanine",
+    "subs": [
+      {
+        "name": "Hisuian Arcanine",
+        "synonyms": [
+          "Hisuian Arcanine",
+          "Arcanine Hisuian",
+          "Arcanine Hisui",
+          "Hisui Arcanine"
+        ]
+      },
+      {
+        "name": "Gigantamax Arcanine",
+        "synonyms": [
+          "Arcanine Gigantamax"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "poliwag": {
+    "number": 60,
+    "display": "Poliwag",
+    "subs": null,
+    "synonyms": []
+  },
+  "poliwhirl": {
+    "number": 61,
+    "display": "Poliwhirl",
+    "subs": null,
+    "synonyms": []
+  },
+  "poliwrath": {
+    "number": 62,
+    "display": "Poliwrath",
+    "subs": null,
+    "synonyms": []
+  },
+  "abra": {
+    "number": 63,
+    "display": "Abra",
+    "subs": null,
+    "synonyms": []
+  },
+  "kadabra": {
+    "number": 64,
+    "display": "Kadabra",
+    "subs": null,
+    "synonyms": []
+  },
+  "alakazam": {
+    "number": 65,
+    "display": "Alakazam",
+    "subs": [
+      {
+        "name": "Mega Alakazam",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "machop": {
+    "number": 66,
+    "display": "Machop",
+    "subs": null,
+    "synonyms": []
+  },
+  "machoke": {
+    "number": 67,
+    "display": "Machoke",
+    "subs": null,
+    "synonyms": []
+  },
+  "machamp": {
+    "number": 68,
+    "display": "Machamp",
+    "subs": [
+      {
+        "name": "Gigantamax Machamp",
+        "synonyms": [
+          "Machamp Gigantamax"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "bellsprout": {
+    "number": 69,
+    "display": "Bellsprout",
+    "subs": null,
+    "synonyms": []
+  },
+  "weepinbell": {
+    "number": 70,
+    "display": "Weepinbell",
+    "subs": null,
+    "synonyms": []
+  },
+  "victreebel": {
+    "number": 71,
+    "display": "Victreebel",
+    "subs": [
+      {
+        "name": "Mega Victreebel",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "tentacool": {
+    "number": 72,
+    "display": "Tentacool",
+    "subs": null,
+    "synonyms": []
+  },
+  "tentacruel": {
+    "number": 73,
+    "display": "Tentacruel",
+    "subs": null,
+    "synonyms": []
+  },
+  "geodude": {
+    "number": 74,
+    "display": "Geodude",
+    "subs": [
+      {
+        "name": "Alolan Geodude",
+        "synonyms": [
+          "Alolan Geodude",
+          "Geodude Alolan",
+          "Geodude Alola",
+          "Alola Geodude"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "graveler": {
+    "number": 75,
+    "display": "Graveler",
+    "subs": [
+      {
+        "name": "Alolan Graveler",
+        "synonyms": [
+          "Alolan Graveler",
+          "Graveler Alolan",
+          "Graveler Alola",
+          "Alola Graveler"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "golem": {
+    "number": 76,
+    "display": "Golem",
+    "subs": [
+      {
+        "name": "Alolan Golem",
+        "synonyms": [
+          "Alolan Golem",
+          "Golem Alolan",
+          "Golem Alola",
+          "Alola Golem"
+        ]
+      },
+      {
+        "name": "Gigantamax Golem",
+        "synonyms": [
+          "Golem Gigantamax"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "ponyta": {
+    "number": 77,
+    "display": "Ponyta",
+    "subs": [
+      {
+        "name": "Galarian Ponyta",
+        "synonyms": [
+          "Galarian Ponyta",
+          "Ponyta Galarian",
+          "Ponyta Galar",
+          "Galar Ponyta"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "rapidash": {
+    "number": 78,
+    "display": "Rapidash",
+    "subs": [
+      {
+        "name": "Galarian Rapidash",
+        "synonyms": [
+          "Galarian Rapidash",
+          "Rapidash Galarian",
+          "Rapidash Galar",
+          "Galar Rapidash"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "slowpoke": {
+    "number": 79,
+    "display": "Slowpoke",
+    "subs": [
+      {
+        "name": "Galarian Slowpoke",
+        "synonyms": [
+          "Galarian Slowpoke",
+          "Slowpoke Galarian",
+          "Slowpoke Galar",
+          "Galar Slowpoke"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "slowbro": {
+    "number": 80,
+    "display": "Slowbro",
+    "subs": [
+      {
+        "name": "Mega Slowbro",
+        "synonyms": []
+      },
+      {
+        "name": "Galarian Slowbro",
+        "synonyms": [
+          "Galarian Slowbro",
+          "Slowbro Galarian",
+          "Slowbro Galar",
+          "Galar Slowbro"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "magnemite": {
+    "number": 81,
+    "display": "Magnemite",
+    "subs": null,
+    "synonyms": []
+  },
+  "magneton": {
+    "number": 82,
+    "display": "Magneton",
+    "subs": null,
+    "synonyms": []
+  },
+  "farfetch-d": {
+    "number": 83,
+    "display": "Farfetch'd",
+    "subs": [
+      {
+        "name": "Galarian Farfetch'd",
+        "synonyms": [
+          "Galarian Farfetch'd",
+          "Farfetch'd Galarian",
+          "Farfetch'd Galar",
+          "Galar Farfetch'd"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "doduo": {
+    "number": 84,
+    "display": "Doduo",
+    "subs": null,
+    "synonyms": []
+  },
+  "dodrio": {
+    "number": 85,
+    "display": "Dodrio",
+    "subs": null,
+    "synonyms": []
+  },
+  "seel": {
+    "number": 86,
+    "display": "Seel",
+    "subs": null,
+    "synonyms": []
+  },
+  "dewgong": {
+    "number": 87,
+    "display": "Dewgong",
+    "subs": null,
+    "synonyms": []
+  },
+  "grimer": {
+    "number": 88,
+    "display": "Grimer",
+    "subs": [
+      {
+        "name": "Alolan Grimer",
+        "synonyms": [
+          "Alolan Grimer",
+          "Grimer Alolan",
+          "Grimer Alola",
+          "Alola Grimer"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "muk": {
+    "number": 89,
+    "display": "Muk",
+    "subs": [
+      {
+        "name": "Alolan Muk",
+        "synonyms": [
+          "Alolan Muk",
+          "Muk Alolan",
+          "Muk Alola",
+          "Alola Muk"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "shellder": {
+    "number": 90,
+    "display": "Shellder",
+    "subs": null,
+    "synonyms": []
+  },
+  "cloyster": {
+    "number": 91,
+    "display": "Cloyster",
+    "subs": null,
+    "synonyms": []
+  },
+  "gastly": {
+    "number": 92,
+    "display": "Gastly",
+    "subs": null,
+    "synonyms": []
+  },
+  "haunter": {
+    "number": 93,
+    "display": "Haunter",
+    "subs": null,
+    "synonyms": []
+  },
+  "gengar": {
+    "number": 94,
+    "display": "Gengar",
+    "subs": [
+      {
+        "name": "Mega Gengar",
+        "synonyms": []
+      },
+      {
+        "name": "Gigantamax Gengar",
+        "synonyms": [
+          "Gengar Gigantamax"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "onix": {
+    "number": 95,
+    "display": "Onix",
+    "subs": null,
+    "synonyms": []
+  },
+  "drowzee": {
+    "number": 96,
+    "display": "Drowzee",
+    "subs": null,
+    "synonyms": []
+  },
+  "hypno": {
+    "number": 97,
+    "display": "Hypno",
+    "subs": null,
+    "synonyms": []
+  },
+  "krabby": {
+    "number": 98,
+    "display": "Krabby",
+    "subs": null,
+    "synonyms": []
+  },
+  "kingler": {
+    "number": 99,
+    "display": "Kingler",
+    "subs": [
+      {
+        "name": "Gigantamax Kingler",
+        "synonyms": [
+          "Kingler Gigantamax"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "voltorb": {
+    "number": 100,
+    "display": "Voltorb",
+    "subs": [
+      {
+        "name": "Hisuian Voltorb",
+        "synonyms": [
+          "Hisuian Voltorb",
+          "Voltorb Hisuian",
+          "Voltorb Hisui",
+          "Hisui Voltorb"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "electrode": {
+    "number": 101,
+    "display": "Electrode",
+    "subs": [
+      {
+        "name": "Hisuian Electrode",
+        "synonyms": [
+          "Hisuian Electrode",
+          "Electrode Hisuian",
+          "Electrode Hisui",
+          "Hisui Electrode"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "exeggcute": {
+    "number": 102,
+    "display": "Exeggcute",
+    "subs": null,
+    "synonyms": []
+  },
+  "exeggutor": {
+    "number": 103,
+    "display": "Exeggutor",
+    "subs": [
+      {
+        "name": "Alolan Exeggutor",
+        "synonyms": [
+          "Alolan Exeggutor",
+          "Exeggutor Alolan",
+          "Exeggutor Alola",
+          "Alola Exeggutor"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "cubone": {
+    "number": 104,
+    "display": "Cubone",
+    "subs": null,
+    "synonyms": []
+  },
+  "marowak": {
+    "number": 105,
+    "display": "Marowak",
+    "subs": [
+      {
+        "name": "Alolan Marowak",
+        "synonyms": [
+          "Alolan Marowak",
+          "Marowak Alolan",
+          "Marowak Alola",
+          "Alola Marowak"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "hitmonlee": {
+    "number": 106,
+    "display": "Hitmonlee",
+    "subs": null,
+    "synonyms": []
+  },
+  "hitmonchan": {
+    "number": 107,
+    "display": "Hitmonchan",
+    "subs": null,
+    "synonyms": []
+  },
+  "lickitung": {
+    "number": 108,
+    "display": "Lickitung",
+    "subs": null,
+    "synonyms": []
+  },
+  "koffing": {
+    "number": 109,
+    "display": "Koffing",
+    "subs": null,
+    "synonyms": []
+  },
+  "weezing": {
+    "number": 110,
+    "display": "Weezing",
+    "subs": [
+      {
+        "name": "Galarian Weezing",
+        "synonyms": [
+          "Galarian Weezing",
+          "Weezing Galarian",
+          "Weezing Galar",
+          "Galar Weezing"
+        ]
+      },
+      {
+        "name": "Gigantamax Weezing",
+        "synonyms": [
+          "Weezing Gigantamax"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "rhyhorn": {
+    "number": 111,
+    "display": "Rhyhorn",
+    "subs": null,
+    "synonyms": []
+  },
+  "rhydon": {
+    "number": 112,
+    "display": "Rhydon",
+    "subs": null,
+    "synonyms": []
+  },
+  "chansey": {
+    "number": 113,
+    "display": "Chansey",
+    "subs": null,
+    "synonyms": []
+  },
+  "tangela": {
+    "number": 114,
+    "display": "Tangela",
+    "subs": null,
+    "synonyms": []
+  },
+  "kangaskhan": {
+    "number": 115,
+    "display": "Kangaskhan",
+    "subs": [
+      {
+        "name": "Mega Kangaskhan",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "horsea": {
+    "number": 116,
+    "display": "Horsea",
+    "subs": null,
+    "synonyms": []
+  },
+  "seadra": {
+    "number": 117,
+    "display": "Seadra",
+    "subs": null,
+    "synonyms": []
+  },
+  "goldeen": {
+    "number": 118,
+    "display": "Goldeen",
+    "subs": null,
+    "synonyms": []
+  },
+  "seaking": {
+    "number": 119,
+    "display": "Seaking",
+    "subs": null,
+    "synonyms": []
+  },
+  "staryu": {
+    "number": 120,
+    "display": "Staryu",
+    "subs": null,
+    "synonyms": []
+  },
+  "starmie": {
+    "number": 121,
+    "display": "Starmie",
+    "subs": [
+      {
+        "name": "Mega Starmie",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "mr-mime": {
+    "number": 122,
+    "display": "Mr. Mime",
+    "subs": [
+      {
+        "name": "Galarian Mr. Mime",
+        "synonyms": [
+          "Galarian Mr. Mime",
+          "Mr. Mime Galarian",
+          "Mr. Mime Galar",
+          "Galar Mr. Mime"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "scyther": {
+    "number": 123,
+    "display": "Scyther",
+    "subs": null,
+    "synonyms": []
+  },
+  "jynx": {
+    "number": 124,
+    "display": "Jynx",
+    "subs": null,
+    "synonyms": []
+  },
+  "electabuzz": {
+    "number": 125,
+    "display": "Electabuzz",
+    "subs": null,
+    "synonyms": []
+  },
+  "magmar": {
+    "number": 126,
+    "display": "Magmar",
+    "subs": null,
+    "synonyms": []
+  },
+  "pinsir": {
+    "number": 127,
+    "display": "Pinsir",
+    "subs": [
+      {
+        "name": "Mega Pinsir",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "tauros": {
+    "number": 128,
+    "display": "Tauros",
+    "subs": [
+      {
+        "name": "Paldean Tauros",
+        "synonyms": [
+          "Paldea Tauros",
+          "Tauros Paldean",
+          "Tauros Paldea"
+        ],
+        "subs": [
+          {
+            "name": "Tauros (Combat Breed)",
+            "synonyms": [
+              "Combat Breed Tauros",
+              "Paldean Tauros Combat Breed",
+              "Paldean Combat Breed Tauros",
+              "Paldean Tauros Combat",
+              "Paldean Combat Tauros",
+              "Combat Breed Paldean Tauros",
+              "Combat Paldean Tauros",
+              "Tauros Paldean Combat Breed",
+              "Tauros Paldean Combat",
+              "Paldea Tauros Combat Breed",
+              "Paldea Combat Breed Tauros",
+              "Paldea Tauros Combat",
+              "Paldea Combat Tauros",
+              "Combat Breed Paldea Tauros",
+              "Combat Paldea Tauros",
+              "Tauros Paldea Combat Breed",
+              "Tauros Paldea Combat"
+            ]
+          },
+          {
+            "name": "Tauros (Blaze Breed)",
+            "synonyms": [
+              "Blaze Breed Tauros",
+              "Paldean Tauros Blaze Breed",
+              "Paldean Blaze Breed Tauros",
+              "Paldean Tauros Blaze",
+              "Paldean Blaze Tauros",
+              "Blaze Breed Paldean Tauros",
+              "Blaze Paldean Tauros",
+              "Tauros Paldean Blaze Breed",
+              "Tauros Paldean Blaze",
+              "Paldea Tauros Blaze Breed",
+              "Paldea Blaze Breed Tauros",
+              "Paldea Tauros Blaze",
+              "Paldea Blaze Tauros",
+              "Blaze Breed Paldea Tauros",
+              "Blaze Paldea Tauros",
+              "Tauros Paldea Blaze Breed",
+              "Tauros Paldea Blaze"
+            ]
+          },
+          {
+            "name": "Tauros (Aqua Breed)",
+            "synonyms": [
+              "Aqua Breed Tauros",
+              "Paldean Tauros Aqua Breed",
+              "Paldean Aqua Breed Tauros",
+              "Paldean Tauros Aqua",
+              "Paldean Aqua Tauros",
+              "Aqua Breed Paldean Tauros",
+              "Aqua Paldean Tauros",
+              "Tauros Paldean Aqua Breed",
+              "Tauros Paldean Aqua",
+              "Paldea Tauros Aqua Breed",
+              "Paldea Aqua Breed Tauros",
+              "Paldea Tauros Aqua",
+              "Paldea Aqua Tauros",
+              "Aqua Breed Paldea Tauros",
+              "Aqua Paldea Tauros",
+              "Tauros Paldea Aqua Breed",
+              "Tauros Paldea Aqua"
+            ]
+          }
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "magikarp": {
+    "number": 129,
+    "display": "Magikarp",
+    "subs": null,
+    "synonyms": []
+  },
+  "gyarados": {
+    "number": 130,
+    "display": "Gyarados",
+    "subs": [
+      {
+        "name": "Mega Gyarados",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "lapras": {
+    "number": 131,
+    "display": "Lapras",
+    "subs": [
+      {
+        "name": "Gigantamax Lapras",
+        "synonyms": [
+          "Lapras Gigantamax"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "ditto": {
+    "number": 132,
+    "display": "Ditto",
+    "subs": null,
+    "synonyms": []
+  },
+  "eevee": {
+    "number": 133,
+    "display": "Eevee",
+    "subs": [
+      {
+        "name": "Partner Eevee",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "vaporeon": {
+    "number": 134,
+    "display": "Vaporeon",
+    "subs": null,
+    "synonyms": []
+  },
+  "jolteon": {
+    "number": 135,
+    "display": "Jolteon",
+    "subs": null,
+    "synonyms": []
+  },
+  "flareon": {
+    "number": 136,
+    "display": "Flareon",
+    "subs": null,
+    "synonyms": []
+  },
+  "porygon": {
+    "number": 137,
+    "display": "Porygon",
+    "subs": null,
+    "synonyms": []
+  },
+  "omanyte": {
+    "number": 138,
+    "display": "Omanyte",
+    "subs": null,
+    "synonyms": []
+  },
+  "omastar": {
+    "number": 139,
+    "display": "Omastar",
+    "subs": null,
+    "synonyms": []
+  },
+  "kabuto": {
+    "number": 140,
+    "display": "Kabuto",
+    "subs": null,
+    "synonyms": []
+  },
+  "kabutops": {
+    "number": 141,
+    "display": "Kabutops",
+    "subs": null,
+    "synonyms": []
+  },
+  "aerodactyl": {
+    "number": 142,
+    "display": "Aerodactyl",
+    "subs": [
+      {
+        "name": "Mega Aerodactyl",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "snorlax": {
+    "number": 143,
+    "display": "Snorlax",
+    "subs": [
+      {
+        "name": "Gigantamax Snorlax",
+        "synonyms": [
+          "Snorlax Gigantamax"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "articuno": {
+    "number": 144,
+    "display": "Articuno",
+    "subs": [
+      {
+        "name": "Galarian Articuno",
+        "synonyms": [
+          "Galarian Articuno",
+          "Articuno Galarian",
+          "Articuno Galar",
+          "Galar Articuno"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "zapdos": {
+    "number": 145,
+    "display": "Zapdos",
+    "subs": [
+      {
+        "name": "Galarian Zapdos",
+        "synonyms": [
+          "Galarian Zapdos",
+          "Zapdos Galarian",
+          "Zapdos Galar",
+          "Galar Zapdos"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "moltres": {
+    "number": 146,
+    "display": "Moltres",
+    "subs": [
+      {
+        "name": "Galarian Moltres",
+        "synonyms": [
+          "Galarian Moltres",
+          "Moltres Galarian",
+          "Moltres Galar",
+          "Galar Moltres"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "dratini": {
+    "number": 147,
+    "display": "Dratini",
+    "subs": null,
+    "synonyms": []
+  },
+  "dragonair": {
+    "number": 148,
+    "display": "Dragonair",
+    "subs": null,
+    "synonyms": []
+  },
+  "dragonite": {
+    "number": 149,
+    "display": "Dragonite",
+    "subs": [
+      {
+        "name": "Mega Dragonite",
+        "synonyms": []
+      },
+      {
+        "name": "Gigantamax Dragonite",
+        "synonyms": [
+          "Dragonite Gigantamax"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "mewtwo": {
+    "number": 150,
+    "display": "Mewtwo",
+    "subs": [
+      {
+        "name": "Mega Mewtwo X",
+        "synonyms": []
+      },
+      {
+        "name": "Mega Mewtwo Y",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "mew": {
+    "number": 151,
+    "display": "Mew",
+    "subs": null,
+    "synonyms": []
+  },
+  "chikorita": {
+    "number": 152,
+    "display": "Chikorita",
+    "subs": null,
+    "synonyms": []
+  },
+  "bayleef": {
+    "number": 153,
+    "display": "Bayleef",
+    "subs": null,
+    "synonyms": []
+  },
+  "meganium": {
+    "number": 154,
+    "display": "Meganium",
+    "subs": [
+      {
+        "name": "Mega Meganium",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "cyndaquil": {
+    "number": 155,
+    "display": "Cyndaquil",
+    "subs": null,
+    "synonyms": []
+  },
+  "quilava": {
+    "number": 156,
+    "display": "Quilava",
+    "subs": null,
+    "synonyms": []
+  },
+  "typhlosion": {
+    "number": 157,
+    "display": "Typhlosion",
+    "subs": [
+      {
+        "name": "Hisuian Typhlosion",
+        "synonyms": [
+          "Hisuian Typhlosion",
+          "Typhlosion Hisuian",
+          "Typhlosion Hisui",
+          "Hisui Typhlosion"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "totodile": {
+    "number": 158,
+    "display": "Totodile",
+    "subs": null,
+    "synonyms": []
+  },
+  "croconaw": {
+    "number": 159,
+    "display": "Croconaw",
+    "subs": null,
+    "synonyms": []
+  },
+  "feraligatr": {
+    "number": 160,
+    "display": "Feraligatr",
+    "subs": [
+      {
+        "name": "Mega Feraligatr",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "sentret": {
+    "number": 161,
+    "display": "Sentret",
+    "subs": null,
+    "synonyms": []
+  },
+  "furret": {
+    "number": 162,
+    "display": "Furret",
+    "subs": null,
+    "synonyms": []
+  },
+  "hoothoot": {
+    "number": 163,
+    "display": "Hoothoot",
+    "subs": null,
+    "synonyms": []
+  },
+  "noctowl": {
+    "number": 164,
+    "display": "Noctowl",
+    "subs": null,
+    "synonyms": []
+  },
+  "ledyba": {
+    "number": 165,
+    "display": "Ledyba",
+    "subs": null,
+    "synonyms": []
+  },
+  "ledian": {
+    "number": 166,
+    "display": "Ledian",
+    "subs": null,
+    "synonyms": []
+  },
+  "spinarak": {
+    "number": 167,
+    "display": "Spinarak",
+    "subs": null,
+    "synonyms": []
+  },
+  "ariados": {
+    "number": 168,
+    "display": "Ariados",
+    "subs": null,
+    "synonyms": []
+  },
+  "crobat": {
+    "number": 169,
+    "display": "Crobat",
+    "subs": null,
+    "synonyms": []
+  },
+  "chinchou": {
+    "number": 170,
+    "display": "Chinchou",
+    "subs": null,
+    "synonyms": []
+  },
+  "lanturn": {
+    "number": 171,
+    "display": "Lanturn",
+    "subs": null,
+    "synonyms": []
+  },
+  "pichu": {
+    "number": 172,
+    "display": "Pichu",
+    "subs": [
+      {
+        "name": "Spiky-Eared Pichu",
+        "synonyms": [
+          "Spiky-Ear Pichu",
+          "Pichu Spiky-Eared",
+          "Pichu Spiky-Ear"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "cleffa": {
+    "number": 173,
+    "display": "Cleffa",
+    "subs": null,
+    "synonyms": []
+  },
+  "igglybuff": {
+    "number": 174,
+    "display": "Igglybuff",
+    "subs": null,
+    "synonyms": []
+  },
+  "togepi": {
+    "number": 175,
+    "display": "Togepi",
+    "subs": null,
+    "synonyms": []
+  },
+  "togetic": {
+    "number": 176,
+    "display": "Togetic",
+    "subs": null,
+    "synonyms": []
+  },
+  "natu": {
+    "number": 177,
+    "display": "Natu",
+    "subs": null,
+    "synonyms": []
+  },
+  "xatu": {
+    "number": 178,
+    "display": "Xatu",
+    "subs": null,
+    "synonyms": []
+  },
+  "mareep": {
+    "number": 179,
+    "display": "Mareep",
+    "subs": null,
+    "synonyms": []
+  },
+  "flaaffy": {
+    "number": 180,
+    "display": "Flaaffy",
+    "subs": null,
+    "synonyms": []
+  },
+  "ampharos": {
+    "number": 181,
+    "display": "Ampharos",
+    "subs": [
+      {
+        "name": "Mega Ampharos",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "bellossom": {
+    "number": 182,
+    "display": "Bellossom",
+    "subs": null,
+    "synonyms": []
+  },
+  "marill": {
+    "number": 183,
+    "display": "Marill",
+    "subs": null,
+    "synonyms": [
+      "Pikablu", "Pikablue"
+    ]
+  },
+  "azumarill": {
+    "number": 184,
+    "display": "Azumarill",
+    "subs": null,
+    "synonyms": []
+  },
+  "sudowoodo": {
+    "number": 185,
+    "display": "Sudowoodo",
+    "subs": null,
+    "synonyms": []
+  },
+  "politoed": {
+    "number": 186,
+    "display": "Politoed",
+    "subs": null,
+    "synonyms": []
+  },
+  "hoppip": {
+    "number": 187,
+    "display": "Hoppip",
+    "subs": null,
+    "synonyms": []
+  },
+  "skiploom": {
+    "number": 188,
+    "display": "Skiploom",
+    "subs": null,
+    "synonyms": []
+  },
+  "jumpluff": {
+    "number": 189,
+    "display": "Jumpluff",
+    "subs": null,
+    "synonyms": []
+  },
+  "aipom": {
+    "number": 190,
+    "display": "Aipom",
+    "subs": null,
+    "synonyms": []
+  },
+  "sunkern": {
+    "number": 191,
+    "display": "Sunkern",
+    "subs": null,
+    "synonyms": []
+  },
+  "sunflora": {
+    "number": 192,
+    "display": "Sunflora",
+    "subs": null,
+    "synonyms": []
+  },
+  "yanma": {
+    "number": 193,
+    "display": "Yanma",
+    "subs": null,
+    "synonyms": []
+  },
+  "wooper": {
+    "number": 194,
+    "display": "Wooper",
+    "subs": [
+      {
+        "name": "Paldean Wooper",
+        "synonyms": [
+          "Wooper Paldean",
+          "Wooper Paldea",
+          "Paldea Wooper"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "quagsire": {
+    "number": 195,
+    "display": "Quagsire",
+    "subs": null,
+    "synonyms": []
+  },
+  "espeon": {
+    "number": 196,
+    "display": "Espeon",
+    "subs": null,
+    "synonyms": []
+  },
+  "umbreon": {
+    "number": 197,
+    "display": "Umbreon",
+    "subs": null,
+    "synonyms": []
+  },
+  "murkrow": {
+    "number": 198,
+    "display": "Murkrow",
+    "subs": null,
+    "synonyms": []
+  },
+  "slowking": {
+    "number": 199,
+    "display": "Slowking",
+    "subs": [
+      {
+        "name": "Galarian Slowking",
+        "synonyms": [
+          "Galarian Slowking",
+          "Slowking Galarian",
+          "Slowking Galar",
+          "Galar Slowking"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "misdreavus": {
+    "number": 200,
+    "display": "Misdreavus",
+    "subs": null,
+    "synonyms": []
+  },
+  "unown": {
+    "number": 201,
+    "display": "Unown",
+    "subs": [
+      {
+        "name": "Unown A",
+        "synonyms": [
+          "A Unown"
+        ]
+      },
+      {
+        "name": "Unown B",
+        "synonyms": [
+          "B Unown"
+        ]
+      },
+      {
+        "name": "Unown C",
+        "synonyms": [
+          "C Unown"
+        ]
+      },
+      {
+        "name": "Unown D",
+        "synonyms": [
+          "D Unown"
+        ]
+      },
+      {
+        "name": "Unown E",
+        "synonyms": [
+          "E Unown"
+        ]
+      },
+      {
+        "name": "Unown F",
+        "synonyms": [
+          "F Unown"
+        ]
+      },
+      {
+        "name": "Unown G",
+        "synonyms": [
+          "G Unown"
+        ]
+      },
+      {
+        "name": "Unown H",
+        "synonyms": [
+          "H Unown"
+        ]
+      },
+      {
+        "name": "Unown I",
+        "synonyms": [
+          "I Unown"
+        ]
+      },
+      {
+        "name": "Unown J",
+        "synonyms": [
+          "J Unown"
+        ]
+      },
+      {
+        "name": "Unown K",
+        "synonyms": [
+          "K Unown"
+        ]
+      },
+      {
+        "name": "Unown L",
+        "synonyms": [
+          "L Unown"
+        ]
+      },
+      {
+        "name": "Unown M",
+        "synonyms": [
+          "M Unown"
+        ]
+      },
+      {
+        "name": "Unown N",
+        "synonyms": [
+          "N Unown"
+        ]
+      },
+      {
+        "name": "Unown O",
+        "synonyms": [
+          "O Unown"
+        ]
+      },
+      {
+        "name": "Unown P",
+        "synonyms": [
+          "P Unown"
+        ]
+      },
+      {
+        "name": "Unown Q",
+        "synonyms": [
+          "Q Unown"
+        ]
+      },
+      {
+        "name": "Unown R",
+        "synonyms": [
+          "R Unown"
+        ]
+      },
+      {
+        "name": "Unown S",
+        "synonyms": [
+          "S Unown"
+        ]
+      },
+      {
+        "name": "Unown T",
+        "synonyms": [
+          "T Unown"
+        ]
+      },
+      {
+        "name": "Unown U",
+        "synonyms": [
+          "U Unown"
+        ]
+      },
+      {
+        "name": "Unown V",
+        "synonyms": [
+          "V Unown"
+        ]
+      },
+      {
+        "name": "Unown W",
+        "synonyms": [
+          "W Unown"
+        ]
+      },
+      {
+        "name": "Unown X",
+        "synonyms": [
+          "X Unown"
+        ]
+      },
+      {
+        "name": "Unown Y",
+        "synonyms": [
+          "Y Unown"
+        ]
+      },
+      {
+        "name": "Unown Z",
+        "synonyms": [
+          "Z Unown"
+        ]
+      },
+      {
+        "name": "Unown ?",
+        "synonyms": [
+          "? Unown",
+          "Unown Question Mark",
+          "Question Mark Unown"
+        ]
+      },
+      {
+        "name": "Unown !",
+        "synonyms": [
+          "! Unown",
+          "Unown Exclamation Mark",
+          "Exclamation Mark Unown",
+          "Unown Exclamation Point",
+          "Exclamation Point Unown"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false,
+    "grantAll": true
+  },
+  "wobbuffet": {
+    "number": 202,
+    "display": "Wobbuffet",
+    "subs": null,
+    "synonyms": []
+  },
+  "girafarig": {
+    "number": 203,
+    "display": "Girafarig",
+    "subs": null,
+    "synonyms": []
+  },
+  "pineco": {
+    "number": 204,
+    "display": "Pineco",
+    "subs": null,
+    "synonyms": []
+  },
+  "forretress": {
+    "number": 205,
+    "display": "Forretress",
+    "subs": null,
+    "synonyms": []
+  },
+  "dunsparce": {
+    "number": 206,
+    "display": "Dunsparce",
+    "subs": null,
+    "synonyms": []
+  },
+  "gligar": {
+    "number": 207,
+    "display": "Gligar",
+    "subs": null,
+    "synonyms": []
+  },
+  "steelix": {
+    "number": 208,
+    "display": "Steelix",
+    "subs": [
+      {
+        "name": "Mega Steelix",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "snubbull": {
+    "number": 209,
+    "display": "Snubbull",
+    "subs": null,
+    "synonyms": []
+  },
+  "granbull": {
+    "number": 210,
+    "display": "Granbull",
+    "subs": null,
+    "synonyms": []
+  },
+  "qwilfish": {
+    "number": 211,
+    "display": "Qwilfish",
+    "subs": [
+      {
+        "name": "Hisuian Qwilfish",
+        "synonyms": [
+          "Hisuian Qwilfish",
+          "Qwilfish Hisuian",
+          "Qwilfish Hisui",
+          "Hisui Qwilfish"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "scizor": {
+    "number": 212,
+    "display": "Scizor",
+    "subs": [
+      {
+        "name": "Mega Scizor",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "shuckle": {
+    "number": 213,
+    "display": "Shuckle",
+    "subs": null,
+    "synonyms": []
+  },
+  "heracross": {
+    "number": 214,
+    "display": "Heracross",
+    "subs": [
+      {
+        "name": "Mega Heracross",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "sneasel": {
+    "number": 215,
+    "display": "Sneasel",
+    "subs": [
+      {
+        "name": "Hisuian Sneasel",
+        "synonyms": [
+          "Hisuian Sneasel",
+          "Sneasel Hisuian",
+          "Sneasel Hisui",
+          "Hisui Sneasel"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "teddiursa": {
+    "number": 216,
+    "display": "Teddiursa",
+    "subs": null,
+    "synonyms": []
+  },
+  "ursaring": {
+    "number": 217,
+    "display": "Ursaring",
+    "subs": null,
+    "synonyms": []
+  },
+  "slugma": {
+    "number": 218,
+    "display": "Slugma",
+    "subs": null,
+    "synonyms": []
+  },
+  "magcargo": {
+    "number": 219,
+    "display": "Magcargo",
+    "subs": null,
+    "synonyms": []
+  },
+  "swinub": {
+    "number": 220,
+    "display": "Swinub",
+    "subs": null,
+    "synonyms": []
+  },
+  "piloswine": {
+    "number": 221,
+    "display": "Piloswine",
+    "subs": null,
+    "synonyms": []
+  },
+  "corsola": {
+    "number": 222,
+    "display": "Corsola",
+    "subs": [
+      {
+        "name": "Galarian Corsola",
+        "synonyms": [
+          "Galarian Corsola",
+          "Corsola Galarian",
+          "Corsola Galar",
+          "Galar Corsola"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "remoraid": {
+    "number": 223,
+    "display": "Remoraid",
+    "subs": null,
+    "synonyms": []
+  },
+  "octillery": {
+    "number": 224,
+    "display": "Octillery",
+    "subs": null,
+    "synonyms": []
+  },
+  "delibird": {
+    "number": 225,
+    "display": "Delibird",
+    "subs": null,
+    "synonyms": []
+  },
+  "mantine": {
+    "number": 226,
+    "display": "Mantine",
+    "subs": null,
+    "synonyms": []
+  },
+  "skarmory": {
+    "number": 227,
+    "display": "Skarmory",
+    "subs": [
+      {
+        "name": "Mega Skarmory",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "houndour": {
+    "number": 228,
+    "display": "Houndour",
+    "subs": null,
+    "synonyms": []
+  },
+  "houndoom": {
+    "number": 229,
+    "display": "Houndoom",
+    "subs": [
+      {
+        "name": "Mega Houndoom",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "kingdra": {
+    "number": 230,
+    "display": "Kingdra",
+    "subs": null,
+    "synonyms": []
+  },
+  "phanpy": {
+    "number": 231,
+    "display": "Phanpy",
+    "subs": null,
+    "synonyms": []
+  },
+  "donphan": {
+    "number": 232,
+    "display": "Donphan",
+    "subs": null,
+    "synonyms": []
+  },
+  "porygon2": {
+    "number": 233,
+    "display": "Porygon2",
+    "subs": null,
+    "synonyms": []
+  },
+  "stantler": {
+    "number": 234,
+    "display": "Stantler",
+    "subs": null,
+    "synonyms": []
+  },
+  "smeargle": {
+    "number": 235,
+    "display": "Smeargle",
+    "subs": null,
+    "synonyms": []
+  },
+  "tyrogue": {
+    "number": 236,
+    "display": "Tyrogue",
+    "subs": null,
+    "synonyms": []
+  },
+  "hitmontop": {
+    "number": 237,
+    "display": "Hitmontop",
+    "subs": null,
+    "synonyms": []
+  },
+  "smoochum": {
+    "number": 238,
+    "display": "Smoochum",
+    "subs": null,
+    "synonyms": []
+  },
+  "elekid": {
+    "number": 239,
+    "display": "Elekid",
+    "subs": null,
+    "synonyms": []
+  },
+  "magby": {
+    "number": 240,
+    "display": "Magby",
+    "subs": null,
+    "synonyms": []
+  },
+  "miltank": {
+    "number": 241,
+    "display": "Miltank",
+    "subs": null,
+    "synonyms": []
+  },
+  "blissey": {
+    "number": 242,
+    "display": "Blissey",
+    "subs": null,
+    "synonyms": []
+  },
+  "raikou": {
+    "number": 243,
+    "display": "Raikou",
+    "subs": null,
+    "synonyms": []
+  },
+  "entei": {
+    "number": 244,
+    "display": "Entei",
+    "subs": null,
+    "synonyms": []
+  },
+  "suicune": {
+    "number": 245,
+    "display": "Suicune",
+    "subs": null,
+    "synonyms": []
+  },
+  "larvitar": {
+    "number": 246,
+    "display": "Larvitar",
+    "subs": null,
+    "synonyms": []
+  },
+  "pupitar": {
+    "number": 247,
+    "display": "Pupitar",
+    "subs": null,
+    "synonyms": []
+  },
+  "tyranitar": {
+    "number": 248,
+    "display": "Tyranitar",
+    "subs": [
+      {
+        "name": "Mega Tyranitar",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "lugia": {
+    "number": 249,
+    "display": "Lugia",
+    "subs": null,
+    "synonyms": []
+  },
+  "ho-oh": {
+    "number": 250,
+    "display": "Ho-oh",
+    "subs": null,
+    "synonyms": []
+  },
+  "celebi": {
+    "number": 251,
+    "display": "Celebi",
+    "subs": null,
+    "synonyms": []
+  },
+  "treecko": {
+    "number": 252,
+    "display": "Treecko",
+    "subs": null,
+    "synonyms": []
+  },
+  "grovyle": {
+    "number": 253,
+    "display": "Grovyle",
+    "subs": null,
+    "synonyms": []
+  },
+  "sceptile": {
+    "number": 254,
+    "display": "Sceptile",
+    "subs": [
+      {
+        "name": "Mega Sceptile",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "torchic": {
+    "number": 255,
+    "display": "Torchic",
+    "subs": null,
+    "synonyms": []
+  },
+  "combusken": {
+    "number": 256,
+    "display": "Combusken",
+    "subs": null,
+    "synonyms": []
+  },
+  "blaziken": {
+    "number": 257,
+    "display": "Blaziken",
+    "subs": [
+      {
+        "name": "Mega Blaziken",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "mudkip": {
+    "number": 258,
+    "display": "Mudkip",
+    "subs": null,
+    "synonyms": []
+  },
+  "marshtomp": {
+    "number": 259,
+    "display": "Marshtomp",
+    "subs": null,
+    "synonyms": []
+  },
+  "swampert": {
+    "number": 260,
+    "display": "Swampert",
+    "subs": [
+      {
+        "name": "Mega Swampert",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "poochyena": {
+    "number": 261,
+    "display": "Poochyena",
+    "subs": null,
+    "synonyms": []
+  },
+  "mightyena": {
+    "number": 262,
+    "display": "Mightyena",
+    "subs": null,
+    "synonyms": []
+  },
+  "zigzagoon": {
+    "number": 263,
+    "display": "Zigzagoon",
+    "subs": [
+      {
+        "name": "Galarian Zigzagoon",
+        "synonyms": [
+          "Galarian Zigzagoon",
+          "Zigzagoon Galarian",
+          "Zigzagoon Galar",
+          "Galar Zigzagoon"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "linoone": {
+    "number": 264,
+    "display": "Linoone",
+    "subs": [
+      {
+        "name": "Galarian Linoone",
+        "synonyms": [
+          "Galarian Linoone",
+          "Linoone Galarian",
+          "Linoone Galar",
+          "Galar Linoone"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "wurmple": {
+    "number": 265,
+    "display": "Wurmple",
+    "subs": null,
+    "synonyms": []
+  },
+  "silcoon": {
+    "number": 266,
+    "display": "Silcoon",
+    "subs": null,
+    "synonyms": []
+  },
+  "beautifly": {
+    "number": 267,
+    "display": "Beautifly",
+    "subs": null,
+    "synonyms": []
+  },
+  "cascoon": {
+    "number": 268,
+    "display": "Cascoon",
+    "subs": null,
+    "synonyms": []
+  },
+  "dustox": {
+    "number": 269,
+    "display": "Dustox",
+    "subs": null,
+    "synonyms": []
+  },
+  "lotad": {
+    "number": 270,
+    "display": "Lotad",
+    "subs": null,
+    "synonyms": []
+  },
+  "lombre": {
+    "number": 271,
+    "display": "Lombre",
+    "subs": null,
+    "synonyms": []
+  },
+  "ludicolo": {
+    "number": 272,
+    "display": "Ludicolo",
+    "subs": null,
+    "synonyms": []
+  },
+  "seedot": {
+    "number": 273,
+    "display": "Seedot",
+    "subs": null,
+    "synonyms": []
+  },
+  "nuzleaf": {
+    "number": 274,
+    "display": "Nuzleaf",
+    "subs": null,
+    "synonyms": []
+  },
+  "shiftry": {
+    "number": 275,
+    "display": "Shiftry",
+    "subs": null,
+    "synonyms": []
+  },
+  "taillow": {
+    "number": 276,
+    "display": "Taillow",
+    "subs": null,
+    "synonyms": []
+  },
+  "swellow": {
+    "number": 277,
+    "display": "Swellow",
+    "subs": null,
+    "synonyms": []
+  },
+  "wingull": {
+    "number": 278,
+    "display": "Wingull",
+    "subs": null,
+    "synonyms": []
+  },
+  "pelipper": {
+    "number": 279,
+    "display": "Pelipper",
+    "subs": null,
+    "synonyms": []
+  },
+  "ralts": {
+    "number": 280,
+    "display": "Ralts",
+    "subs": null,
+    "synonyms": []
+  },
+  "kirlia": {
+    "number": 281,
+    "display": "Kirlia",
+    "subs": null,
+    "synonyms": []
+  },
+  "gardevoir": {
+    "number": 282,
+    "display": "Gardevoir",
+    "subs": [
+      {
+        "name": "Mega Gardevoir",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "surskit": {
+    "number": 283,
+    "display": "Surskit",
+    "subs": null,
+    "synonyms": []
+  },
+  "masquerain": {
+    "number": 284,
+    "display": "Masquerain",
+    "subs": null,
+    "synonyms": []
+  },
+  "shroomish": {
+    "number": 285,
+    "display": "Shroomish",
+    "subs": null,
+    "synonyms": []
+  },
+  "breloom": {
+    "number": 286,
+    "display": "Breloom",
+    "subs": null,
+    "synonyms": []
+  },
+  "slakoth": {
+    "number": 287,
+    "display": "Slakoth",
+    "subs": null,
+    "synonyms": []
+  },
+  "vigoroth": {
+    "number": 288,
+    "display": "Vigoroth",
+    "subs": null,
+    "synonyms": []
+  },
+  "slaking": {
+    "number": 289,
+    "display": "Slaking",
+    "subs": null,
+    "synonyms": []
+  },
+  "nincada": {
+    "number": 290,
+    "display": "Nincada",
+    "subs": null,
+    "synonyms": []
+  },
+  "ninjask": {
+    "number": 291,
+    "display": "Ninjask",
+    "subs": null,
+    "synonyms": []
+  },
+  "shedinja": {
+    "number": 292,
+    "display": "Shedinja",
+    "subs": null,
+    "synonyms": []
+  },
+  "whismur": {
+    "number": 293,
+    "display": "Whismur",
+    "subs": null,
+    "synonyms": []
+  },
+  "loudred": {
+    "number": 294,
+    "display": "Loudred",
+    "subs": null,
+    "synonyms": []
+  },
+  "exploud": {
+    "number": 295,
+    "display": "Exploud",
+    "subs": null,
+    "synonyms": []
+  },
+  "makuhita": {
+    "number": 296,
+    "display": "Makuhita",
+    "subs": null,
+    "synonyms": []
+  },
+  "hariyama": {
+    "number": 297,
+    "display": "Hariyama",
+    "subs": null,
+    "synonyms": []
+  },
+  "azurill": {
+    "number": 298,
+    "display": "Azurill",
+    "subs": null,
+    "synonyms": []
+  },
+  "nosepass": {
+    "number": 299,
+    "display": "Nosepass",
+    "subs": null,
+    "synonyms": []
+  },
+  "skitty": {
+    "number": 300,
+    "display": "Skitty",
+    "subs": null,
+    "synonyms": []
+  },
+  "delcatty": {
+    "number": 301,
+    "display": "Delcatty",
+    "subs": null,
+    "synonyms": []
+  },
+  "sableye": {
+    "number": 302,
+    "display": "Sableye",
+    "subs": [
+      {
+        "name": "Mega Sableye",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "mawile": {
+    "number": 303,
+    "display": "Mawile",
+    "subs": [
+      {
+        "name": "Mega Mawile",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "aron": {
+    "number": 304,
+    "display": "Aron",
+    "subs": null,
+    "synonyms": []
+  },
+  "lairon": {
+    "number": 305,
+    "display": "Lairon",
+    "subs": null,
+    "synonyms": []
+  },
+  "aggron": {
+    "number": 306,
+    "display": "Aggron",
+    "subs": [
+      {
+        "name": "Mega Aggron",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "meditite": {
+    "number": 307,
+    "display": "Meditite",
+    "subs": null,
+    "synonyms": []
+  },
+  "medicham": {
+    "number": 308,
+    "display": "Medicham",
+    "subs": [
+      {
+        "name": "Mega Medicham",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "electrike": {
+    "number": 309,
+    "display": "Electrike",
+    "subs": null,
+    "synonyms": []
+  },
+  "manectric": {
+    "number": 310,
+    "display": "Manectric",
+    "subs": [
+      {
+        "name": "Mega Manectric",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "plusle": {
+    "number": 311,
+    "display": "Plusle",
+    "subs": null,
+    "synonyms": []
+  },
+  "minun": {
+    "number": 312,
+    "display": "Minun",
+    "subs": null,
+    "synonyms": []
+  },
+  "volbeat": {
+    "number": 313,
+    "display": "Volbeat",
+    "subs": null,
+    "synonyms": []
+  },
+  "illumise": {
+    "number": 314,
+    "display": "Illumise",
+    "subs": null,
+    "synonyms": []
+  },
+  "roselia": {
+    "number": 315,
+    "display": "Roselia",
+    "subs": null,
+    "synonyms": []
+  },
+  "gulpin": {
+    "number": 316,
+    "display": "Gulpin",
+    "subs": null,
+    "synonyms": []
+  },
+  "swalot": {
+    "number": 317,
+    "display": "Swalot",
+    "subs": null,
+    "synonyms": []
+  },
+  "carvanha": {
+    "number": 318,
+    "display": "Carvanha",
+    "subs": null,
+    "synonyms": []
+  },
+  "sharpedo": {
+    "number": 319,
+    "display": "Sharpedo",
+    "subs": [
+      {
+        "name": "Mega Sharpedo",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "wailmer": {
+    "number": 320,
+    "display": "Wailmer",
+    "subs": null,
+    "synonyms": []
+  },
+  "wailord": {
+    "number": 321,
+    "display": "Wailord",
+    "subs": null,
+    "synonyms": []
+  },
+  "numel": {
+    "number": 322,
+    "display": "Numel",
+    "subs": null,
+    "synonyms": []
+  },
+  "camerupt": {
+    "number": 323,
+    "display": "Camerupt",
+    "subs": [
+      {
+        "name": "Mega Camerupt",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "torkoal": {
+    "number": 324,
+    "display": "Torkoal",
+    "subs": null,
+    "synonyms": []
+  },
+  "spoink": {
+    "number": 325,
+    "display": "Spoink",
+    "subs": null,
+    "synonyms": []
+  },
+  "grumpig": {
+    "number": 326,
+    "display": "Grumpig",
+    "subs": null,
+    "synonyms": []
+  },
+  "spinda": {
+    "number": 327,
+    "display": "Spinda",
+    "subs": null,
+    "synonyms": []
+  },
+  "trapinch": {
+    "number": 328,
+    "display": "Trapinch",
+    "subs": null,
+    "synonyms": []
+  },
+  "vibrava": {
+    "number": 329,
+    "display": "Vibrava",
+    "subs": null,
+    "synonyms": []
+  },
+  "flygon": {
+    "number": 330,
+    "display": "Flygon",
+    "subs": null,
+    "synonyms": []
+  },
+  "cacnea": {
+    "number": 331,
+    "display": "Cacnea",
+    "subs": null,
+    "synonyms": []
+  },
+  "cacturne": {
+    "number": 332,
+    "display": "Cacturne",
+    "subs": null,
+    "synonyms": []
+  },
+  "swablu": {
+    "number": 333,
+    "display": "Swablu",
+    "subs": null,
+    "synonyms": []
+  },
+  "altaria": {
+    "number": 334,
+    "display": "Altaria",
+    "subs": [
+      {
+        "name": "Mega Altaria",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "zangoose": {
+    "number": 335,
+    "display": "Zangoose",
+    "subs": null,
+    "synonyms": []
+  },
+  "seviper": {
+    "number": 336,
+    "display": "Seviper",
+    "subs": null,
+    "synonyms": []
+  },
+  "lunatone": {
+    "number": 337,
+    "display": "Lunatone",
+    "subs": null,
+    "synonyms": []
+  },
+  "solrock": {
+    "number": 338,
+    "display": "Solrock",
+    "subs": null,
+    "synonyms": []
+  },
+  "barboach": {
+    "number": 339,
+    "display": "Barboach",
+    "subs": null,
+    "synonyms": []
+  },
+  "whiscash": {
+    "number": 340,
+    "display": "Whiscash",
+    "subs": null,
+    "synonyms": []
+  },
+  "corphish": {
+    "number": 341,
+    "display": "Corphish",
+    "subs": null,
+    "synonyms": []
+  },
+  "crawdaunt": {
+    "number": 342,
+    "display": "Crawdaunt",
+    "subs": null,
+    "synonyms": []
+  },
+  "baltoy": {
+    "number": 343,
+    "display": "Baltoy",
+    "subs": null,
+    "synonyms": []
+  },
+  "claydol": {
+    "number": 344,
+    "display": "Claydol",
+    "subs": null,
+    "synonyms": []
+  },
+  "lileep": {
+    "number": 345,
+    "display": "Lileep",
+    "subs": null,
+    "synonyms": []
+  },
+  "cradily": {
+    "number": 346,
+    "display": "Cradily",
+    "subs": null,
+    "synonyms": []
+  },
+  "anorith": {
+    "number": 347,
+    "display": "Anorith",
+    "subs": null,
+    "synonyms": []
+  },
+  "armaldo": {
+    "number": 348,
+    "display": "Armaldo",
+    "subs": null,
+    "synonyms": []
+  },
+  "feebas": {
+    "number": 349,
+    "display": "Feebas",
+    "subs": null,
+    "synonyms": []
+  },
+  "milotic": {
+    "number": 350,
+    "display": "Milotic",
+    "subs": null,
+    "synonyms": []
+  },
+  "castform": {
+    "number": 351,
+    "display": "Castform",
+    "subs": [
+      {
+        "name": "Castform (Sunny Form)",
+        "synonyms": [
+          "Sunny Form Castform",
+          "Sunny Castform",
+          "Castform Sunny"
+        ]
+      },
+      {
+        "name": "Castform (Rainy Form)",
+        "synonyms": [
+          "Rainy Form Castform",
+          "Rainy Castform",
+          "Castform Sunny"
+        ]
+      },
+      {
+        "name": "Castform (Snowy Form)",
+        "synonyms": [
+          "Snowy Form Castform",
+          "Snowy Castform",
+          "Castform Snowy"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "kecleon": {
+    "number": 352,
+    "display": "Kecleon",
+    "subs": null,
+    "synonyms": []
+  },
+  "shuppet": {
+    "number": 353,
+    "display": "Shuppet",
+    "subs": null,
+    "synonyms": []
+  },
+  "banette": {
+    "number": 354,
+    "display": "Banette",
+    "subs": [
+      {
+        "name": "Mega Banette",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "duskull": {
+    "number": 355,
+    "display": "Duskull",
+    "subs": null,
+    "synonyms": []
+  },
+  "dusclops": {
+    "number": 356,
+    "display": "Dusclops",
+    "subs": null,
+    "synonyms": []
+  },
+  "tropius": {
+    "number": 357,
+    "display": "Tropius",
+    "subs": null,
+    "synonyms": []
+  },
+  "chimecho": {
+    "number": 358,
+    "display": "Chimecho",
+    "subs": [
+      {
+        "name": "Mega Chimecho",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "absol": {
+    "number": 359,
+    "display": "Absol",
+    "subs": [
+      {
+        "name": "Mega Absol",
+        "synonyms": []
+      },
+      {
+        "name": "Mega Absol Z",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "wynaut": {
+    "number": 360,
+    "display": "Wynaut",
+    "subs": null,
+    "synonyms": []
+  },
+  "snorunt": {
+    "number": 361,
+    "display": "Snorunt",
+    "subs": null,
+    "synonyms": []
+  },
+  "glalie": {
+    "number": 362,
+    "display": "Glalie",
+    "subs": [
+      {
+        "name": "Mega Glalie",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "spheal": {
+    "number": 363,
+    "display": "Spheal",
+    "subs": null,
+    "synonyms": []
+  },
+  "sealeo": {
+    "number": 364,
+    "display": "Sealeo",
+    "subs": null,
+    "synonyms": []
+  },
+  "walrein": {
+    "number": 365,
+    "display": "Walrein",
+    "subs": null,
+    "synonyms": []
+  },
+  "clamperl": {
+    "number": 366,
+    "display": "Clamperl",
+    "subs": null,
+    "synonyms": []
+  },
+  "huntail": {
+    "number": 367,
+    "display": "Huntail",
+    "subs": null,
+    "synonyms": []
+  },
+  "gorebyss": {
+    "number": 368,
+    "display": "Gorebyss",
+    "subs": null,
+    "synonyms": []
+  },
+  "relicanth": {
+    "number": 369,
+    "display": "Relicanth",
+    "subs": null,
+    "synonyms": []
+  },
+  "luvdisc": {
+    "number": 370,
+    "display": "Luvdisc",
+    "subs": null,
+    "synonyms": []
+  },
+  "bagon": {
+    "number": 371,
+    "display": "Bagon",
+    "subs": null,
+    "synonyms": []
+  },
+  "shelgon": {
+    "number": 372,
+    "display": "Shelgon",
+    "subs": null,
+    "synonyms": []
+  },
+  "salamence": {
+    "number": 373,
+    "display": "Salamence",
+    "subs": [
+      {
+        "name": "Mega Salamence",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "beldum": {
+    "number": 374,
+    "display": "Beldum",
+    "subs": null,
+    "synonyms": []
+  },
+  "metang": {
+    "number": 375,
+    "display": "Metang",
+    "subs": null,
+    "synonyms": []
+  },
+  "metagross": {
+    "number": 376,
+    "display": "Metagross",
+    "subs": [
+      {
+        "name": "Mega Metagross",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "regirock": {
+    "number": 377,
+    "display": "Regirock",
+    "subs": null,
+    "synonyms": []
+  },
+  "regice": {
+    "number": 378,
+    "display": "Regice",
+    "subs": null,
+    "synonyms": []
+  },
+  "registeel": {
+    "number": 379,
+    "display": "Registeel",
+    "subs": null,
+    "synonyms": []
+  },
+  "latias": {
+    "number": 380,
+    "display": "Latias",
+    "subs": [
+      {
+        "name": "Mega Latias",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "latios": {
+    "number": 381,
+    "display": "Latios",
+    "subs": [
+      {
+        "name": "Mega Latios",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "kyogre": {
+    "number": 382,
+    "display": "Kyogre",
+    "subs": [
+      {
+        "name": "Primal Kyogre",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "groudon": {
+    "number": 383,
+    "display": "Groudon",
+    "subs": [
+      {
+        "name": "Primal Groudon",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "rayquaza": {
+    "number": 384,
+    "display": "Rayquaza",
+    "subs": [
+      {
+        "name": "Mega Rayquaza",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "jirachi": {
+    "number": 385,
+    "display": "Jirachi",
+    "subs": null,
+    "synonyms": []
+  },
+  "deoxys": {
+    "number": 386,
+    "display": "Deoxys",
+    "subs": [
+      {
+        "name": "Deoxys (Normal Forme)",
+        "synonyms": [
+          "Normal Forme Deoxys",
+          "Deoxys Normal",
+          "Normal Deoxys"
+        ]
+      },
+      {
+        "name": "Deoxys (Attack Forme)",
+        "synonyms": [
+          "Attack Forme Deoxys",
+          "Deoxys Attack",
+          "Attack Deoxys"
+        ]
+      },
+      {
+        "name": "Deoxys (Defense Forme)",
+        "synonyms": [
+          "Defense Forme Deoxys",
+          "Deoxys Defense",
+          "Defense Deoxys"
+        ]
+      },
+      {
+        "name": "Deoxys (Speed Forme)",
+        "synonyms": [
+          "Speed Forme Deoxys",
+          "Deoxys Speed",
+          "Speed Deoxys"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "turtwig": {
+    "number": 387,
+    "display": "Turtwig",
+    "subs": null,
+    "synonyms": []
+  },
+  "grotle": {
+    "number": 388,
+    "display": "Grotle",
+    "subs": null,
+    "synonyms": []
+  },
+  "torterra": {
+    "number": 389,
+    "display": "Torterra",
+    "subs": null,
+    "synonyms": []
+  },
+  "chimchar": {
+    "number": 390,
+    "display": "Chimchar",
+    "subs": null,
+    "synonyms": []
+  },
+  "monferno": {
+    "number": 391,
+    "display": "Monferno",
+    "subs": null,
+    "synonyms": []
+  },
+  "infernape": {
+    "number": 392,
+    "display": "Infernape",
+    "subs": null,
+    "synonyms": []
+  },
+  "piplup": {
+    "number": 393,
+    "display": "Piplup",
+    "subs": null,
+    "synonyms": []
+  },
+  "prinplup": {
+    "number": 394,
+    "display": "Prinplup",
+    "subs": null,
+    "synonyms": []
+  },
+  "empoleon": {
+    "number": 395,
+    "display": "Empoleon",
+    "subs": null,
+    "synonyms": []
+  },
+  "starly": {
+    "number": 396,
+    "display": "Starly",
+    "subs": null,
+    "synonyms": []
+  },
+  "staravia": {
+    "number": 397,
+    "display": "Staravia",
+    "subs": null,
+    "synonyms": []
+  },
+  "staraptor": {
+    "number": 398,
+    "display": "Staraptor",
+    "subs": [
+      {
+        "name": "Mega Staraptor",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "bidoof": {
+    "number": 399,
+    "display": "Bidoof",
+    "subs": null,
+    "synonyms": []
+  },
+  "bibarel": {
+    "number": 400,
+    "display": "Bibarel",
+    "subs": null,
+    "synonyms": []
+  },
+  "kricketot": {
+    "number": 401,
+    "display": "Kricketot",
+    "subs": null,
+    "synonyms": []
+  },
+  "kricketune": {
+    "number": 402,
+    "display": "Kricketune",
+    "subs": null,
+    "synonyms": []
+  },
+  "shinx": {
+    "number": 403,
+    "display": "Shinx",
+    "subs": null,
+    "synonyms": []
+  },
+  "luxio": {
+    "number": 404,
+    "display": "Luxio",
+    "subs": null,
+    "synonyms": []
+  },
+  "luxray": {
+    "number": 405,
+    "display": "Luxray",
+    "subs": null,
+    "synonyms": []
+  },
+  "budew": {
+    "number": 406,
+    "display": "Budew",
+    "subs": null,
+    "synonyms": []
+  },
+  "roserade": {
+    "number": 407,
+    "display": "Roserade",
+    "subs": null,
+    "synonyms": []
+  },
+  "cranidos": {
+    "number": 408,
+    "display": "Cranidos",
+    "subs": null,
+    "synonyms": []
+  },
+  "rampardos": {
+    "number": 409,
+    "display": "Rampardos",
+    "subs": null,
+    "synonyms": []
+  },
+  "shieldon": {
+    "number": 410,
+    "display": "Shieldon",
+    "subs": null,
+    "synonyms": []
+  },
+  "bastiodon": {
+    "number": 411,
+    "display": "Bastiodon",
+    "subs": null,
+    "synonyms": []
+  },
+  "burmy": {
+    "number": 412,
+    "display": "Burmy",
+    "subs": [
+      {
+        "name": "Burmy (Plant Cloak)",
+        "synonyms": [
+          "Plant Cloak Burmy"
+        ]
+      },
+      {
+        "name": "Burmy (Sandy Cloak)",
+        "synonyms": [
+          "Sandy Cloak Burmy"
+        ]
+      },
+      {
+        "name": "Burmy (Trash Cloak)",
+        "synonyms": [
+          "Trash Cloak Burmy"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "wormadam": {
+    "number": 413,
+    "display": "Wormadam",
+    "subs": [
+      {
+        "name": "Wormadam (Plant Cloak)",
+        "synonyms": [
+          "Plant Cloak Wormadam"
+        ]
+      },
+      {
+        "name": "Wormadam (Sandy Cloak)",
+        "synonyms": [
+          "Sandy Cloak Wormadam"
+        ]
+      },
+      {
+        "name": "Wormadam (Trash Cloak)",
+        "synonyms": [
+          "Trash Cloak Wormadam"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "mothim": {
+    "number": 414,
+    "display": "Mothim",
+    "subs": null,
+    "synonyms": []
+  },
+  "combee": {
+    "number": 415,
+    "display": "Combee",
+    "subs": null,
+    "synonyms": []
+  },
+  "vespiquen": {
+    "number": 416,
+    "display": "Vespiquen",
+    "subs": null,
+    "synonyms": []
+  },
+  "pachirisu": {
+    "number": 417,
+    "display": "Pachirisu",
+    "subs": null,
+    "synonyms": []
+  },
+  "buizel": {
+    "number": 418,
+    "display": "Buizel",
+    "subs": null,
+    "synonyms": []
+  },
+  "floatzel": {
+    "number": 419,
+    "display": "Floatzel",
+    "subs": null,
+    "synonyms": []
+  },
+  "cherubi": {
+    "number": 420,
+    "display": "Cherubi",
+    "subs": null,
+    "synonyms": []
+  },
+  "cherrim": {
+    "number": 421,
+    "display": "Cherrim",
+    "subs": [
+      {
+        "name": "Cherrim (Overcast Form)",
+        "synonyms": [
+          "Cherrim Overcast Form",
+          "Overcast Cherrim",
+          "Cherrim Overcast",
+          "Overcast Form Cherrim"
+        ]
+      },
+      {
+        "name": "Cherrim (Sunshine Form)",
+        "synonyms": [
+          "Cherrim Sunshine Form",
+          "Sunshine Cherrim",
+          "Cherrim Sunshine",
+          "Sunshine Form Cherrim"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "shellos": {
+    "number": 422,
+    "display": "Shellos",
+    "subs": [
+      {
+        "name": "Shellos (West Sea)",
+        "synonyms": [
+          "Shellos West Sea",
+          "West Sea Shellos"
+        ]
+      },
+      {
+        "name": "Shellos (East Sea)",
+        "synonyms": [
+          "Shellos East Sea",
+          "East Sea Shellos"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "gastrodon": {
+    "number": 423,
+    "display": "Gastrodon",
+    "subs": [
+      {
+        "name": "Gastrodon (West Sea)",
+        "synonyms": [
+          "Gastrodon West Sea",
+          "West Sea Gastrodon"
+        ]
+      },
+      {
+        "name": "Gastrodon (East Sea)",
+        "synonyms": [
+          "Gastrodon East Sea",
+          "East Sea Gastrodon"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "ambipom": {
+    "number": 424,
+    "display": "Ambipom",
+    "subs": null,
+    "synonyms": []
+  },
+  "drifloon": {
+    "number": 425,
+    "display": "Drifloon",
+    "subs": null,
+    "synonyms": []
+  },
+  "drifblim": {
+    "number": 426,
+    "display": "Drifblim",
+    "subs": null,
+    "synonyms": []
+  },
+  "buneary": {
+    "number": 427,
+    "display": "Buneary",
+    "subs": null,
+    "synonyms": []
+  },
+  "lopunny": {
+    "number": 428,
+    "display": "Lopunny",
+    "subs": [
+      {
+        "name": "Mega Lopunny",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "mismagius": {
+    "number": 429,
+    "display": "Mismagius",
+    "subs": null,
+    "synonyms": []
+  },
+  "honchkrow": {
+    "number": 430,
+    "display": "Honchkrow",
+    "subs": null,
+    "synonyms": []
+  },
+  "glameow": {
+    "number": 431,
+    "display": "Glameow",
+    "subs": null,
+    "synonyms": []
+  },
+  "purugly": {
+    "number": 432,
+    "display": "Purugly",
+    "subs": null,
+    "synonyms": []
+  },
+  "chingling": {
+    "number": 433,
+    "display": "Chingling",
+    "subs": null,
+    "synonyms": []
+  },
+  "stunky": {
+    "number": 434,
+    "display": "Stunky",
+    "subs": null,
+    "synonyms": []
+  },
+  "skuntank": {
+    "number": 435,
+    "display": "Skuntank",
+    "subs": null,
+    "synonyms": []
+  },
+  "bronzor": {
+    "number": 436,
+    "display": "Bronzor",
+    "subs": null,
+    "synonyms": []
+  },
+  "bronzong": {
+    "number": 437,
+    "display": "Bronzong",
+    "subs": null,
+    "synonyms": []
+  },
+  "bonsly": {
+    "number": 438,
+    "display": "Bonsly",
+    "subs": null,
+    "synonyms": []
+  },
+  "mime-jr": {
+    "number": 439,
+    "display": "Mime Jr.",
+    "subs": null,
+    "synonyms": []
+  },
+  "happiny": {
+    "number": 440,
+    "display": "Happiny",
+    "subs": null,
+    "synonyms": []
+  },
+  "chatot": {
+    "number": 441,
+    "display": "Chatot",
+    "subs": null,
+    "synonyms": []
+  },
+  "spiritomb": {
+    "number": 442,
+    "display": "Spiritomb",
+    "subs": null,
+    "synonyms": []
+  },
+  "gible": {
+    "number": 443,
+    "display": "Gible",
+    "subs": null,
+    "synonyms": []
+  },
+  "gabite": {
+    "number": 444,
+    "display": "Gabite",
+    "subs": null,
+    "synonyms": []
+  },
+  "garchomp": {
+    "number": 445,
+    "display": "Garchomp",
+    "subs": [
+      {
+        "name": "Mega Garchomp",
+        "synonyms": []
+      },
+      {
+        "name": "Mega Garchomp Z",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "munchlax": {
+    "number": 446,
+    "display": "Munchlax",
+    "subs": null,
+    "synonyms": []
+  },
+  "riolu": {
+    "number": 447,
+    "display": "Riolu",
+    "subs": null,
+    "synonyms": []
+  },
+  "lucario": {
+    "number": 448,
+    "display": "Lucario",
+    "subs": [
+      {
+        "name": "Mega Lucario",
+        "synonyms": []
+      },
+      {
+        "name": "Mega Lucario Z",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "hippopotas": {
+    "number": 449,
+    "display": "Hippopotas",
+    "subs": null,
+    "synonyms": []
+  },
+  "hippowdon": {
+    "number": 450,
+    "display": "Hippowdon",
+    "subs": null,
+    "synonyms": []
+  },
+  "skorupi": {
+    "number": 451,
+    "display": "Skorupi",
+    "subs": null,
+    "synonyms": []
+  },
+  "drapion": {
+    "number": 452,
+    "display": "Drapion",
+    "subs": null,
+    "synonyms": []
+  },
+  "croagunk": {
+    "number": 453,
+    "display": "Croagunk",
+    "subs": null,
+    "synonyms": []
+  },
+  "toxicroak": {
+    "number": 454,
+    "display": "Toxicroak",
+    "subs": null,
+    "synonyms": []
+  },
+  "carnivine": {
+    "number": 455,
+    "display": "Carnivine",
+    "subs": null,
+    "synonyms": []
+  },
+  "finneon": {
+    "number": 456,
+    "display": "Finneon",
+    "subs": null,
+    "synonyms": []
+  },
+  "lumineon": {
+    "number": 457,
+    "display": "Lumineon",
+    "subs": null,
+    "synonyms": []
+  },
+  "mantyke": {
+    "number": 458,
+    "display": "Mantyke",
+    "subs": null,
+    "synonyms": []
+  },
+  "snover": {
+    "number": 459,
+    "display": "Snover",
+    "subs": null,
+    "synonyms": []
+  },
+  "abomasnow": {
+    "number": 460,
+    "display": "Abomasnow",
+    "subs": [
+      {
+        "name": "Mega Abomasnow",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "weavile": {
+    "number": 461,
+    "display": "Weavile",
+    "subs": null,
+    "synonyms": []
+  },
+  "magnezone": {
+    "number": 462,
+    "display": "Magnezone",
+    "subs": null,
+    "synonyms": []
+  },
+  "lickilicky": {
+    "number": 463,
+    "display": "Lickilicky",
+    "subs": null,
+    "synonyms": []
+  },
+  "rhyperior": {
+    "number": 464,
+    "display": "Rhyperior",
+    "subs": null,
+    "synonyms": []
+  },
+  "tangrowth": {
+    "number": 465,
+    "display": "Tangrowth",
+    "subs": null,
+    "synonyms": []
+  },
+  "electivire": {
+    "number": 466,
+    "display": "Electivire",
+    "subs": null,
+    "synonyms": []
+  },
+  "magmortar": {
+    "number": 467,
+    "display": "Magmortar",
+    "subs": null,
+    "synonyms": []
+  },
+  "togekiss": {
+    "number": 468,
+    "display": "Togekiss",
+    "subs": null,
+    "synonyms": []
+  },
+  "yanmega": {
+    "number": 469,
+    "display": "Yanmega",
+    "subs": null,
+    "synonyms": []
+  },
+  "leafeon": {
+    "number": 470,
+    "display": "Leafeon",
+    "subs": null,
+    "synonyms": []
+  },
+  "glaceon": {
+    "number": 471,
+    "display": "Glaceon",
+    "subs": null,
+    "synonyms": []
+  },
+  "gliscor": {
+    "number": 472,
+    "display": "Gliscor",
+    "subs": null,
+    "synonyms": []
+  },
+  "mamoswine": {
+    "number": 473,
+    "display": "Mamoswine",
+    "subs": null,
+    "synonyms": []
+  },
+  "porygon-z": {
+    "number": 474,
+    "display": "Porygon-Z",
+    "subs": null,
+    "synonyms": []
+  },
+  "gallade": {
+    "number": 475,
+    "display": "Gallade",
+    "subs": [
+      {
+        "name": "Mega Gallade",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "probopass": {
+    "number": 476,
+    "display": "Probopass",
+    "subs": null,
+    "synonyms": []
+  },
+  "dusknoir": {
+    "number": 477,
+    "display": "Dusknoir",
+    "subs": null,
+    "synonyms": []
+  },
+  "froslass": {
+    "number": 478,
+    "display": "Froslass",
+    "subs": [
+      {
+        "name": "Mega Froslass",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "rotom": {
+    "number": 479,
+    "display": "Rotom",
+    "subs": [
+      {
+        "name": "Heat Rotom",
+        "synonyms": [
+          "Rotom-Heat",
+          "Rotom-H"
+        ]
+      },
+      {
+        "name": "Wash Rotom",
+        "synonyms": [
+          "Rotom-Wash",
+          "Rotom-W"
+        ]
+      },
+      {
+        "name": "Frost Rotom",
+        "synonyms": [
+          "Rotom-Frost",
+          "Rotom-F"
+        ]
+      },
+      {
+        "name": "Fan Rotom",
+        "synonyms": [
+          "Rotom-Fan",
+          "Rotom-Fa"
+        ]
+      },
+      {
+        "name": "Mow Rotom",
+        "synonyms": [
+          "Rotom-Mow",
+          "Rotom-M"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "uxie": {
+    "number": 480,
+    "display": "Uxie",
+    "subs": null,
+    "synonyms": []
+  },
+  "mesprit": {
+    "number": 481,
+    "display": "Mesprit",
+    "subs": null,
+    "synonyms": []
+  },
+  "azelf": {
+    "number": 482,
+    "display": "Azelf",
+    "subs": null,
+    "synonyms": []
+  },
+  "dialga": {
+    "number": 483,
+    "display": "Dialga",
+    "subs": [
+      {
+        "name": "Dialga (Origin Forme)",
+        "synonyms": [
+          "Origin Forme Dialga",
+          "Dialga Origin",
+          "Origin Dialga"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "palkia": {
+    "number": 484,
+    "display": "Palkia",
+    "subs": [
+      {
+        "name": "Palkia (Origin Forme)",
+        "synonyms": [
+          "Origin Forme Palkia",
+          "Origin Palkia",
+          "Palkia Origin"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "heatran": {
+    "number": 485,
+    "display": "Heatran",
+    "subs": [
+      {
+        "name": "Mega Heatran",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "regigigas": {
+    "number": 486,
+    "display": "Regigigas",
+    "subs": null,
+    "synonyms": []
+  },
+  "giratina": {
+    "number": 487,
+    "display": "Giratina",
+    "subs": [
+      {
+        "name": "Giratina (Altered Forme)",
+        "synonyms": [
+          "Altered Forme Giratina",
+          "Altered Giratina",
+          "Giratina Altered"
+        ]
+      },
+      {
+        "name": "Giratina (Origin Forme)",
+        "synonyms": [
+          "Origin Forme Giratina",
+          "Origin Giratina",
+          "Giratina Origin"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "cresselia": {
+    "number": 488,
+    "display": "Cresselia",
+    "subs": null,
+    "synonyms": []
+  },
+  "phione": {
+    "number": 489,
+    "display": "Phione",
+    "subs": null,
+    "synonyms": []
+  },
+  "manaphy": {
+    "number": 490,
+    "display": "Manaphy",
+    "subs": null,
+    "synonyms": []
+  },
+  "darkrai": {
+    "number": 491,
+    "display": "Darkrai",
+    "subs": [
+      {
+        "name": "Mega Darkrai",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "shaymin": {
+    "number": 492,
+    "display": "Shaymin",
+    "subs": [
+      {
+        "name": "Shaymin (Land Forme)",
+        "synonyms": [
+          "Land Forme Shaymin",
+          "Shaymin Land",
+          "Land Shaymin"
+        ]
+      },
+      {
+        "name": "Shaymin (Sky Forme)",
+        "synonyms": [
+          "Sky Forme Shaymin",
+          "Shaymin Sky",
+          "Sky Shaymin"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "arceus": {
+    "number": 493,
+    "display": "Arceus",
+    "subs": [
+      {
+        "name": "Normal Arceus",
+        "synonyms": [
+          "Arceus Normal"
+        ]
+      },
+      {
+        "name": "Fire Arceus",
+        "synonyms": [
+          "Arceus Fire"
+        ]
+      },
+      {
+        "name": "Water Arceus",
+        "synonyms": [
+          "Arceus Water"
+        ]
+      },
+      {
+        "name": "Electric Arceus",
+        "synonyms": [
+          "Arceus Electric"
+        ]
+      },
+      {
+        "name": "Grass Arceus",
+        "synonyms": [
+          "Arceus Grass"
+        ]
+      },
+      {
+        "name": "Ice Arceus",
+        "synonyms": [
+          "Arceus Ice"
+        ]
+      },
+      {
+        "name": "Fighting Arceus",
+        "synonyms": [
+          "Arceus Fighting"
+        ]
+      },
+      {
+        "name": "Poison Arceus",
+        "synonyms": [
+          "Arceus Poison"
+        ]
+      },
+      {
+        "name": "Ground Arceus",
+        "synonyms": [
+          "Arceus Ground"
+        ]
+      },
+      {
+        "name": "Flying Arceus",
+        "synonyms": [
+          "Arceus Flying"
+        ]
+      },
+      {
+        "name": "Psychic Arceus",
+        "synonyms": [
+          "Arceus Psychic"
+        ]
+      },
+      {
+        "name": "Bug Arceus",
+        "synonyms": [
+          "Arceus Bug"
+        ]
+      },
+      {
+        "name": "Rock Arceus",
+        "synonyms": [
+          "Arceus Rock"
+        ]
+      },
+      {
+        "name": "Ghost Arceus",
+        "synonyms": [
+          "Arceus Ghost"
+        ]
+      },
+      {
+        "name": "Dragon Arceus",
+        "synonyms": [
+          "Arceus Dragon"
+        ]
+      },
+      {
+        "name": "Dark Arceus",
+        "synonyms": [
+          "Arceus Dark"
+        ]
+      },
+      {
+        "name": "Steel Arceus",
+        "synonyms": [
+          "Arceus Steel"
+        ]
+      },
+      {
+        "name": "Fairy Arceus",
+        "synonyms": [
+          "Arceus Fairy"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false,
+    "grantAll": true
+  },
+  "victini": {
+    "number": 494,
+    "display": "Victini",
+    "subs": null,
+    "synonyms": []
+  },
+  "snivy": {
+    "number": 495,
+    "display": "Snivy",
+    "subs": null,
+    "synonyms": []
+  },
+  "servine": {
+    "number": 496,
+    "display": "Servine",
+    "subs": null,
+    "synonyms": []
+  },
+  "serperior": {
+    "number": 497,
+    "display": "Serperior",
+    "subs": null,
+    "synonyms": []
+  },
+  "tepig": {
+    "number": 498,
+    "display": "Tepig",
+    "subs": null,
+    "synonyms": []
+  },
+  "pignite": {
+    "number": 499,
+    "display": "Pignite",
+    "subs": null,
+    "synonyms": []
+  },
+  "emboar": {
+    "number": 500,
+    "display": "Emboar",
+    "subs": [
+      {
+        "name": "Mega Emboar",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "oshawott": {
+    "number": 501,
+    "display": "Oshawott",
+    "subs": null,
+    "synonyms": []
+  },
+  "dewott": {
+    "number": 502,
+    "display": "Dewott",
+    "subs": null,
+    "synonyms": []
+  },
+  "samurott": {
+    "number": 503,
+    "display": "Samurott",
+    "subs": [
+      {
+        "name": "Hisuian Samurott",
+        "synonyms": [
+          "Hisuian Samurott",
+          "Samurott Hisuian",
+          "Samurott Hisui",
+          "Hisui Samurott"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "patrat": {
+    "number": 504,
+    "display": "Patrat",
+    "subs": null,
+    "synonyms": []
+  },
+  "watchog": {
+    "number": 505,
+    "display": "Watchog",
+    "subs": null,
+    "synonyms": []
+  },
+  "lillipup": {
+    "number": 506,
+    "display": "Lillipup",
+    "subs": null,
+    "synonyms": []
+  },
+  "herdier": {
+    "number": 507,
+    "display": "Herdier",
+    "subs": null,
+    "synonyms": []
+  },
+  "stoutland": {
+    "number": 508,
+    "display": "Stoutland",
+    "subs": null,
+    "synonyms": []
+  },
+  "purrloin": {
+    "number": 509,
+    "display": "Purrloin",
+    "subs": null,
+    "synonyms": []
+  },
+  "liepard": {
+    "number": 510,
+    "display": "Liepard",
+    "subs": null,
+    "synonyms": []
+  },
+  "pansage": {
+    "number": 511,
+    "display": "Pansage",
+    "subs": null,
+    "synonyms": []
+  },
+  "simisage": {
+    "number": 512,
+    "display": "Simisage",
+    "subs": null,
+    "synonyms": []
+  },
+  "pansear": {
+    "number": 513,
+    "display": "Pansear",
+    "subs": null,
+    "synonyms": []
+  },
+  "simisear": {
+    "number": 514,
+    "display": "Simisear",
+    "subs": null,
+    "synonyms": []
+  },
+  "panpour": {
+    "number": 515,
+    "display": "Panpour",
+    "subs": null,
+    "synonyms": []
+  },
+  "simipour": {
+    "number": 516,
+    "display": "Simipour",
+    "subs": null,
+    "synonyms": []
+  },
+  "munna": {
+    "number": 517,
+    "display": "Munna",
+    "subs": null,
+    "synonyms": []
+  },
+  "musharna": {
+    "number": 518,
+    "display": "Musharna",
+    "subs": null,
+    "synonyms": []
+  },
+  "pidove": {
+    "number": 519,
+    "display": "Pidove",
+    "subs": null,
+    "synonyms": []
+  },
+  "tranquill": {
+    "number": 520,
+    "display": "Tranquill",
+    "subs": null,
+    "synonyms": []
+  },
+  "unfezant": {
+    "number": 521,
+    "display": "Unfezant",
+    "subs": null,
+    "synonyms": []
+  },
+  "blitzle": {
+    "number": 522,
+    "display": "Blitzle",
+    "subs": null,
+    "synonyms": []
+  },
+  "zebstrika": {
+    "number": 523,
+    "display": "Zebstrika",
+    "subs": null,
+    "synonyms": []
+  },
+  "roggenrola": {
+    "number": 524,
+    "display": "Roggenrola",
+    "subs": null,
+    "synonyms": []
+  },
+  "boldore": {
+    "number": 525,
+    "display": "Boldore",
+    "subs": null,
+    "synonyms": []
+  },
+  "gigalith": {
+    "number": 526,
+    "display": "Gigalith",
+    "subs": null,
+    "synonyms": []
+  },
+  "woobat": {
+    "number": 527,
+    "display": "Woobat",
+    "subs": null,
+    "synonyms": []
+  },
+  "swoobat": {
+    "number": 528,
+    "display": "Swoobat",
+    "subs": null,
+    "synonyms": []
+  },
+  "drilbur": {
+    "number": 529,
+    "display": "Drilbur",
+    "subs": null,
+    "synonyms": []
+  },
+  "excadrill": {
+    "number": 530,
+    "display": "Excadrill",
+    "subs": [
+      {
+        "name": "Mega Excadrill",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "audino": {
+    "number": 531,
+    "display": "Audino",
+    "subs": [
+      {
+        "name": "Mega Audino",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "timburr": {
+    "number": 532,
+    "display": "Timburr",
+    "subs": null,
+    "synonyms": []
+  },
+  "gurdurr": {
+    "number": 533,
+    "display": "Gurdurr",
+    "subs": null,
+    "synonyms": []
+  },
+  "conkeldurr": {
+    "number": 534,
+    "display": "Conkeldurr",
+    "subs": null,
+    "synonyms": []
+  },
+  "tympole": {
+    "number": 535,
+    "display": "Tympole",
+    "subs": null,
+    "synonyms": []
+  },
+  "palpitoad": {
+    "number": 536,
+    "display": "Palpitoad",
+    "subs": null,
+    "synonyms": []
+  },
+  "seismitoad": {
+    "number": 537,
+    "display": "Seismitoad",
+    "subs": null,
+    "synonyms": []
+  },
+  "throh": {
+    "number": 538,
+    "display": "Throh",
+    "subs": null,
+    "synonyms": []
+  },
+  "sawk": {
+    "number": 539,
+    "display": "Sawk",
+    "subs": null,
+    "synonyms": []
+  },
+  "sewaddle": {
+    "number": 540,
+    "display": "Sewaddle",
+    "subs": null,
+    "synonyms": []
+  },
+  "swadloon": {
+    "number": 541,
+    "display": "Swadloon",
+    "subs": null,
+    "synonyms": []
+  },
+  "leavanny": {
+    "number": 542,
+    "display": "Leavanny",
+    "subs": null,
+    "synonyms": []
+  },
+  "venipede": {
+    "number": 543,
+    "display": "Venipede",
+    "subs": null,
+    "synonyms": []
+  },
+  "whirlipede": {
+    "number": 544,
+    "display": "Whirlipede",
+    "subs": null,
+    "synonyms": []
+  },
+  "scolipede": {
+    "number": 545,
+    "display": "Scolipede",
+    "subs": [
+      {
+        "name": "Mega Scolipede",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "cottonee": {
+    "number": 546,
+    "display": "Cottonee",
+    "subs": null,
+    "synonyms": []
+  },
+  "whimsicott": {
+    "number": 547,
+    "display": "Whimsicott",
+    "subs": null,
+    "synonyms": []
+  },
+  "petilil": {
+    "number": 548,
+    "display": "Petilil",
+    "subs": null,
+    "synonyms": []
+  },
+  "lilligant": {
+    "number": 549,
+    "display": "Lilligant",
+    "subs": [
+      {
+        "name": "Hisuian Lilligant",
+        "synonyms": [
+          "Hisuian Lilligant",
+          "Lilligant Hisuian",
+          "Lilligant Hisui",
+          "Hisui Lilligant"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "basculin": {
+    "number": 550,
+    "display": "Basculin",
+    "subs": [
+      {
+        "name": "Basculin (Red-Striped Form)",
+        "synonyms": [
+          "Red-Striped Form Basculin",
+          "Red-Striped Basculin",
+          "Basculin Red-Striped"
+        ]
+      },
+      {
+        "name": "Basculin (Blue-Striped Form)",
+        "synonyms": [
+          "Blue-Striped Form Basculin",
+          "Blue-Striped Basculin",
+          "Basculin Blue-Striped"
+        ]
+      },
+      {
+        "name": "Basculin (White-Striped Form)",
+        "synonyms": [
+          "White-Striped Form Basculin",
+          "White-Striped Basculin",
+          "Basculin White-Striped"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "sandile": {
+    "number": 551,
+    "display": "Sandile",
+    "subs": null,
+    "synonyms": []
+  },
+  "krokorok": {
+    "number": 552,
+    "display": "Krokorok",
+    "subs": null,
+    "synonyms": []
+  },
+  "krookodile": {
+    "number": 553,
+    "display": "Krookodile",
+    "subs": null,
+    "synonyms": []
+  },
+  "darumaka": {
+    "number": 554,
+    "display": "Darumaka",
+    "subs": [
+      {
+        "name": "Galarian Darumaka",
+        "synonyms": [
+          "Galarian Darumaka",
+          "Darumaka Galarian",
+          "Darumaka Galar",
+          "Galar Darumaka"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "darmanitan": {
+    "number": 555,
+    "display": "Darmanitan",
+    "subs": [
+      {
+        "name": "Darmanitan (Standard Mode)",
+        "synonyms": [
+          "Standard Mode Darmanitan"
+        ]
+      },
+      {
+        "name": "Darmanitan (Zen Mode)",
+        "synonyms": [
+          "Zen Mode Darmanitan"
+        ]
+      },
+      {
+        "name": "Darmanitan (Galarian Standard Mode)",
+        "synonyms": [
+          "Galarian Standard Mode",
+          "Standard Mode Galarian",
+          "Standard Mode Galar",
+          "Galar Standard Mode",
+          "Galarian Standard Mode Darmanitan"
+        ]
+      },
+      {
+        "name": "Darmanitan (Galarian Zen Mode)",
+        "synonyms": [
+          "Galarian Zen Mode",
+          "Zen Mode Galarian",
+          "Zen Mode Galar",
+          "Galar Zen Mode",
+          "Galarian Zen Mode Darmanitan"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "maractus": {
+    "number": 556,
+    "display": "Maractus",
+    "subs": null,
+    "synonyms": []
+  },
+  "dwebble": {
+    "number": 557,
+    "display": "Dwebble",
+    "subs": null,
+    "synonyms": []
+  },
+  "crustle": {
+    "number": 558,
+    "display": "Crustle",
+    "subs": null,
+    "synonyms": []
+  },
+  "scraggy": {
+    "number": 559,
+    "display": "Scraggy",
+    "subs": null,
+    "synonyms": []
+  },
+  "scrafty": {
+    "number": 560,
+    "display": "Scrafty",
+    "subs": [
+      {
+        "name": "Mega Scrafty",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "sigilyph": {
+    "number": 561,
+    "display": "Sigilyph",
+    "subs": null,
+    "synonyms": []
+  },
+  "yamask": {
+    "number": 562,
+    "display": "Yamask",
+    "subs": [
+      {
+        "name": "Galarian Yamask",
+        "synonyms": [
+          "Galarian Yamask",
+          "Yamask Galarian",
+          "Yamask Galar",
+          "Galar Yamask"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "cofagrigus": {
+    "number": 563,
+    "display": "Cofagrigus",
+    "subs": null,
+    "synonyms": []
+  },
+  "tirtouga": {
+    "number": 564,
+    "display": "Tirtouga",
+    "subs": null,
+    "synonyms": []
+  },
+  "carracosta": {
+    "number": 565,
+    "display": "Carracosta",
+    "subs": null,
+    "synonyms": []
+  },
+  "archen": {
+    "number": 566,
+    "display": "Archen",
+    "subs": null,
+    "synonyms": []
+  },
+  "archeops": {
+    "number": 567,
+    "display": "Archeops",
+    "subs": null,
+    "synonyms": []
+  },
+  "trubbish": {
+    "number": 568,
+    "display": "Trubbish",
+    "subs": null,
+    "synonyms": []
+  },
+  "garbodor": {
+    "number": 569,
+    "display": "Garbodor",
+    "subs": null,
+    "synonyms": []
+  },
+  "zorua": {
+    "number": 570,
+    "display": "Zorua",
+    "subs": [
+      {
+        "name": "Hisuian Zorua",
+        "synonyms": [
+          "Hisuian Zorua",
+          "Zorua Hisuian",
+          "Zorua Hisui",
+          "Hisui Zorua"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "zoroark": {
+    "number": 571,
+    "display": "Zoroark",
+    "subs": [
+      {
+        "name": "Hisuian Zoroark",
+        "synonyms": [
+          "Hisuian Zoroark",
+          "Zoroark Hisuian",
+          "Zoroark Hisui",
+          "Hisui Zoroark"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "minccino": {
+    "number": 572,
+    "display": "Minccino",
+    "subs": null,
+    "synonyms": []
+  },
+  "cinccino": {
+    "number": 573,
+    "display": "Cinccino",
+    "subs": null,
+    "synonyms": []
+  },
+  "gothita": {
+    "number": 574,
+    "display": "Gothita",
+    "subs": null,
+    "synonyms": []
+  },
+  "gothorita": {
+    "number": 575,
+    "display": "Gothorita",
+    "subs": null,
+    "synonyms": []
+  },
+  "gothitelle": {
+    "number": 576,
+    "display": "Gothitelle",
+    "subs": null,
+    "synonyms": []
+  },
+  "solosis": {
+    "number": 577,
+    "display": "Solosis",
+    "subs": null,
+    "synonyms": []
+  },
+  "duosion": {
+    "number": 578,
+    "display": "Duosion",
+    "subs": null,
+    "synonyms": []
+  },
+  "reuniclus": {
+    "number": 579,
+    "display": "Reuniclus",
+    "subs": null,
+    "synonyms": []
+  },
+  "ducklett": {
+    "number": 580,
+    "display": "Ducklett",
+    "subs": null,
+    "synonyms": []
+  },
+  "swanna": {
+    "number": 581,
+    "display": "Swanna",
+    "subs": null,
+    "synonyms": []
+  },
+  "vanillite": {
+    "number": 582,
+    "display": "Vanillite",
+    "subs": null,
+    "synonyms": []
+  },
+  "vanillish": {
+    "number": 583,
+    "display": "Vanillish",
+    "subs": null,
+    "synonyms": []
+  },
+  "vanilluxe": {
+    "number": 584,
+    "display": "Vanilluxe",
+    "subs": null,
+    "synonyms": []
+  },
+  "deerling": {
+    "number": 585,
+    "display": "Deerling",
+    "subs": [
+      {
+        "name": "Deerling (Spring Form)",
+        "synonyms": [
+          "Deerling Spring Form",
+          "Spring Deerling",
+          "Deerling Spring",
+          "Spring Form Deerling"
+        ]
+      },
+      {
+        "name": "Deerling (Summer Form)",
+        "synonyms": [
+          "Deerling Summer Form",
+          "Summer Deerling",
+          "Deerling Summer",
+          "Summer Form Deerling"
+        ]
+      },
+      {
+        "name": "Deerling (Autumn Form)",
+        "synonyms": [
+          "Deerling Autumn Form",
+          "Autumn Deerling",
+          "Deerling Autumn",
+          "Autumn Form Deerling"
+        ]
+      },
+      {
+        "name": "Deerling (Winter Form)",
+        "synonyms": [
+          "Deerling Winter Form",
+          "Winter Deerling",
+          "Deerling Winter",
+          "Winter Form Deerling"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "sawsbuck": {
+    "number": 586,
+    "display": "Sawsbuck",
+    "subs": [
+      {
+        "name": "Sawsbuck (Spring Form)",
+        "synonyms": [
+          "Sawsbuck Spring Form",
+          "Spring Sawsbuck",
+          "Sawsbuck Spring",
+          "Spring Form Sawsbuck"
+        ]
+      },
+      {
+        "name": "Sawsbuck (Summer Form)",
+        "synonyms": [
+          "Sawsbuck Summer Form",
+          "Summer Sawsbuck",
+          "Sawsbuck Summer",
+          "Summer Form Sawsbuck"
+        ]
+      },
+      {
+        "name": "Sawsbuck (Autumn Form)",
+        "synonyms": [
+          "Sawsbuck Autumn Form",
+          "Autumn Sawsbuck",
+          "Sawsbuck Autumn",
+          "Autumn Form Sawsbuck"
+        ]
+      },
+      {
+        "name": "Sawsbuck (Winter Form)",
+        "synonyms": [
+          "Sawsbuck Winter Form",
+          "Winter Sawsbuck",
+          "Sawsbuck Winter",
+          "Winter Form Sawsbuck"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "emolga": {
+    "number": 587,
+    "display": "Emolga",
+    "subs": null,
+    "synonyms": []
+  },
+  "karrablast": {
+    "number": 588,
+    "display": "Karrablast",
+    "subs": null,
+    "synonyms": []
+  },
+  "escavalier": {
+    "number": 589,
+    "display": "Escavalier",
+    "subs": null,
+    "synonyms": []
+  },
+  "foongus": {
+    "number": 590,
+    "display": "Foongus",
+    "subs": null,
+    "synonyms": []
+  },
+  "amoonguss": {
+    "number": 591,
+    "display": "Amoonguss",
+    "subs": null,
+    "synonyms": []
+  },
+  "frillish": {
+    "number": 592,
+    "display": "Frillish",
+    "subs": null,
+    "synonyms": []
+  },
+  "jellicent": {
+    "number": 593,
+    "display": "Jellicent",
+    "subs": null,
+    "synonyms": []
+  },
+  "alomomola": {
+    "number": 594,
+    "display": "Alomomola",
+    "subs": null,
+    "synonyms": []
+  },
+  "joltik": {
+    "number": 595,
+    "display": "Joltik",
+    "subs": null,
+    "synonyms": []
+  },
+  "galvantula": {
+    "number": 596,
+    "display": "Galvantula",
+    "subs": null,
+    "synonyms": []
+  },
+  "ferroseed": {
+    "number": 597,
+    "display": "Ferroseed",
+    "subs": null,
+    "synonyms": []
+  },
+  "ferrothorn": {
+    "number": 598,
+    "display": "Ferrothorn",
+    "subs": null,
+    "synonyms": []
+  },
+  "klink": {
+    "number": 599,
+    "display": "Klink",
+    "subs": null,
+    "synonyms": []
+  },
+  "klang": {
+    "number": 600,
+    "display": "Klang",
+    "subs": null,
+    "synonyms": []
+  },
+  "klinklang": {
+    "number": 601,
+    "display": "Klinklang",
+    "subs": null,
+    "synonyms": []
+  },
+  "tynamo": {
+    "number": 602,
+    "display": "Tynamo",
+    "subs": null,
+    "synonyms": []
+  },
+  "eelektrik": {
+    "number": 603,
+    "display": "Eelektrik",
+    "subs": null,
+    "synonyms": []
+  },
+  "eelektross": {
+    "number": 604,
+    "display": "Eelektross",
+    "subs": [
+      {
+        "name": "Mega Eelektross",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "elgyem": {
+    "number": 605,
+    "display": "Elgyem",
+    "subs": null,
+    "synonyms": []
+  },
+  "beheeyem": {
+    "number": 606,
+    "display": "Beheeyem",
+    "subs": null,
+    "synonyms": []
+  },
+  "litwick": {
+    "number": 607,
+    "display": "Litwick",
+    "subs": null,
+    "synonyms": []
+  },
+  "lampent": {
+    "number": 608,
+    "display": "Lampent",
+    "subs": null,
+    "synonyms": []
+  },
+  "chandelure": {
+    "number": 609,
+    "display": "Chandelure",
+    "subs": [
+      {
+        "name": "Mega Chandelure",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "axew": {
+    "number": 610,
+    "display": "Axew",
+    "subs": null,
+    "synonyms": []
+  },
+  "fraxure": {
+    "number": 611,
+    "display": "Fraxure",
+    "subs": null,
+    "synonyms": []
+  },
+  "haxorus": {
+    "number": 612,
+    "display": "Haxorus",
+    "subs": null,
+    "synonyms": []
+  },
+  "cubchoo": {
+    "number": 613,
+    "display": "Cubchoo",
+    "subs": null,
+    "synonyms": []
+  },
+  "beartic": {
+    "number": 614,
+    "display": "Beartic",
+    "subs": null,
+    "synonyms": []
+  },
+  "cryogonal": {
+    "number": 615,
+    "display": "Cryogonal",
+    "subs": null,
+    "synonyms": []
+  },
+  "shelmet": {
+    "number": 616,
+    "display": "Shelmet",
+    "subs": null,
+    "synonyms": []
+  },
+  "accelgor": {
+    "number": 617,
+    "display": "Accelgor",
+    "subs": null,
+    "synonyms": []
+  },
+  "stunfisk": {
+    "number": 618,
+    "display": "Stunfisk",
+    "subs": [
+      {
+        "name": "Galarian Stunfisk",
+        "synonyms": [
+          "Galarian Stunfisk",
+          "Stunfisk Galarian",
+          "Stunfisk Galar",
+          "Galar Stunfisk"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "mienfoo": {
+    "number": 619,
+    "display": "Mienfoo",
+    "subs": null,
+    "synonyms": []
+  },
+  "mienshao": {
+    "number": 620,
+    "display": "Mienshao",
+    "subs": null,
+    "synonyms": []
+  },
+  "druddigon": {
+    "number": 621,
+    "display": "Druddigon",
+    "subs": null,
+    "synonyms": []
+  },
+  "golett": {
+    "number": 622,
+    "display": "Golett",
+    "subs": null,
+    "synonyms": []
+  },
+  "golurk": {
+    "number": 623,
+    "display": "Golurk",
+    "subs": [
+      {
+        "name": "Mega Golurk",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "pawniard": {
+    "number": 624,
+    "display": "Pawniard",
+    "subs": null,
+    "synonyms": []
+  },
+  "bisharp": {
+    "number": 625,
+    "display": "Bisharp",
+    "subs": null,
+    "synonyms": []
+  },
+  "bouffalant": {
+    "number": 626,
+    "display": "Bouffalant",
+    "subs": null,
+    "synonyms": []
+  },
+  "rufflet": {
+    "number": 627,
+    "display": "Rufflet",
+    "subs": null,
+    "synonyms": []
+  },
+  "braviary": {
+    "number": 628,
+    "display": "Braviary",
+    "subs": [
+      {
+        "name": "Hisuian Braviary",
+        "synonyms": [
+          "Hisuian Braviary",
+          "Braviary Hisuian",
+          "Braviary Hisui",
+          "Hisui Braviary"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "vullaby": {
+    "number": 629,
+    "display": "Vullaby",
+    "subs": null,
+    "synonyms": []
+  },
+  "mandibuzz": {
+    "number": 630,
+    "display": "Mandibuzz",
+    "subs": null,
+    "synonyms": []
+  },
+  "heatmor": {
+    "number": 631,
+    "display": "Heatmor",
+    "subs": null,
+    "synonyms": []
+  },
+  "durant": {
+    "number": 632,
+    "display": "Durant",
+    "subs": null,
+    "synonyms": []
+  },
+  "deino": {
+    "number": 633,
+    "display": "Deino",
+    "subs": null,
+    "synonyms": []
+  },
+  "zweilous": {
+    "number": 634,
+    "display": "Zweilous",
+    "subs": null,
+    "synonyms": []
+  },
+  "hydreigon": {
+    "number": 635,
+    "display": "Hydreigon",
+    "subs": null,
+    "synonyms": []
+  },
+  "larvesta": {
+    "number": 636,
+    "display": "Larvesta",
+    "subs": null,
+    "synonyms": []
+  },
+  "volcarona": {
+    "number": 637,
+    "display": "Volcarona",
+    "subs": null,
+    "synonyms": []
+  },
+  "cobalion": {
+    "number": 638,
+    "display": "Cobalion",
+    "subs": null,
+    "synonyms": []
+  },
+  "terrakion": {
+    "number": 639,
+    "display": "Terrakion",
+    "subs": null,
+    "synonyms": []
+  },
+  "virizion": {
+    "number": 640,
+    "display": "Virizion",
+    "subs": null,
+    "synonyms": []
+  },
+  "tornadus": {
+    "number": 641,
+    "display": "Tornadus",
+    "subs": [
+      {
+        "name": "Tornadus (Incarnate Forme)",
+        "synonyms": [
+          "Incarnate Forme Tornadus",
+          "Incarnate Tornadus",
+          "Tornadus Incarnate"
+        ]
+      },
+      {
+        "name": "Tornadus (Therian Forme)",
+        "synonyms": [
+          "Therian Forme Tornadus",
+          "Therian Tornadus",
+          "Tornadus Therian"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "thundurus": {
+    "number": 642,
+    "display": "Thundurus",
+    "subs": [
+      {
+        "name": "Thundurus (Incarnate Forme)",
+        "synonyms": [
+          "Incarnate Forme Thundurus",
+          "Incarnate Thundurus",
+          "Thundurus Incarnate"
+        ]
+      },
+      {
+        "name": "Thundurus (Therian Forme)",
+        "synonyms": [
+          "Therian Forme Thundurus",
+          "Therian Thundurus",
+          "Thundurus Therian"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "reshiram": {
+    "number": 643,
+    "display": "Reshiram",
+    "subs": null,
+    "synonyms": []
+  },
+  "zekrom": {
+    "number": 644,
+    "display": "Zekrom",
+    "subs": null,
+    "synonyms": []
+  },
+  "landorus": {
+    "number": 645,
+    "display": "Landorus",
+    "subs": [
+      {
+        "name": "Landorus (Incarnate Forme)",
+        "synonyms": [
+          "Incarnate Forme Landorus",
+          "Incarnate Landorus",
+          "Landorus Incarnate"
+        ]
+      },
+      {
+        "name": "Landorus (Therian Forme)",
+        "synonyms": [
+          "Therian Forme Landorus",
+          "Therian Landorus",
+          "Landorus Therian"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "kyurem": {
+    "number": 646,
+    "display": "Kyurem",
+    "subs": [
+      {
+        "name": "White Kyurem",
+        "synonyms": []
+      },
+      {
+        "name": "Black Kyurem",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "keldeo": {
+    "number": 647,
+    "display": "Keldeo",
+    "subs": [
+      {
+        "name": "Keldeo (Ordinary Form)",
+        "synonyms": [
+          "Ordinary Form Keldeo",
+          "Ordinary Keldeo",
+          "Keldeo Ordinary"
+        ]
+      },
+      {
+        "name": "Keldeo (Resolute Form)",
+        "synonyms": [
+          "Resolute Form Keldeo",
+          "Keldeo Resolute",
+          "Resolute Keldeo"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "meloetta": {
+    "number": 648,
+    "display": "Meloetta",
+    "subs": [
+      {
+        "name": "Meloetta (Aria Forme)",
+        "synonyms": [
+          "Aria Forme Meloetta",
+          "Aria Meloetta",
+          "Meloetta Aria"
+        ]
+      },
+      {
+        "name": "Meloetta (Pirouette Forme)",
+        "synonyms": [
+          "Pirouette Forme Meloetta",
+          "Pirouette Meloetta",
+          "Meloetta Pirouette"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "genesect": {
+    "number": 649,
+    "display": "Genesect",
+    "subs": [
+      {
+        "name": "Genesect (Douse Drive)",
+        "synonyms": [
+          "Genesect Douse Drive",
+          "Douse Drive Genesect",
+          "Genesect Douse",
+          "Douse Genesect"
+        ]
+      },
+      {
+        "name": "Genesect (Shock Drive)",
+        "synonyms": [
+          "Genesect Shock Drive",
+          "Shock Drive Genesect",
+          "Genesect Shock",
+          "Shock Genesect"
+        ]
+      },
+      {
+        "name": "Genesect (Burn Drive)",
+        "synonyms": [
+          "Genesect Burn Drive",
+          "Burn Drive Genesect",
+          "Genesect Burn",
+          "Burn Genesect"
+        ]
+      },
+      {
+        "name": "Genesect (Chill Drive)",
+        "synonyms": [
+          "Genesect Chill Drive",
+          "Chill Drive Genesect",
+          "Genesect Chill",
+          "Chill Genesect"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "chespin": {
+    "number": 650,
+    "display": "Chespin",
+    "subs": null,
+    "synonyms": []
+  },
+  "quilladin": {
+    "number": 651,
+    "display": "Quilladin",
+    "subs": null,
+    "synonyms": []
+  },
+  "chesnaught": {
+    "number": 652,
+    "display": "Chesnaught",
+    "subs": [
+      {
+        "name": "Mega Chesnaught",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "fennekin": {
+    "number": 653,
+    "display": "Fennekin",
+    "subs": null,
+    "synonyms": []
+  },
+  "braixen": {
+    "number": 654,
+    "display": "Braixen",
+    "subs": null,
+    "synonyms": []
+  },
+  "delphox": {
+    "number": 655,
+    "display": "Delphox",
+    "subs": [
+      {
+        "name": "Mega Delphox",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "froakie": {
+    "number": 656,
+    "display": "Froakie",
+    "subs": null,
+    "synonyms": []
+  },
+  "frogadier": {
+    "number": 657,
+    "display": "Frogadier",
+    "subs": null,
+    "synonyms": []
+  },
+  "greninja": {
+    "number": 658,
+    "display": "Greninja",
+    "subs": [
+      {
+        "name": "Ash-Greninja",
+        "synonyms": [
+          "Greninja Ash-Greninja",
+          "Ash Greninja",
+          "Battle Bond Greninja",
+          "Greninja Battle Bond"
+        ]
+      },
+      {
+        "name": "Mega Greninja",
+        "synonyms": [
+          "Greninja Mega"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "bunnelby": {
+    "number": 659,
+    "display": "Bunnelby",
+    "subs": null,
+    "synonyms": []
+  },
+  "diggersby": {
+    "number": 660,
+    "display": "Diggersby",
+    "subs": null,
+    "synonyms": []
+  },
+  "fletchling": {
+    "number": 661,
+    "display": "Fletchling",
+    "subs": null,
+    "synonyms": []
+  },
+  "fletchinder": {
+    "number": 662,
+    "display": "Fletchinder",
+    "subs": null,
+    "synonyms": []
+  },
+  "talonflame": {
+    "number": 663,
+    "display": "Talonflame",
+    "subs": null,
+    "synonyms": []
+  },
+  "scatterbug": {
+    "number": 664,
+    "display": "Scatterbug",
+    "subs": null,
+    "synonyms": []
+  },
+  "spewpa": {
+    "number": 665,
+    "display": "Spewpa",
+    "subs": null,
+    "synonyms": []
+  },
+  "vivillon": {
+    "number": 666,
+    "display": "Vivillon",
+    "subs": [
+      {
+        "name": "Vivillon (Icy Snow Pattern)",
+        "synonyms": [
+          "Vivillon Icy Snow Pattern",
+          "Icy Snow Pattern Vivillon",
+          "Icy Snow Vivillon",
+          "Vivillon Icy Snow"
+        ]
+      },
+      {
+        "name": "Vivillon (Polar Pattern)",
+        "synonyms": [
+          "Vivillon Polar Pattern",
+          "Polar Pattern Vivillon",
+          "Polar Vivillon",
+          "Vivillon Polar"
+        ]
+      },
+      {
+        "name": "Vivillon (Tundra Pattern)",
+        "synonyms": [
+          "Vivillon Tundra Pattern",
+          "Tundra Pattern Vivillon",
+          "Tundra Vivillon",
+          "Vivillon Tundra"
+        ]
+      },
+      {
+        "name": "Vivillon (Continental Pattern)",
+        "synonyms": [
+          "Vivillon Continental Pattern",
+          "Continental Pattern Vivillon",
+          "Continental Vivillon",
+          "Vivillon Continental"
+        ]
+      },
+      {
+        "name": "Vivillon (Garden Pattern)",
+        "synonyms": [
+          "Vivillon Garden Pattern",
+          "Garden Pattern Vivillon",
+          "Garden Vivillon",
+          "Vivillon Garden"
+        ]
+      },
+      {
+        "name": "Vivillon (Elegant Pattern)",
+        "synonyms": [
+          "Vivillon Elegant Pattern",
+          "Elegant Pattern Vivillon",
+          "Elegant Vivillon",
+          "Vivillon Elegant"
+        ]
+      },
+      {
+        "name": "Vivillon (Meadow Pattern)",
+        "synonyms": [
+          "Vivillon Meadow Pattern",
+          "Meadow Pattern Vivillon",
+          "Meadow Vivillon",
+          "Vivillon Meadow"
+        ]
+      },
+      {
+        "name": "Vivillon (Modern Pattern)",
+        "synonyms": [
+          "Vivillon Modern Pattern",
+          "Modern Pattern Vivillon",
+          "Modern Vivillon",
+          "Vivillon Modern"
+        ]
+      },
+      {
+        "name": "Vivillon (Marine Pattern)",
+        "synonyms": [
+          "Vivillon Marine Pattern",
+          "Marine Pattern Vivillon",
+          "Marine Vivillon",
+          "Vivillon Marine"
+        ]
+      },
+      {
+        "name": "Vivillon (Archipelago Pattern)",
+        "synonyms": [
+          "Vivillon Archipelago Pattern",
+          "Archipelago Pattern Vivillon",
+          "Archipelago Vivillon",
+          "Vivillon Archipelago"
+        ]
+      },
+      {
+        "name": "Vivillon (High Plains Pattern)",
+        "synonyms": [
+          "Vivillon High Plains Pattern",
+          "High Plains Pattern Vivillon",
+          "High Plains Vivillon",
+          "Vivillon High Plains"
+        ]
+      },
+      {
+        "name": "Vivillon (Sandstorm Pattern)",
+        "synonyms": [
+          "Vivillon Sandstorm Pattern",
+          "Sandstorm Pattern Vivillon",
+          "Sandstorm Vivillon",
+          "Vivillon Sandstorm"
+        ]
+      },
+      {
+        "name": "Vivillon (River Pattern)",
+        "synonyms": [
+          "Vivillon River Pattern",
+          "River Pattern Vivillon",
+          "River Vivillon",
+          "Vivillon River"
+        ]
+      },
+      {
+        "name": "Vivillon (Monsoon Pattern)",
+        "synonyms": [
+          "Vivillon Monsoon Pattern",
+          "Monsoon Pattern Vivillon",
+          "Monsoon Vivillon",
+          "Vivillon Monsoon"
+        ]
+      },
+      {
+        "name": "Vivillon (Savanna Pattern)",
+        "synonyms": [
+          "Vivillon Savanna Pattern",
+          "Savanna Pattern Vivillon",
+          "Savanna Vivillon",
+          "Vivillon Savanna"
+        ]
+      },
+      {
+        "name": "Vivillon (Sun Pattern)",
+        "synonyms": [
+          "Vivillon Sun Pattern",
+          "Sun Pattern Vivillon",
+          "Sun Vivillon",
+          "Vivillon Sun"
+        ]
+      },
+      {
+        "name": "Vivillon (Ocean Pattern)",
+        "synonyms": [
+          "Vivillon Ocean Pattern",
+          "Ocean Pattern Vivillon",
+          "Ocean Vivillon",
+          "Vivillon Ocean"
+        ]
+      },
+      {
+        "name": "Vivillon (Jungle Pattern)",
+        "synonyms": [
+          "Vivillon Jungle Pattern",
+          "Jungle Pattern Vivillon",
+          "Jungle Vivillon",
+          "Vivillon Jungle"
+        ]
+      },
+      {
+        "name": "Vivillon (Fancy Pattern)",
+        "synonyms": [
+          "Vivillon Fancy Pattern",
+          "Fancy Pattern Vivillon",
+          "Fancy Vivillon",
+          "Vivillon Fancy"
+        ]
+      },
+      {
+        "name": "Vivillon (Poké Ball Pattern)",
+        "synonyms": [
+          "Vivillon Poké Ball Pattern",
+          "Poké Ball Pattern Vivillon",
+          "Poké Ball Vivillon",
+          "Vivillon Poké Ball",
+          "Vivillon Pokeball Pattern",
+          "Pokeball Pattern Vivillon",
+          "Pokeball Vivillon",
+          "Vivillon Pokeball"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "litleo": {
+    "number": 667,
+    "display": "Litleo",
+    "subs": null,
+    "synonyms": []
+  },
+  "pyroar": {
+    "number": 668,
+    "display": "Pyroar",
+    "subs": [
+      {
+        "name": "Mega Pyroar",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "flabebe": {
+    "number": 669,
+    "display": "Flabébé",
+    "subs": [
+      {
+        "name": "Flabébé (Red Flower)",
+        "synonyms": [
+          "Flabébé Red Flower",
+          "Red Flower Flabébé",
+          "Red Flabébé",
+          "Flabébé Red",
+          "Flabebe (Red Flower)",
+          "Flabebe Red Flower",
+          "Red Flower Flabebe",
+          "Red Flabebe",
+          "Flabebe Red"
+        ]
+      },
+      {
+        "name": "Flabébé (Yellow Flower)",
+        "synonyms": [
+          "Flabébé Yellow Flower",
+          "Yellow Flower Flabébé",
+          "Yellow Flabébé",
+          "Flabébé Yellow",
+          "Flabebe (Yellow Flower)",
+          "Flabebe Yellow Flower",
+          "Yellow Flower Flabebe",
+          "Yellow Flabebe",
+          "Flabebe Yellow"
+        ]
+      },
+      {
+        "name": "Flabébé (Orange Flower)",
+        "synonyms": [
+          "Flabébé Orange Flower",
+          "Orange Flower Flabébé",
+          "Orange Flabébé",
+          "Flabébé Orange",
+          "Flabebe (Orange Flower)",
+          "Flabebe Orange Flower",
+          "Orange Flower Flabebe",
+          "Orange Flabebe",
+          "Flabebe Orange"
+        ]
+      },
+      {
+        "name": "Flabébé (Blue Flower)",
+        "synonyms": [
+          "Flabébé Blue Flower",
+          "Blue Flower Flabébé",
+          "Blue Flabébé",
+          "Flabébé Blue",
+          "Flabebe (Blue Flower)",
+          "Flabebe Blue Flower",
+          "Blue Flower Flabebe",
+          "Blue Flabebe",
+          "Flabebe Blue"
+        ]
+      },
+      {
+        "name": "Flabébé (White Flower)",
+        "synonyms": [
+          "Flabébé White Flower",
+          "White Flower Flabébé",
+          "White Flabébé",
+          "Flabébé White",
+          "Flabebe (White Flower)",
+          "Flabebe White Flower",
+          "White Flower Flabebe",
+          "White Flabebe",
+          "Flabebe White"
+        ]
+      }
+    ],
+    "synonyms": [
+      "Flabebe",
+      "Flabébé"
+    ],
+    "core": false
+  },
+  "floette": {
+    "number": 670,
+    "display": "Floette",
+    "subs": [
+      {
+        "name": "Floette (Red Flower)",
+        "synonyms": [
+          "Floette Red Flower",
+          "Red Flower Floette",
+          "Red Floette",
+          "Floette Red"
+        ]
+      },
+      {
+        "name": "Floette (Yellow Flower)",
+        "synonyms": [
+          "Floette Yellow Flower",
+          "Yellow Flower Floette",
+          "Yellow Floette",
+          "Floette Yellow"
+        ]
+      },
+      {
+        "name": "Floette (Orange Flower)",
+        "synonyms": [
+          "Floette Orange Flower",
+          "Orange Flower Floette",
+          "Orange Floette",
+          "Floette Orange"
+        ]
+      },
+      {
+        "name": "Floette (Blue Flower)",
+        "synonyms": [
+          "Floette Blue Flower",
+          "Blue Flower Floette",
+          "Blue Floette",
+          "Floette Blue"
+        ]
+      },
+      {
+        "name": "Floette (White Flower)",
+        "synonyms": [
+          "Floette White Flower",
+          "White Flower Floette",
+          "White Floette",
+          "Floette White"
+        ]
+      },
+      {
+        "name": "Floette (Eternal Flower)",
+        "synonyms": [
+          "Floette Eternal Flower",
+          "Eternal Flower Floette",
+          "Eternal Floette",
+          "Floette Eternal"
+        ],
+        "subs": [
+          {
+            "name": "Mega Floette (Eternal Flower)",
+            "synonyms": [
+              "Mega Eternal Flower Floette",
+              "Mega Floette Eternal Flower"
+            ]
+          }
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "florges": {
+    "number": 671,
+    "display": "Florges",
+    "subs": [
+      {
+        "name": "Florges (Red Flower)",
+        "synonyms": [
+          "Florges Red Flower",
+          "Red Flower Florges",
+          "Red Florges",
+          "Florges Red"
+        ]
+      },
+      {
+        "name": "Florges (Yellow Flower)",
+        "synonyms": [
+          "Florges Yellow Flower",
+          "Yellow Flower Florges",
+          "Yellow Florges",
+          "Florges Yellow"
+        ]
+      },
+      {
+        "name": "Florges (Orange Flower)",
+        "synonyms": [
+          "Florges Orange Flower",
+          "Orange Flower Florges",
+          "Orange Florges",
+          "Florges Orange"
+        ]
+      },
+      {
+        "name": "Florges (Blue Flower)",
+        "synonyms": [
+          "Florges Blue Flower",
+          "Blue Flower Florges",
+          "Blue Florges",
+          "Florges Blue"
+        ]
+      },
+      {
+        "name": "Florges (White Flower)",
+        "synonyms": [
+          "Florges White Flower",
+          "White Flower Florges",
+          "White Florges",
+          "Florges White"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "skiddo": {
+    "number": 672,
+    "display": "Skiddo",
+    "subs": null,
+    "synonyms": []
+  },
+  "gogoat": {
+    "number": 673,
+    "display": "Gogoat",
+    "subs": null,
+    "synonyms": []
+  },
+  "pancham": {
+    "number": 674,
+    "display": "Pancham",
+    "subs": null,
+    "synonyms": []
+  },
+  "pangoro": {
+    "number": 675,
+    "display": "Pangoro",
+    "subs": null,
+    "synonyms": []
+  },
+  "furfrou": {
+    "number": 676,
+    "display": "Furfrou",
+    "subs": [
+      {
+        "name": "Furfrou (Heart Trim)",
+        "synonyms": [
+          "Furfrou Heart Trim",
+          "Heart Trim Furfrou",
+          "Heart Furfrou",
+          "Furfrou Heart"
+        ]
+      },
+      {
+        "name": "Furfrou (Star Trim)",
+        "synonyms": [
+          "Furfrou Star Trim",
+          "Star Trim Furfrou",
+          "Star Furfrou",
+          "Furfrou Star"
+        ]
+      },
+      {
+        "name": "Furfrou (Diamond Trim)",
+        "synonyms": [
+          "Furfrou Diamond Trim",
+          "Diamond Trim Furfrou",
+          "Diamond Furfrou",
+          "Furfrou Diamond"
+        ]
+      },
+      {
+        "name": "Furfrou (Debutante Trim)",
+        "synonyms": [
+          "Furfrou Debutante Trim",
+          "Debutante Trim Furfrou",
+          "Debutante Furfrou",
+          "Furfrou Debutante"
+        ]
+      },
+      {
+        "name": "Furfrou (Matron Trim)",
+        "synonyms": [
+          "Furfrou Matron Trim",
+          "Matron Trim Furfrou",
+          "Matron Furfrou",
+          "Furfrou Matron"
+        ]
+      },
+      {
+        "name": "Furfrou (Dandy Trim)",
+        "synonyms": [
+          "Furfrou Dandy Trim",
+          "Dandy Trim Furfrou",
+          "Dandy Furfrou",
+          "Furfrou Dandy"
+        ]
+      },
+      {
+        "name": "Furfrou (La Reine Trim)",
+        "synonyms": [
+          "Furfrou La Reine Trim",
+          "La Reine Trim Furfrou",
+          "La Reine Furfrou",
+          "Furfrou La Reine"
+        ]
+      },
+      {
+        "name": "Furfrou (Kabuki Trim)",
+        "synonyms": [
+          "Furfrou Kabuki Trim",
+          "Kabuki Trim Furfrou",
+          "Kabuki Furfrou",
+          "Furfrou Kabuki"
+        ]
+      },
+      {
+        "name": "Furfrou (Pharaoh Trim)",
+        "synonyms": [
+          "Furfrou Pharaoh Trim",
+          "Pharaoh Trim Furfrou",
+          "Pharaoh Furfrou",
+          "Furfrou Pharaoh"
+        ]
+      }
+    ],
+    "synonyms": [
+      "Natural Form Furfrou",
+      "Furfrou Natural Form"
+    ],
+    "core": true
+  },
+  "espurr": {
+    "number": 677,
+    "display": "Espurr",
+    "subs": null,
+    "synonyms": []
+  },
+  "meowstic": {
+    "number": 678,
+    "display": "Meowstic",
+    "subs": [
+      {
+        "name": "Meowstic (Male)",
+        "synonyms": [
+          "Male Meowstic",
+          "M Meowstic",
+          "Meowstic M",
+          "Meowstic ♂",
+          "♂ Meowstic"
+        ]
+      },
+      {
+        "name": "Meowstic (Female)",
+        "synonyms": [
+          "Female Meowstic",
+          "F Meowstic",
+          "Meowstic F",
+          "Meowstic ♀",
+          "♀ Meowstic"
+        ]
+      },
+      {
+        "name": "Mega Meowstic",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "honedge": {
+    "number": 679,
+    "display": "Honedge",
+    "subs": null,
+    "synonyms": []
+  },
+  "doublade": {
+    "number": 680,
+    "display": "Doublade",
+    "subs": null,
+    "synonyms": []
+  },
+  "aegislash": {
+    "number": 681,
+    "display": "Aegislash",
+    "subs": [
+      {
+        "name": "Aegislash (Shield Forme)",
+        "synonyms": [
+          "Shield Forme Aegislash",
+          "Shield Aegislash",
+          "Aegislash Shield"
+        ]
+      },
+      {
+        "name": "Aegislash (Blade Forme)",
+        "synonyms": [
+          "Blade Forme Aegislash",
+          "Blade Aegislash",
+          "Aegislash Blade"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "spritzee": {
+    "number": 682,
+    "display": "Spritzee",
+    "subs": null,
+    "synonyms": []
+  },
+  "aromatisse": {
+    "number": 683,
+    "display": "Aromatisse",
+    "subs": null,
+    "synonyms": []
+  },
+  "swirlix": {
+    "number": 684,
+    "display": "Swirlix",
+    "subs": null,
+    "synonyms": []
+  },
+  "slurpuff": {
+    "number": 685,
+    "display": "Slurpuff",
+    "subs": null,
+    "synonyms": []
+  },
+  "inkay": {
+    "number": 686,
+    "display": "Inkay",
+    "subs": null,
+    "synonyms": []
+  },
+  "malamar": {
+    "number": 687,
+    "display": "Malamar",
+    "subs": [
+      {
+        "name": "Mega Malamar",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "binacle": {
+    "number": 688,
+    "display": "Binacle",
+    "subs": null,
+    "synonyms": []
+  },
+  "barbaracle": {
+    "number": 689,
+    "display": "Barbaracle",
+    "subs": [
+      {
+        "name": "Mega Barbaracle",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "skrelp": {
+    "number": 690,
+    "display": "Skrelp",
+    "subs": null,
+    "synonyms": []
+  },
+  "dragalge": {
+    "number": 691,
+    "display": "Dragalge",
+    "subs": [
+      {
+        "name": "Mega Dragalge",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "clauncher": {
+    "number": 692,
+    "display": "Clauncher",
+    "subs": null,
+    "synonyms": []
+  },
+  "clawitzer": {
+    "number": 693,
+    "display": "Clawitzer",
+    "subs": null,
+    "synonyms": []
+  },
+  "helioptile": {
+    "number": 694,
+    "display": "Helioptile",
+    "subs": null,
+    "synonyms": []
+  },
+  "heliolisk": {
+    "number": 695,
+    "display": "Heliolisk",
+    "subs": null,
+    "synonyms": []
+  },
+  "tyrunt": {
+    "number": 696,
+    "display": "Tyrunt",
+    "subs": null,
+    "synonyms": []
+  },
+  "tyrantrum": {
+    "number": 697,
+    "display": "Tyrantrum",
+    "subs": null,
+    "synonyms": []
+  },
+  "amaura": {
+    "number": 698,
+    "display": "Amaura",
+    "subs": null,
+    "synonyms": []
+  },
+  "aurorus": {
+    "number": 699,
+    "display": "Aurorus",
+    "subs": null,
+    "synonyms": []
+  },
+  "sylveon": {
+    "number": 700,
+    "display": "Sylveon",
+    "subs": null,
+    "synonyms": []
+  },
+  "hawlucha": {
+    "number": 701,
+    "display": "Hawlucha",
+    "subs": [
+      {
+        "name": "Mega Hawlucha",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "dedenne": {
+    "number": 702,
+    "display": "Dedenne",
+    "subs": null,
+    "synonyms": []
+  },
+  "carbink": {
+    "number": 703,
+    "display": "Carbink",
+    "subs": null,
+    "synonyms": []
+  },
+  "goomy": {
+    "number": 704,
+    "display": "Goomy",
+    "subs": null,
+    "synonyms": []
+  },
+  "sliggoo": {
+    "number": 705,
+    "display": "Sliggoo",
+    "subs": [
+      {
+        "name": "Hisuian Sliggoo",
+        "synonyms": [
+          "Hisuian Sliggoo",
+          "Sliggoo Hisuian",
+          "Sliggoo Hisui",
+          "Hisui Sliggoo"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "goodra": {
+    "number": 706,
+    "display": "Goodra",
+    "subs": [
+      {
+        "name": "Hisuian Goodra",
+        "synonyms": [
+          "Hisuian Goodra",
+          "Goodra Hisuian",
+          "Goodra Hisui",
+          "Hisui Goodra"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "klefki": {
+    "number": 707,
+    "display": "Klefki",
+    "subs": null,
+    "synonyms": []
+  },
+  "phantump": {
+    "number": 708,
+    "display": "Phantump",
+    "subs": null,
+    "synonyms": []
+  },
+  "trevenant": {
+    "number": 709,
+    "display": "Trevenant",
+    "subs": null,
+    "synonyms": []
+  },
+  "pumpkaboo": {
+    "number": 710,
+    "display": "Pumpkaboo",
+    "subs": [
+      {
+        "name": "Pumpkaboo (Average Size)",
+        "synonyms": [
+          "Average Size Pumpkaboo",
+          "Pumpkaboo Average",
+          "Average Pumpkaboo  "
+        ]
+      },
+      {
+        "name": "Pumpkaboo (Small Size)",
+        "synonyms": [
+          "Small Size Pumpkaboo",
+          "Pumpkaboo Small",
+          "Small Pumpkaboo"
+        ]
+      },
+      {
+        "name": "Pumpkaboo (Large Size)",
+        "synonyms": [
+          "Large Size Pumpkaboo",
+          "Pumpkaboo Large",
+          "Large Pumpkaboo"
+        ]
+      },
+      {
+        "name": "Pumpkaboo (Super Size)",
+        "synonyms": [
+          "Super Size Pumpkaboo",
+          "Pumpkaboo Super",
+          "Super Pumpkaboo",
+          "Pumpkaboo Jumbo Size",
+          "Jumbo Size Pumpkaboo",
+          "Pumpkaboo Jumbo",
+          "Jumbo Pumpkaboo"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "gourgeist": {
+    "number": 711,
+    "display": "Gourgeist",
+    "subs": [
+      {
+        "name": "Gourgeist (Average Size)",
+        "synonyms": [
+          "Average Size Gourgeist",
+          "Gourgeist Average",
+          "Average Gourgeist"
+        ]
+      },
+      {
+        "name": "Gourgeist (Small Size)",
+        "synonyms": [
+          "Small Size Gourgeist",
+          "Gourgeist Small",
+          "Small Gourgeist"
+        ]
+      },
+      {
+        "name": "Gourgeist (Large Size)",
+        "synonyms": [
+          "Large Size Gourgeist",
+          "Gourgeist Large",
+          "Large Gourgeist"
+        ]
+      },
+      {
+        "name": "Gourgeist (Super Size)",
+        "synonyms": [
+          "Super Size Gourgeist",
+          "Gourgeist Super",
+          "Super Gourgeist",
+          "Gourgeist Jumbo Size",
+          "Jumbo Size Gourgeist",
+          "Gourgeist Jumbo",
+          "Jumbo Gourgeist"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "bergmite": {
+    "number": 712,
+    "display": "Bergmite",
+    "subs": null,
+    "synonyms": []
+  },
+  "avalugg": {
+    "number": 713,
+    "display": "Avalugg",
+    "subs": [
+      {
+        "name": "Hisuian Avalugg",
+        "synonyms": [
+          "Hisuian Avalugg",
+          "Avalugg Hisuian",
+          "Avalugg Hisui",
+          "Hisui Avalugg"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "noibat": {
+    "number": 714,
+    "display": "Noibat",
+    "subs": null,
+    "synonyms": []
+  },
+  "noivern": {
+    "number": 715,
+    "display": "Noivern",
+    "subs": null,
+    "synonyms": []
+  },
+  "xerneas": {
+    "number": 716,
+    "display": "Xerneas",
+    "subs": [
+      {
+        "name": "Xerneas (Neutral Mode)",
+        "synonyms": [
+          "Xerneas Neutral Mode",
+          "Neutral Mode Xerneas",
+          "Neutral Xerneas",
+          "Xerneas Neutral"
+        ]
+      },
+      {
+        "name": "Xerneas (Active Mode)",
+        "synonyms": [
+          "Xerneas Active Mode",
+          "Active Mode Xerneas",
+          "Active Xerneas",
+          "Xerneas Active"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "yveltal": {
+    "number": 717,
+    "display": "Yveltal",
+    "subs": null,
+    "synonyms": []
+  },
+  "zygarde": {
+    "number": 718,
+    "display": "Zygarde",
+    "subs": [
+      {
+        "name": "Zygarde (50% Forme)",
+        "synonyms": [
+          "50% Forme Zygarde",
+          "50% Zygarde",
+          "Zygarde 50%"
+        ]
+      },
+      {
+        "name": "Zygarde (10% Forme)",
+        "synonyms": [
+          "10% Forme Zygarde",
+          "10% Zygarde",
+          "Zygarde 10%"
+        ]
+      },
+      {
+        "name": "Zygarde (Complete Forme)",
+        "synonyms": [
+          "Complete Forme Zygarde",
+          "Complete Zygarde",
+          "Zygarde Complete",
+          "Zygarde 100%",
+          "100% Forme Zygarde",
+          "100% Zygarde",
+          "Zygard 100% Forme"
+        ]
+      },
+      {
+        "name": "Mega Zygarde",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "diancie": {
+    "number": 719,
+    "display": "Diancie",
+    "subs": [
+      {
+        "name": "Mega Diancie",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "hoopa": {
+    "number": 720,
+    "display": "Hoopa",
+    "subs": [
+      {
+        "name": "Hoopa Confined",
+        "synonyms": [
+          "Confined Hoopa"
+        ]
+      },
+      {
+        "name": "Hoopa Unbound",
+        "synonyms": [
+          "Unbound Hoopa"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "volcanion": {
+    "number": 721,
+    "display": "Volcanion",
+    "subs": null,
+    "synonyms": []
+  },
+  "rowlet": {
+    "number": 722,
+    "display": "Rowlet",
+    "subs": null,
+    "synonyms": []
+  },
+  "dartrix": {
+    "number": 723,
+    "display": "Dartrix",
+    "subs": null,
+    "synonyms": []
+  },
+  "decidueye": {
+    "number": 724,
+    "display": "Decidueye",
+    "subs": [
+      {
+        "name": "Hisuian Decidueye",
+        "synonyms": [
+          "Hisuian Decidueye",
+          "Decidueye Hisuian",
+          "Decidueye Hisui",
+          "Hisui Decidueye"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "litten": {
+    "number": 725,
+    "display": "Litten",
+    "subs": null,
+    "synonyms": []
+  },
+  "torracat": {
+    "number": 726,
+    "display": "Torracat",
+    "subs": null,
+    "synonyms": []
+  },
+  "incineroar": {
+    "number": 727,
+    "display": "Incineroar",
+    "subs": null,
+    "synonyms": []
+  },
+  "popplio": {
+    "number": 728,
+    "display": "Popplio",
+    "subs": null,
+    "synonyms": []
+  },
+  "brionne": {
+    "number": 729,
+    "display": "Brionne",
+    "subs": null,
+    "synonyms": []
+  },
+  "primarina": {
+    "number": 730,
+    "display": "Primarina",
+    "subs": null,
+    "synonyms": []
+  },
+  "pikipek": {
+    "number": 731,
+    "display": "Pikipek",
+    "subs": null,
+    "synonyms": []
+  },
+  "trumbeak": {
+    "number": 732,
+    "display": "Trumbeak",
+    "subs": null,
+    "synonyms": []
+  },
+  "toucannon": {
+    "number": 733,
+    "display": "Toucannon",
+    "subs": null,
+    "synonyms": []
+  },
+  "yungoos": {
+    "number": 734,
+    "display": "Yungoos",
+    "subs": null,
+    "synonyms": []
+  },
+  "gumshoos": {
+    "number": 735,
+    "display": "Gumshoos",
+    "subs": null,
+    "synonyms": []
+  },
+  "grubbin": {
+    "number": 736,
+    "display": "Grubbin",
+    "subs": null,
+    "synonyms": []
+  },
+  "charjabug": {
+    "number": 737,
+    "display": "Charjabug",
+    "subs": null,
+    "synonyms": []
+  },
+  "vikavolt": {
+    "number": 738,
+    "display": "Vikavolt",
+    "subs": null,
+    "synonyms": []
+  },
+  "crabrawler": {
+    "number": 739,
+    "display": "Crabrawler",
+    "subs": null,
+    "synonyms": []
+  },
+  "crabominable": {
+    "number": 740,
+    "display": "Crabominable",
+    "subs": [
+      {
+        "name": "Mega Crabominable",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "oricorio": {
+    "number": 741,
+    "display": "Oricorio",
+    "subs": [
+      {
+        "name": "Oricorio (Baile Style)",
+        "synonyms": [
+          "Baile Style Oricorio",
+          "Baile Oricorio",
+          "Oricorio Baile"
+        ]
+      },
+      {
+        "name": "Oricorio (Pom-Pom Style)",
+        "synonyms": [
+          "Pom-Pom Style Oricorio",
+          "Pom-Pom Oricorio",
+          "Oricorio Pom-Pom"
+        ]
+      },
+      {
+        "name": "Oricorio (Pa'u Style)",
+        "synonyms": [
+          "Pa'u Style Oricorio",
+          "Pa'u Oricorio",
+          "Oricorio Pa'u"
+        ]
+      },
+      {
+        "name": "Oricorio (Sensu Style)",
+        "synonyms": [
+          "Sensu Style Oricorio",
+          "Sensu Oricorio",
+          "Oricorio Sensu"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "cutiefly": {
+    "number": 742,
+    "display": "Cutiefly",
+    "subs": null,
+    "synonyms": []
+  },
+  "ribombee": {
+    "number": 743,
+    "display": "Ribombee",
+    "subs": null,
+    "synonyms": []
+  },
+  "rockruff": {
+    "number": 744,
+    "display": "Rockruff",
+    "subs": [
+      {
+        "name": "Own Tempo Rockruff",
+        "synonyms": [
+          "Rockruff Own Tempo"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "lycanroc": {
+    "number": 745,
+    "display": "Lycanroc",
+    "subs": [
+      {
+        "name": "Lycanroc (Midday Form)",
+        "synonyms": [
+          "Midday Form Lycanroc",
+          "Midday Lycanroc",
+          "Lycanroc Midday"
+        ]
+      },
+      {
+        "name": "Lycanroc (Midnight Form)",
+        "synonyms": [
+          "Midnight Form Lycanroc",
+          "Midnight Lycanroc",
+          "Lycanroc Midnight"
+        ]
+      },
+      {
+        "name": "Lycanroc (Dusk Form)",
+        "synonyms": [
+          "Dusk Form Lycanroc",
+          "Dusk Lycanroc",
+          "Lycanroc Dusk"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "wishiwashi": {
+    "number": 746,
+    "display": "Wishiwashi",
+    "subs": [
+      {
+        "name": "Wishiwashi (Solo Form)",
+        "synonyms": [
+          "Solo Form Wishiwashi"
+        ]
+      },
+      {
+        "name": "Wishiwashi (School Form)",
+        "synonyms": [
+          "School Form Wishiwashi"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "mareanie": {
+    "number": 747,
+    "display": "Mareanie",
+    "subs": null,
+    "synonyms": []
+  },
+  "toxapex": {
+    "number": 748,
+    "display": "Toxapex",
+    "subs": null,
+    "synonyms": []
+  },
+  "mudbray": {
+    "number": 749,
+    "display": "Mudbray",
+    "subs": null,
+    "synonyms": []
+  },
+  "mudsdale": {
+    "number": 750,
+    "display": "Mudsdale",
+    "subs": null,
+    "synonyms": []
+  },
+  "dewpider": {
+    "number": 751,
+    "display": "Dewpider",
+    "subs": null,
+    "synonyms": []
+  },
+  "araquanid": {
+    "number": 752,
+    "display": "Araquanid",
+    "subs": null,
+    "synonyms": []
+  },
+  "fomantis": {
+    "number": 753,
+    "display": "Fomantis",
+    "subs": null,
+    "synonyms": []
+  },
+  "lurantis": {
+    "number": 754,
+    "display": "Lurantis",
+    "subs": null,
+    "synonyms": []
+  },
+  "morelull": {
+    "number": 755,
+    "display": "Morelull",
+    "subs": null,
+    "synonyms": []
+  },
+  "shiinotic": {
+    "number": 756,
+    "display": "Shiinotic",
+    "subs": null,
+    "synonyms": []
+  },
+  "salandit": {
+    "number": 757,
+    "display": "Salandit",
+    "subs": null,
+    "synonyms": []
+  },
+  "salazzle": {
+    "number": 758,
+    "display": "Salazzle",
+    "subs": null,
+    "synonyms": []
+  },
+  "stufful": {
+    "number": 759,
+    "display": "Stufful",
+    "subs": null,
+    "synonyms": []
+  },
+  "bewear": {
+    "number": 760,
+    "display": "Bewear",
+    "subs": null,
+    "synonyms": []
+  },
+  "bounsweet": {
+    "number": 761,
+    "display": "Bounsweet",
+    "subs": null,
+    "synonyms": []
+  },
+  "steenee": {
+    "number": 762,
+    "display": "Steenee",
+    "subs": null,
+    "synonyms": []
+  },
+  "tsareena": {
+    "number": 763,
+    "display": "Tsareena",
+    "subs": null,
+    "synonyms": []
+  },
+  "comfey": {
+    "number": 764,
+    "display": "Comfey",
+    "subs": null,
+    "synonyms": []
+  },
+  "oranguru": {
+    "number": 765,
+    "display": "Oranguru",
+    "subs": null,
+    "synonyms": []
+  },
+  "passimian": {
+    "number": 766,
+    "display": "Passimian",
+    "subs": null,
+    "synonyms": []
+  },
+  "wimpod": {
+    "number": 767,
+    "display": "Wimpod",
+    "subs": null,
+    "synonyms": []
+  },
+  "golisopod": {
+    "number": 768,
+    "display": "Golisopod",
+    "subs": [
+      {
+        "name": "Mega Golisopod",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "sandygast": {
+    "number": 769,
+    "display": "Sandygast",
+    "subs": null,
+    "synonyms": []
+  },
+  "palossand": {
+    "number": 770,
+    "display": "Palossand",
+    "subs": null,
+    "synonyms": []
+  },
+  "pyukumuku": {
+    "number": 771,
+    "display": "Pyukumuku",
+    "subs": null,
+    "synonyms": []
+  },
+  "type-null": {
+    "number": 772,
+    "display": "Type: Null",
+    "subs": null,
+    "synonyms": []
+  },
+  "silvally": {
+    "number": 773,
+    "display": "Silvally",
+    "subs": [
+      {
+        "name": "Type: Normal Silvally",
+        "synonyms": [
+          "Silvally Type: Normal",
+          "Type: Normal",
+          "Normal Silvally",
+          "Silvally Normal"
+        ]
+      },
+      {
+        "name": "Type: Fire Silvally",
+        "synonyms": [
+          "Silvally Type: Fire",
+          "Type: Fire",
+          "Fire Silvally",
+          "Silvally Fire"
+        ]
+      },
+      {
+        "name": "Type: Water Silvally",
+        "synonyms": [
+          "Silvally Type: Water",
+          "Type: Water",
+          "Water Silvally",
+          "Silvally Water"
+        ]
+      },
+      {
+        "name": "Type: Electric Silvally",
+        "synonyms": [
+          "Silvally Type: Electric",
+          "Type: Electric",
+          "Electric Silvally",
+          "Silvally Electric"
+        ]
+      },
+      {
+        "name": "Type: Grass Silvally",
+        "synonyms": [
+          "Silvally Type: Grass",
+          "Type: Grass",
+          "Grass Silvally",
+          "Silvally Grass"
+        ]
+      },
+      {
+        "name": "Type: Ice Silvally",
+        "synonyms": [
+          "Silvally Type: Ice",
+          "Type: Ice",
+          "Ice Silvally",
+          "Silvally Ice"
+        ]
+      },
+      {
+        "name": "Type: Fighting Silvally",
+        "synonyms": [
+          "Silvally Type: Fighting",
+          "Type: Fighting",
+          "Fighting Silvally",
+          "Silvally Fighting"
+        ]
+      },
+      {
+        "name": "Type: Poison Silvally",
+        "synonyms": [
+          "Silvally Type: Poison",
+          "Type: Poison",
+          "Poison Silvally",
+          "Silvally Poison"
+        ]
+      },
+      {
+        "name": "Type: Ground Silvally",
+        "synonyms": [
+          "Silvally Type: Ground",
+          "Type: Ground",
+          "Ground Silvally",
+          "Silvally Ground"
+        ]
+      },
+      {
+        "name": "Type: Flying Silvally",
+        "synonyms": [
+          "Silvally Type: Flying",
+          "Type: Flying",
+          "Flying Silvally",
+          "Silvally Flying"
+        ]
+      },
+      {
+        "name": "Type: Psychic Silvally",
+        "synonyms": [
+          "Silvally Type: Psychic",
+          "Type: Psychic",
+          "Psychic Silvally",
+          "Silvally Psychic"
+        ]
+      },
+      {
+        "name": "Type: Bug Silvally",
+        "synonyms": [
+          "Silvally Type: Bug",
+          "Type: Bug",
+          "Bug Silvally",
+          "Silvally Bug"
+        ]
+      },
+      {
+        "name": "Type: Rock Silvally",
+        "synonyms": [
+          "Silvally Type: Rock",
+          "Type: Rock",
+          "Rock Silvally",
+          "Silvally Rock"
+        ]
+      },
+      {
+        "name": "Type: Ghost Silvally",
+        "synonyms": [
+          "Silvally Type: Ghost",
+          "Type: Ghost",
+          "Ghost Silvally",
+          "Silvally Ghost"
+        ]
+      },
+      {
+        "name": "Type: Dragon Silvally",
+        "synonyms": [
+          "Silvally Type: Dragon",
+          "Type: Dragon",
+          "Dragon Silvally",
+          "Silvally Dragon"
+        ]
+      },
+      {
+        "name": "Type: Dark Silvally",
+        "synonyms": [
+          "Silvally Type: Dark",
+          "Type: Dark",
+          "Dark Silvally",
+          "Silvally Dark"
+        ]
+      },
+      {
+        "name": "Type: Steel Silvally",
+        "synonyms": [
+          "Silvally Type: Steel",
+          "Type: Steel",
+          "Steel Silvally",
+          "Silvally Steel"
+        ]
+      },
+      {
+        "name": "Type: Fairy Silvally",
+        "synonyms": [
+          "Silvally Type: Fairy",
+          "Type: Fairy",
+          "Fairy Silvally",
+          "Silvally Fairy"
+        ]
+      }
+    ],
+    "synonyms": [
+      "Type: Full"
+    ],
+    "core": false,
+    "grantAll": true
+  },
+  "minior": {
+    "number": 774,
+    "display": "Minior",
+    "subs": [
+      {
+        "name": "Minior (Meteor Form)",
+        "synonyms": [
+          "Meteor Form Minior",
+          "Meteor Minior",
+          "Minior Meteor"
+        ]
+      },
+      {
+        "name": "Minior (Core Form)",
+        "synonyms": [
+          "Core Form Minior",
+          "Minior Core",
+          "Core Minior"
+        ],
+        "subs": [
+          {
+            "name": "Red Core Minior",
+            "synonyms": [
+              "Red Core Minior",
+              "Minior Red Core",
+              "Red Minior",
+              "Minior Red"
+            ]
+          },
+          {
+            "name": "Orange Core Minior",
+            "synonyms": [
+              "Orange Core Minior",
+              "Minior Orange Core",
+              "Orange Minior",
+              "Minior Orange"
+            ]
+          },
+          {
+            "name": "Yellow Core Minior",
+            "synonyms": [
+              "Yellow Core Minior",
+              "Minior Yellow Core",
+              "Yellow Minior",
+              "Minior Yellow"
+            ]
+          },
+          {
+            "name": "Green Core Minior",
+            "synonyms": [
+              "Green Core Minior",
+              "Minior Green Core",
+              "Green Minior",
+              "Minior Green"
+            ]
+          },
+          {
+            "name": "Blue Core Minior",
+            "synonyms": [
+              "Blue Core Minior",
+              "Minior Blue Core",
+              "Blue Minior",
+              "Minior Blue"
+            ]
+          },
+          {
+            "name": "Indigo Core Minior",
+            "synonyms": [
+              "Indigo Core Minior",
+              "Minior Indigo Core",
+              "Indigo Minior",
+              "Minior Indigo"
+            ]
+          },
+          {
+            "name": "Violet Core Minior",
+            "synonyms": [
+              "Violet Core Minior",
+              "Minior Violet Core",
+              "Violet Minior",
+              "Minior Violet"
+            ]
+          }
+        ],
+        "core": false
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "komala": {
+    "number": 775,
+    "display": "Komala",
+    "subs": null,
+    "synonyms": []
+  },
+  "turtonator": {
+    "number": 776,
+    "display": "Turtonator",
+    "subs": null,
+    "synonyms": []
+  },
+  "togedemaru": {
+    "number": 777,
+    "display": "Togedemaru",
+    "subs": null,
+    "synonyms": []
+  },
+  "mimikyu": {
+    "number": 778,
+    "display": "Mimikyu",
+    "subs": [
+      {
+        "name": "Mimikyu (Disguised Form)",
+        "synonyms": [
+          "Mimikyu Disguised Form",
+          "Disguised Form Mimikyu",
+          "Disguised Mimikyu",
+          "Mimikyu Disguised"
+        ]
+      },
+      {
+        "name": "Mimikyu (Busted Form)",
+        "synonyms": [
+          "Mimikyu Busted Form",
+          "Busted Form Mimikyu",
+          "Busted Mimikyu",
+          "Mimikyu Busted"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "bruxish": {
+    "number": 779,
+    "display": "Bruxish",
+    "subs": null,
+    "synonyms": []
+  },
+  "drampa": {
+    "number": 780,
+    "display": "Drampa",
+    "subs": [
+      {
+        "name": "Mega Drampa",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "dhelmise": {
+    "number": 781,
+    "display": "Dhelmise",
+    "subs": null,
+    "synonyms": []
+  },
+  "jangmo-o": {
+    "number": 782,
+    "display": "Jangmo-o",
+    "subs": null,
+    "synonyms": []
+  },
+  "hakamo-o": {
+    "number": 783,
+    "display": "Hakamo-o",
+    "subs": null,
+    "synonyms": []
+  },
+  "kommo-o": {
+    "number": 784,
+    "display": "Kommo-o",
+    "subs": null,
+    "synonyms": []
+  },
+  "tapu-koko": {
+    "number": 785,
+    "display": "Tapu Koko",
+    "subs": null,
+    "synonyms": []
+  },
+  "tapu-lele": {
+    "number": 786,
+    "display": "Tapu Lele",
+    "subs": null,
+    "synonyms": []
+  },
+  "tapu-bulu": {
+    "number": 787,
+    "display": "Tapu Bulu",
+    "subs": null,
+    "synonyms": []
+  },
+  "tapu-fini": {
+    "number": 788,
+    "display": "Tapu Fini",
+    "subs": null,
+    "synonyms": []
+  },
+  "cosmog": {
+    "number": 789,
+    "display": "Cosmog",
+    "subs": null,
+    "synonyms": []
+  },
+  "cosmoem": {
+    "number": 790,
+    "display": "Cosmoem",
+    "subs": null,
+    "synonyms": []
+  },
+  "solgaleo": {
+    "number": 791,
+    "display": "Solgaleo",
+    "subs": null,
+    "synonyms": []
+  },
+  "lunala": {
+    "number": 792,
+    "display": "Lunala",
+    "subs": null,
+    "synonyms": []
+  },
+  "nihilego": {
+    "number": 793,
+    "display": "Nihilego",
+    "subs": null,
+    "synonyms": []
+  },
+  "buzzwole": {
+    "number": 794,
+    "display": "Buzzwole",
+    "subs": null,
+    "synonyms": []
+  },
+  "pheromosa": {
+    "number": 795,
+    "display": "Pheromosa",
+    "subs": null,
+    "synonyms": []
+  },
+  "xurkitree": {
+    "number": 796,
+    "display": "Xurkitree",
+    "subs": null,
+    "synonyms": []
+  },
+  "celesteela": {
+    "number": 797,
+    "display": "Celesteela",
+    "subs": null,
+    "synonyms": []
+  },
+  "kartana": {
+    "number": 798,
+    "display": "Kartana",
+    "subs": null,
+    "synonyms": []
+  },
+  "guzzlord": {
+    "number": 799,
+    "display": "Guzzlord",
+    "subs": null,
+    "synonyms": []
+  },
+  "necrozma": {
+    "number": 800,
+    "display": "Necrozma",
+    "subs": [
+      {
+        "name": "Dusk Mane Necrozma",
+        "synonyms": [
+          "Necrozma Dusk Mane"
+        ]
+      },
+      {
+        "name": "Dawn Wings Necrozma",
+        "synonyms": [
+          "Necrozma Dawn Wings"
+        ]
+      },
+      {
+        "name": "Ultra Necrozma",
+        "synonyms": [
+          "Necrozma Ultra"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "magearna": {
+    "number": 801,
+    "display": "Magearna",
+    "subs": [
+      {
+        "name": "Mega Magearna",
+        "synonyms": []
+      },
+      {
+        "name": "Magearna (Original Color)",
+        "synonyms": [
+          "Original color Magearna"
+        ],
+        "subs": [
+          {
+            "name": "Mega Magearna (Original Color)",
+            "synonyms": [
+              "Mega Original Color Magearna",
+              "Original Color Mega Magearna"
+            ]
+          }
+        ],
+        "core": true
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "marshadow": {
+    "number": 802,
+    "display": "Marshadow",
+    "subs": null,
+    "synonyms": []
+  },
+  "poipole": {
+    "number": 803,
+    "display": "Poipole",
+    "subs": null,
+    "synonyms": []
+  },
+  "naganadel": {
+    "number": 804,
+    "display": "Naganadel",
+    "subs": null,
+    "synonyms": []
+  },
+  "stakataka": {
+    "number": 805,
+    "display": "Stakataka",
+    "subs": null,
+    "synonyms": []
+  },
+  "blacephalon": {
+    "number": 806,
+    "display": "Blacephalon",
+    "subs": null,
+    "synonyms": []
+  },
+  "zeraora": {
+    "number": 807,
+    "display": "Zeraora",
+    "subs": [
+      {
+        "name": "Mega Zeraora",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "meltan": {
+    "number": 808,
+    "display": "Meltan",
+    "subs": null,
+    "synonyms": []
+  },
+  "melmetal": {
+    "number": 809,
+    "display": "Melmetal",
+    "subs": null,
+    "synonyms": []
+  },
+  "grookey": {
+    "number": 810,
+    "display": "Grookey",
+    "subs": null,
+    "synonyms": []
+  },
+  "thwackey": {
+    "number": 811,
+    "display": "Thwackey",
+    "subs": null,
+    "synonyms": []
+  },
+  "rillaboom": {
+    "number": 812,
+    "display": "Rillaboom",
+    "subs": [
+      {
+        "name": "Gigantamax Rillaboom",
+        "synonyms": [
+          "Rillaboom Gigantamax"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "scorbunny": {
+    "number": 813,
+    "display": "Scorbunny",
+    "subs": null,
+    "synonyms": []
+  },
+  "raboot": {
+    "number": 814,
+    "display": "Raboot",
+    "subs": null,
+    "synonyms": []
+  },
+  "cinderace": {
+    "number": 815,
+    "display": "Cinderace",
+    "subs": [
+      {
+        "name": "Gigantamax Cinderace",
+        "synonyms": [
+          "Cinderace Gigantamax"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "sobble": {
+    "number": 816,
+    "display": "Sobble",
+    "subs": null,
+    "synonyms": []
+  },
+  "drizzile": {
+    "number": 817,
+    "display": "Drizzile",
+    "subs": null,
+    "synonyms": []
+  },
+  "inteleon": {
+    "number": 818,
+    "display": "Inteleon",
+    "subs": [
+      {
+        "name": "Gigantamax Inteleon",
+        "synonyms": [
+          "Inteleon Gigantamax"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "skwovet": {
+    "number": 819,
+    "display": "Skwovet",
+    "subs": null,
+    "synonyms": []
+  },
+  "greedent": {
+    "number": 820,
+    "display": "Greedent",
+    "subs": null,
+    "synonyms": []
+  },
+  "rookidee": {
+    "number": 821,
+    "display": "Rookidee",
+    "subs": null,
+    "synonyms": []
+  },
+  "corvisquire": {
+    "number": 822,
+    "display": "Corvisquire",
+    "subs": null,
+    "synonyms": []
+  },
+  "corviknight": {
+    "number": 823,
+    "display": "Corviknight",
+    "subs": [
+      {
+        "name": "Gigantamax Corviknight",
+        "synonyms": [
+          "Corviknight Gigantamax"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "blipbug": {
+    "number": 824,
+    "display": "Blipbug",
+    "subs": null,
+    "synonyms": []
+  },
+  "dottler": {
+    "number": 825,
+    "display": "Dottler",
+    "subs": null,
+    "synonyms": []
+  },
+  "orbeetle": {
+    "number": 826,
+    "display": "Orbeetle",
+    "subs": null,
+    "synonyms": []
+  },
+  "nickit": {
+    "number": 827,
+    "display": "Nickit",
+    "subs": null,
+    "synonyms": []
+  },
+  "thievul": {
+    "number": 828,
+    "display": "Thievul",
+    "subs": null,
+    "synonyms": []
+  },
+  "gossifleur": {
+    "number": 829,
+    "display": "Gossifleur",
+    "subs": null,
+    "synonyms": []
+  },
+  "eldegoss": {
+    "number": 830,
+    "display": "Eldegoss",
+    "subs": null,
+    "synonyms": []
+  },
+  "wooloo": {
+    "number": 831,
+    "display": "Wooloo",
+    "subs": null,
+    "synonyms": []
+  },
+  "dubwool": {
+    "number": 832,
+    "display": "Dubwool",
+    "subs": null,
+    "synonyms": []
+  },
+  "chewtle": {
+    "number": 833,
+    "display": "Chewtle",
+    "subs": null,
+    "synonyms": []
+  },
+  "drednaw": {
+    "number": 834,
+    "display": "Drednaw",
+    "subs": null,
+    "synonyms": []
+  },
+  "yamper": {
+    "number": 835,
+    "display": "Yamper",
+    "subs": null,
+    "synonyms": []
+  },
+  "boltund": {
+    "number": 836,
+    "display": "Boltund",
+    "subs": null,
+    "synonyms": []
+  },
+  "rolycoly": {
+    "number": 837,
+    "display": "Rolycoly",
+    "subs": null,
+    "synonyms": []
+  },
+  "carkol": {
+    "number": 838,
+    "display": "Carkol",
+    "subs": null,
+    "synonyms": []
+  },
+  "coalossal": {
+    "number": 839,
+    "display": "Coalossal",
+    "subs": null,
+    "synonyms": []
+  },
+  "applin": {
+    "number": 840,
+    "display": "Applin",
+    "subs": null,
+    "synonyms": []
+  },
+  "flapple": {
+    "number": 841,
+    "display": "Flapple",
+    "subs": [
+      {
+        "name": "Gigantamax Flapple",
+        "synonyms": [
+          "Flapple Gigantamax"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "appletun": {
+    "number": 842,
+    "display": "Appletun",
+    "subs": [
+      {
+        "name": "Gigantamax Appletun",
+        "synonyms": [
+          "Appletun Gigantamax"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "silicobra": {
+    "number": 843,
+    "display": "Silicobra",
+    "subs": null,
+    "synonyms": []
+  },
+  "sandaconda": {
+    "number": 844,
+    "display": "Sandaconda",
+    "subs": [
+      {
+        "name": "Gigantamax Sandaconda",
+        "synonyms": [
+          "Sandaconda Gigantamax"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "cramorant": {
+    "number": 845,
+    "display": "Cramorant",
+    "subs": [
+      {
+        "name": "Cramorant (Gulping Form)",
+        "synonyms": [
+          "Cramorant Gulping Form",
+          "Gulping Form Cramorant",
+          "Gulping Cramorant",
+          "Cramorant Gulping"
+        ]
+      },
+      {
+        "name": "Cramorant (Gorging Form)",
+        "synonyms": [
+          "Cramorant Gorging Form",
+          "Gorging Form Cramorant",
+          "Gorging Cramorant",
+          "Cramorant Gorging"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "arrokuda": {
+    "number": 846,
+    "display": "Arrokuda",
+    "subs": null,
+    "synonyms": []
+  },
+  "barraskewda": {
+    "number": 847,
+    "display": "Barraskewda",
+    "subs": null,
+    "synonyms": []
+  },
+  "toxel": {
+    "number": 848,
+    "display": "Toxel",
+    "subs": null,
+    "synonyms": []
+  },
+  "toxtricity": {
+    "number": 849,
+    "display": "Toxtricity",
+    "subs": [
+      {
+        "name": "Toxtricity (Amped Form)",
+        "synonyms": [
+          "Amped Form Toxtricity",
+          "Amped Toxtricity",
+          "Toxtricity Amped"
+        ]
+      },
+      {
+        "name": "Toxtricity (Low Key Form)",
+        "synonyms": [
+          "Low Key Form Toxtricity",
+          "Low Key Toxtricity",
+          "Toxtricity Low Key"
+        ]
+      },
+      {
+        "name": "Gigantamax Toxtricity",
+        "synonyms": [
+          "Toxtricity Gigantamax"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "sizzlipede": {
+    "number": 850,
+    "display": "Sizzlipede",
+    "subs": null,
+    "synonyms": []
+  },
+  "centiskorch": {
+    "number": 851,
+    "display": "Centiskorch",
+    "subs": [
+      {
+        "name": "Gigantamax Centiskorch",
+        "synonyms": [
+          "Centiskorch Gigantamax"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "clobbopus": {
+    "number": 852,
+    "display": "Clobbopus",
+    "subs": null,
+    "synonyms": []
+  },
+  "grapploct": {
+    "number": 853,
+    "display": "Grapploct",
+    "subs": null,
+    "synonyms": []
+  },
+  "sinistea": {
+    "number": 854,
+    "display": "Sinistea",
+    "subs": [
+      {
+        "name": "Sinistea (Phony Form)",
+        "synonyms": [
+          "Sinistea Phony Form",
+          "Phony Form Sinistea",
+          "Phony Sinistea",
+          "Sinistea Phony"
+        ]
+      },
+      {
+        "name": "Sinistea (Antique Form)",
+        "synonyms": [
+          "Sinistea Antique Form",
+          "Antique Form Sinistea",
+          "Antique Sinistea",
+          "Sinistea Antique"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "polteageist": {
+    "number": 855,
+    "display": "Polteageist",
+    "subs": [
+      {
+        "name": "Polteageist (Phony Form)",
+        "synonyms": [
+          "Polteageist Phony Form",
+          "Phony Form Polteageist",
+          "Phony Polteageist",
+          "Polteageist Phony"
+        ]
+      },
+      {
+        "name": "Polteageist (Antique Form)",
+        "synonyms": [
+          "Polteageist Antique Form",
+          "Antique Form Polteageist",
+          "Antique Polteageist",
+          "Polteageist Antique"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "hatenna": {
+    "number": 856,
+    "display": "Hatenna",
+    "subs": null,
+    "synonyms": []
+  },
+  "hattrem": {
+    "number": 857,
+    "display": "Hattrem",
+    "subs": null,
+    "synonyms": []
+  },
+  "hatterene": {
+    "number": 858,
+    "display": "Hatterene",
+    "subs": [
+      {
+        "name": "Gigantamax Hatterene",
+        "synonyms": [
+          "Hatterene Gigantamax"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "impidimp": {
+    "number": 859,
+    "display": "Impidimp",
+    "subs": null,
+    "synonyms": []
+  },
+  "morgrem": {
+    "number": 860,
+    "display": "Morgrem",
+    "subs": null,
+    "synonyms": []
+  },
+  "grimmsnarl": {
+    "number": 861,
+    "display": "Grimmsnarl",
+    "subs": [
+      {
+        "name": "Gigantamax Grimmsnarl",
+        "synonyms": [
+          "Grimmsnarl Gigantamax"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "obstagoon": {
+    "number": 862,
+    "display": "Obstagoon",
+    "subs": null,
+    "synonyms": []
+  },
+  "perrserker": {
+    "number": 863,
+    "display": "Perrserker",
+    "subs": null,
+    "synonyms": []
+  },
+  "cursola": {
+    "number": 864,
+    "display": "Cursola",
+    "subs": null,
+    "synonyms": []
+  },
+  "sirfetch-d": {
+    "number": 865,
+    "display": "Sirfetch'd",
+    "subs": null,
+    "synonyms": []
+  },
+  "mr-rime": {
+    "number": 866,
+    "display": "Mr. Rime",
+    "subs": null,
+    "synonyms": []
+  },
+  "runerigus": {
+    "number": 867,
+    "display": "Runerigus",
+    "subs": null,
+    "synonyms": []
+  },
+  "milcery": {
+    "number": 868,
+    "display": "Milcery",
+    "subs": null,
+    "synonyms": []
+  },
+  "alcremie": {
+    "number": 869,
+    "display": "Alcremie",
+    "subs": null,
+    "synonyms": []
+  },
+  "falinks": {
+    "number": 870,
+    "display": "Falinks",
+    "subs": [
+      {
+        "name": "Mega Falinks",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "pincurchin": {
+    "number": 871,
+    "display": "Pincurchin",
+    "subs": null,
+    "synonyms": []
+  },
+  "snom": {
+    "number": 872,
+    "display": "Snom",
+    "subs": null,
+    "synonyms": []
+  },
+  "frosmoth": {
+    "number": 873,
+    "display": "Frosmoth",
+    "subs": null,
+    "synonyms": []
+  },
+  "stonjourner": {
+    "number": 874,
+    "display": "Stonjourner",
+    "subs": null,
+    "synonyms": []
+  },
+  "eiscue": {
+    "number": 875,
+    "display": "Eiscue",
+    "subs": [
+      {
+        "name": "Eiscue (Ice Face)",
+        "synonyms": [
+          "Ice Face Eiscue"
+        ]
+      },
+      {
+        "name": "Eiscue (Noice Face)",
+        "synonyms": [
+          "Noice Face Eiscue"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "indeedee": {
+    "number": 876,
+    "display": "Indeedee",
+    "subs": [
+      {
+        "name": "Indeedee (Male)",
+        "synonyms": [
+          "Male Indeedee",
+          "M Indeedee",
+          "Indeedee M",
+          "Indeedee ♂",
+          "♂ Indeedee"
+        ]
+      },
+      {
+        "name": "Indeedee (Female)",
+        "synonyms": [
+          "Female Indeedee",
+          "F Indeedee",
+          "Indeedee F",
+          "Indeedee ♀",
+          "♀ Indeedee"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "morpeko": {
+    "number": 877,
+    "display": "Morpeko",
+    "subs": [
+      {
+        "name": "Morpeko (Full Belly Mode)",
+        "synonyms": [
+          "Full Belly Mode Morpeko",
+          "Full Belly Morpeko",
+          "Morpeko Full Belly"
+        ]
+      },
+      {
+        "name": "Morpeko (Hangry Mode)",
+        "synonyms": [
+          "Hangry Mode Morpeko",
+          "Hangry Morpeko",
+          "Morpeko Hangry"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "cufant": {
+    "number": 878,
+    "display": "Cufant",
+    "subs": null,
+    "synonyms": []
+  },
+  "copperajah": {
+    "number": 879,
+    "display": "Copperajah",
+    "subs": [
+      {
+        "name": "Gigantamax Copperajah",
+        "synonyms": [
+          "Copperajah Gigantamax"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "dracozolt": {
+    "number": 880,
+    "display": "Dracozolt",
+    "subs": null,
+    "synonyms": []
+  },
+  "arctozolt": {
+    "number": 881,
+    "display": "Arctozolt",
+    "subs": null,
+    "synonyms": []
+  },
+  "dracovish": {
+    "number": 882,
+    "display": "Dracovish",
+    "subs": null,
+    "synonyms": []
+  },
+  "arctovish": {
+    "number": 883,
+    "display": "Arctovish",
+    "subs": null,
+    "synonyms": []
+  },
+  "duraludon": {
+    "number": 884,
+    "display": "Duraludon",
+    "subs": [
+      {
+        "name": "Gigantamax Duraludon",
+        "synonyms": [
+          "Duraludon Gigantamax"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "dreepy": {
+    "number": 885,
+    "display": "Dreepy",
+    "subs": null,
+    "synonyms": []
+  },
+  "drakloak": {
+    "number": 886,
+    "display": "Drakloak",
+    "subs": null,
+    "synonyms": []
+  },
+  "dragapult": {
+    "number": 887,
+    "display": "Dragapult",
+    "subs": null,
+    "synonyms": []
+  },
+  "zacian": {
+    "number": 888,
+    "display": "Zacian",
+    "subs": [
+      {
+        "name": "Zacian (Hero of Many Battles)",
+        "synonyms": [
+          "Hero of Many Battles Zacian"
+        ]
+      },
+      {
+        "name": "Zacian (Crowned Sword)",
+        "synonyms": [
+          "Crowned Sword Zacian"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "zamazenta": {
+    "number": 889,
+    "display": "Zamazenta",
+    "subs": [
+      {
+        "name": "Zamazenta (Hero of Many Battles)",
+        "synonyms": [
+          "Hero of Many Battles Zamazenta"
+        ]
+      },
+      {
+        "name": "Zamazenta (Crowned Shield)",
+        "synonyms": [
+          "Crowned Shield Zamazenta"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "eternatus": {
+    "number": 890,
+    "display": "Eternatus",
+    "subs": [
+      {
+        "name": "Eternatus (Eternamax)",
+        "synonyms": [
+          "Eternamax Eternatus"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "kubfu": {
+    "number": 891,
+    "display": "Kubfu",
+    "subs": null,
+    "synonyms": []
+  },
+  "urshifu": {
+    "number": 892,
+    "display": "Urshifu",
+    "subs": [
+      {
+        "name": "Urshifu (Single Strike Style)",
+        "synonyms": [
+          "Single Strike Style Urshifu",
+          "Urshifu Single Strike",
+          "Single Strike Urshifu"
+        ]
+      },
+      {
+        "name": "Urshifu (Rapid Strike Style)",
+        "synonyms": [
+          "Rapid Strike Style Urshifu",
+          "Rapid Strike Urshifu",
+          "Urshifu Rapid Strike"
+        ]
+      },
+      {
+        "name": "Gigantamax Urshifu",
+        "synonyms": [
+          "Urshifu Gigantamax"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "zarude": {
+    "number": 893,
+    "display": "Zarude",
+    "subs": null,
+    "synonyms": []
+  },
+  "regieleki": {
+    "number": 894,
+    "display": "Regieleki",
+    "subs": null,
+    "synonyms": []
+  },
+  "regidrago": {
+    "number": 895,
+    "display": "Regidrago",
+    "subs": null,
+    "synonyms": []
+  },
+  "glastrier": {
+    "number": 896,
+    "display": "Glastrier",
+    "subs": null,
+    "synonyms": []
+  },
+  "spectrier": {
+    "number": 897,
+    "display": "Spectrier",
+    "subs": null,
+    "synonyms": []
+  },
+  "calyrex": {
+    "number": 898,
+    "display": "Calyrex",
+    "subs": [
+      {
+        "name": "Calyrex (Ice Rider)",
+        "synonyms": [
+          "Ice Rider Calyrex"
+        ]
+      },
+      {
+        "name": "Calyrex (Shadow Rider)",
+        "synonyms": [
+          "Shadow Rider Calyrex"
+        ]
+      },
+      {
+        "name": "Gigantamax Calyrex",
+        "synonyms": [
+          "Calyrex Gigantamax"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "wyrdeer": {
+    "number": 899,
+    "display": "Wyrdeer",
+    "subs": null,
+    "synonyms": []
+  },
+  "kleavor": {
+    "number": 900,
+    "display": "Kleavor",
+    "subs": null,
+    "synonyms": []
+  },
+  "ursaluna": {
+    "number": 901,
+    "display": "Ursaluna",
+    "subs": [
+      {
+        "name": "Ursaluna (Bloodmoon)",
+        "synonyms": [
+          "Bloodmoon Ursaluna"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "basculegion": {
+    "number": 902,
+    "display": "Basculegion",
+    "subs": [
+      {
+        "name": "Basculegion (Male)",
+        "synonyms": [
+          "Male Basculegion",
+          "M Basculegion",
+          "Basculegion M",
+          "Basculegion ♂",
+          "♂ Basculegion"
+        ]
+      },
+      {
+        "name": "Basculegion (Female)",
+        "synonyms": [
+          "Female Basculegion",
+          "F Basculegion",
+          "Basculegion F",
+          "Basculegion ♀",
+          "♀ Basculegion"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "sneasler": {
+    "number": 903,
+    "display": "Sneasler",
+    "subs": null,
+    "synonyms": []
+  },
+  "overqwil": {
+    "number": 904,
+    "display": "Overqwil",
+    "subs": null,
+    "synonyms": []
+  },
+  "enamorus": {
+    "number": 905,
+    "display": "Enamorus",
+    "subs": [
+      {
+        "name": "Enamorus (Incarnate Forme)",
+        "synonyms": [
+          "Incarnate Forme Enamorus",
+          "Incarnate Enamorus",
+          "Enamorus Incarnate"
+        ]
+      },
+      {
+        "name": "Enamorus (Therian Forme)",
+        "synonyms": [
+          "Therian Forme Enamorus",
+          "Therian Enamorus",
+          "Enamorus Therian"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "sprigatito": {
+    "number": 906,
+    "display": "Sprigatito",
+    "subs": null,
+    "synonyms": []
+  },
+  "floragato": {
+    "number": 907,
+    "display": "Floragato",
+    "subs": null,
+    "synonyms": []
+  },
+  "meowscarada": {
+    "number": 908,
+    "display": "Meowscarada",
+    "subs": null,
+    "synonyms": []
+  },
+  "fuecoco": {
+    "number": 909,
+    "display": "Fuecoco",
+    "subs": null,
+    "synonyms": []
+  },
+  "crocalor": {
+    "number": 910,
+    "display": "Crocalor",
+    "subs": null,
+    "synonyms": []
+  },
+  "skeledirge": {
+    "number": 911,
+    "display": "Skeledirge",
+    "subs": null,
+    "synonyms": []
+  },
+  "quaxly": {
+    "number": 912,
+    "display": "Quaxly",
+    "subs": null,
+    "synonyms": []
+  },
+  "quaxwell": {
+    "number": 913,
+    "display": "Quaxwell",
+    "subs": null,
+    "synonyms": []
+  },
+  "quaquaval": {
+    "number": 914,
+    "display": "Quaquaval",
+    "subs": null,
+    "synonyms": []
+  },
+  "lechonk": {
+    "number": 915,
+    "display": "Lechonk",
+    "subs": null,
+    "synonyms": []
+  },
+  "oinkologne": {
+    "number": 916,
+    "display": "Oinkologne",
+    "subs": [
+      {
+        "name": "Oinkologne (Male)",
+        "synonyms": [
+          "Male Oinkologne",
+          "M Oinkologne",
+          "Oinkologne M",
+          "Oinkologne ♂",
+          "♂ Oinkologne"
+        ]
+      },
+      {
+        "name": "Oinkologne (Female)",
+        "synonyms": [
+          "Female Oinkologne",
+          "F Oinkologne",
+          "Oinkologne F",
+          "Oinkologne ♀",
+          "♀ Oinkologne"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "tarountula": {
+    "number": 917,
+    "display": "Tarountula",
+    "subs": null,
+    "synonyms": []
+  },
+  "spidops": {
+    "number": 918,
+    "display": "Spidops",
+    "subs": null,
+    "synonyms": []
+  },
+  "nymble": {
+    "number": 919,
+    "display": "Nymble",
+    "subs": null,
+    "synonyms": []
+  },
+  "lokix": {
+    "number": 920,
+    "display": "Lokix",
+    "subs": null,
+    "synonyms": []
+  },
+  "pawmi": {
+    "number": 921,
+    "display": "Pawmi",
+    "subs": null,
+    "synonyms": []
+  },
+  "pawmo": {
+    "number": 922,
+    "display": "Pawmo",
+    "subs": null,
+    "synonyms": []
+  },
+  "pawmot": {
+    "number": 923,
+    "display": "Pawmot",
+    "subs": null,
+    "synonyms": []
+  },
+  "tandemaus": {
+    "number": 924,
+    "display": "Tandemaus",
+    "subs": null,
+    "synonyms": []
+  },
+  "maushold": {
+    "number": 925,
+    "display": "Maushold",
+    "subs": [
+      {
+        "name": "Maushold (Family of Four)",
+        "synonyms": [
+          "Family of Four Maushold"
+        ]
+      },
+      {
+        "name": "Maushold (Family of Three)",
+        "synonyms": [
+          "Family of Three Maushold"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "fidough": {
+    "number": 926,
+    "display": "Fidough",
+    "subs": null,
+    "synonyms": []
+  },
+  "dachsbun": {
+    "number": 927,
+    "display": "Dachsbun",
+    "subs": null,
+    "synonyms": []
+  },
+  "smoliv": {
+    "number": 928,
+    "display": "Smoliv",
+    "subs": null,
+    "synonyms": []
+  },
+  "dolliv": {
+    "number": 929,
+    "display": "Dolliv",
+    "subs": null,
+    "synonyms": []
+  },
+  "arboliva": {
+    "number": 930,
+    "display": "Arboliva",
+    "subs": null,
+    "synonyms": []
+  },
+  "squawkabilly": {
+    "number": 931,
+    "display": "Squawkabilly",
+    "subs": [
+      {
+        "name": "Squawkabilly (Green Plumage)",
+        "synonyms": [
+          "Green Plumage Squawkabilly",
+          "Green Squawkabilly",
+          "Squawkabilly Green"
+        ]
+      },
+      {
+        "name": "Squawkabilly (Blue Plumage)",
+        "synonyms": [
+          "Blue Plumage Squawkabilly",
+          "Blue Squawkabilly",
+          "Squawkabilly Blue"
+        ]
+      },
+      {
+        "name": "Squawkabilly (Yellow Plumage)",
+        "synonyms": [
+          "Yellow Plumage Squawkabilly",
+          "Yellow Squawkabilly",
+          "Squawkabilly Yellow"
+        ]
+      },
+      {
+        "name": "Squawkabilly (White Plumage)",
+        "synonyms": [
+          "White Plumage Squawkabilly",
+          "White Squawkabilly",
+          "Squawkabilly White"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "nacli": {
+    "number": 932,
+    "display": "Nacli",
+    "subs": null,
+    "synonyms": []
+  },
+  "naclstack": {
+    "number": 933,
+    "display": "Naclstack",
+    "subs": null,
+    "synonyms": []
+  },
+  "garganacl": {
+    "number": 934,
+    "display": "Garganacl",
+    "subs": null,
+    "synonyms": []
+  },
+  "charcadet": {
+    "number": 935,
+    "display": "Charcadet",
+    "subs": null,
+    "synonyms": []
+  },
+  "armarouge": {
+    "number": 936,
+    "display": "Armarouge",
+    "subs": null,
+    "synonyms": []
+  },
+  "ceruledge": {
+    "number": 937,
+    "display": "Ceruledge",
+    "subs": null,
+    "synonyms": []
+  },
+  "tadbulb": {
+    "number": 938,
+    "display": "Tadbulb",
+    "subs": null,
+    "synonyms": []
+  },
+  "bellibolt": {
+    "number": 939,
+    "display": "Bellibolt",
+    "subs": null,
+    "synonyms": []
+  },
+  "wattrel": {
+    "number": 940,
+    "display": "Wattrel",
+    "subs": null,
+    "synonyms": []
+  },
+  "kilowattrel": {
+    "number": 941,
+    "display": "Kilowattrel",
+    "subs": null,
+    "synonyms": []
+  },
+  "maschiff": {
+    "number": 942,
+    "display": "Maschiff",
+    "subs": null,
+    "synonyms": []
+  },
+  "mabosstiff": {
+    "number": 943,
+    "display": "Mabosstiff",
+    "subs": null,
+    "synonyms": []
+  },
+  "shroodle": {
+    "number": 944,
+    "display": "Shroodle",
+    "subs": null,
+    "synonyms": []
+  },
+  "grafaiai": {
+    "number": 945,
+    "display": "Grafaiai",
+    "subs": null,
+    "synonyms": []
+  },
+  "bramblin": {
+    "number": 946,
+    "display": "Bramblin",
+    "subs": null,
+    "synonyms": []
+  },
+  "brambleghast": {
+    "number": 947,
+    "display": "Brambleghast",
+    "subs": null,
+    "synonyms": []
+  },
+  "toedscool": {
+    "number": 948,
+    "display": "Toedscool",
+    "subs": null,
+    "synonyms": []
+  },
+  "toedscruel": {
+    "number": 949,
+    "display": "Toedscruel",
+    "subs": null,
+    "synonyms": []
+  },
+  "klawf": {
+    "number": 950,
+    "display": "Klawf",
+    "subs": null,
+    "synonyms": []
+  },
+  "capsakid": {
+    "number": 951,
+    "display": "Capsakid",
+    "subs": null,
+    "synonyms": []
+  },
+  "scovillain": {
+    "number": 952,
+    "display": "Scovillain",
+    "subs": [
+      {
+        "name": "Mega Scovillain",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "rellor": {
+    "number": 953,
+    "display": "Rellor",
+    "subs": null,
+    "synonyms": []
+  },
+  "rabsca": {
+    "number": 954,
+    "display": "Rabsca",
+    "subs": null,
+    "synonyms": []
+  },
+  "flittle": {
+    "number": 955,
+    "display": "Flittle",
+    "subs": null,
+    "synonyms": []
+  },
+  "espathra": {
+    "number": 956,
+    "display": "Espathra",
+    "subs": null,
+    "synonyms": []
+  },
+  "tinkatink": {
+    "number": 957,
+    "display": "Tinkatink",
+    "subs": null,
+    "synonyms": []
+  },
+  "tinkatuff": {
+    "number": 958,
+    "display": "Tinkatuff",
+    "subs": null,
+    "synonyms": []
+  },
+  "tinkaton": {
+    "number": 959,
+    "display": "Tinkaton",
+    "subs": null,
+    "synonyms": []
+  },
+  "wiglett": {
+    "number": 960,
+    "display": "Wiglett",
+    "subs": null,
+    "synonyms": []
+  },
+  "wugtrio": {
+    "number": 961,
+    "display": "Wugtrio",
+    "subs": null,
+    "synonyms": []
+  },
+  "bombirdier": {
+    "number": 962,
+    "display": "Bombirdier",
+    "subs": null,
+    "synonyms": []
+  },
+  "finizen": {
+    "number": 963,
+    "display": "Finizen",
+    "subs": null,
+    "synonyms": []
+  },
+  "palafin": {
+    "number": 964,
+    "display": "Palafin",
+    "subs": [
+      {
+        "name": "Palafin (Zero Form)",
+        "synonyms": [
+          "Zero Form Palafin",
+          "Zero Palafin",
+          "Palafin Zero"
+        ]
+      },
+      {
+        "name": "Palafin (Hero Form)",
+        "synonyms": [
+          "Hero Form Palafin",
+          "Hero Palafin",
+          "Palafin Hero"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "varoom": {
+    "number": 965,
+    "display": "Varoom",
+    "subs": null,
+    "synonyms": []
+  },
+  "revavroom": {
+    "number": 966,
+    "display": "Revavroom",
+    "subs": null,
+    "synonyms": []
+  },
+  "cyclizar": {
+    "number": 967,
+    "display": "Cyclizar",
+    "subs": null,
+    "synonyms": []
+  },
+  "orthworm": {
+    "number": 968,
+    "display": "Orthworm",
+    "subs": null,
+    "synonyms": []
+  },
+  "glimmet": {
+    "number": 969,
+    "display": "Glimmet",
+    "subs": null,
+    "synonyms": []
+  },
+  "glimmora": {
+    "number": 970,
+    "display": "Glimmora",
+    "subs": [
+      {
+        "name": "Mega Glimmora",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "greavard": {
+    "number": 971,
+    "display": "Greavard",
+    "subs": null,
+    "synonyms": []
+  },
+  "houndstone": {
+    "number": 972,
+    "display": "Houndstone",
+    "subs": null,
+    "synonyms": []
+  },
+  "flamigo": {
+    "number": 973,
+    "display": "Flamigo",
+    "subs": null,
+    "synonyms": []
+  },
+  "cetoddle": {
+    "number": 974,
+    "display": "Cetoddle",
+    "subs": null,
+    "synonyms": []
+  },
+  "cetitan": {
+    "number": 975,
+    "display": "Cetitan",
+    "subs": null,
+    "synonyms": []
+  },
+  "veluza": {
+    "number": 976,
+    "display": "Veluza",
+    "subs": null,
+    "synonyms": []
+  },
+  "dondozo": {
+    "number": 977,
+    "display": "Dondozo",
+    "subs": null,
+    "synonyms": []
+  },
+  "tatsugiri": {
+    "number": 978,
+    "display": "Tatsugiri",
+    "subs": [
+      {
+        "name": "Tatsugiri (Curly Form)",
+        "synonyms": [
+          "Curly Form Tatsugiri",
+          "Curly Tatsugiri",
+          "Tatsugiri Curly"
+        ]
+      },
+      {
+        "name": "Tatsugiri (Droopy Form)",
+        "synonyms": [
+          "Droopy Form Tatsugiri",
+          "Droopy Tatsugiri",
+          "Tatsugiri Droopy"
+        ]
+      },
+      {
+        "name": "Tatsugiri (Stretchy Form)",
+        "synonyms": [
+          "Stretchy Form Tatsugiri",
+          "Stretchy Tatsugiri",
+          "Tatsugiri Stretchy"
+        ]
+      },
+      {
+        "name": "Mega Tatsugiri (Curly Form)",
+        "synonyms": []
+      },
+      {
+        "name": "Mega Tatsugiri (Droopy Form)",
+        "synonyms": []
+      },
+      {
+        "name": "Mega Tatsugiri (Stretchy Form)",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "annihilape": {
+    "number": 979,
+    "display": "Annihilape",
+    "subs": null,
+    "synonyms": []
+  },
+  "clodsire": {
+    "number": 980,
+    "display": "Clodsire",
+    "subs": [
+      {
+        "name": "Paldean Clodsire",
+        "synonyms": [
+          "Clodsire Paldean",
+          "Clodsire Paldea",
+          "Paldea Clodsire"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "farigiraf": {
+    "number": 981,
+    "display": "Farigiraf",
+    "subs": null,
+    "synonyms": []
+  },
+  "dudunsparce": {
+    "number": 982,
+    "display": "Dudunsparce",
+    "subs": [
+      {
+        "name": "Dudunsparce (Two-Segment Form)",
+        "synonyms": [
+          "Two-Segment Form Dudunsparce",
+          "Two-Segment Dudunsparce",
+          "Dudunsparce Two-Segment"
+        ]
+      },
+      {
+        "name": "Dudunsparce (Three-Segment Form)",
+        "synonyms": [
+          "Three-Segment Form Dudunsparce",
+          "Three-Segment Dudunsparce",
+          "Dudunsparce Three-Segment"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "kingambit": {
+    "number": 983,
+    "display": "Kingambit",
+    "subs": null,
+    "synonyms": []
+  },
+  "great-tusk": {
+    "number": 984,
+    "display": "Great Tusk",
+    "subs": null,
+    "synonyms": []
+  },
+  "scream-tail": {
+    "number": 985,
+    "display": "Scream Tail",
+    "subs": null,
+    "synonyms": []
+  },
+  "brute-bonnet": {
+    "number": 986,
+    "display": "Brute Bonnet",
+    "subs": null,
+    "synonyms": []
+  },
+  "flutter-mane": {
+    "number": 987,
+    "display": "Flutter Mane",
+    "subs": null,
+    "synonyms": []
+  },
+  "slither-wing": {
+    "number": 988,
+    "display": "Slither Wing",
+    "subs": null,
+    "synonyms": []
+  },
+  "sandy-shocks": {
+    "number": 989,
+    "display": "Sandy Shocks",
+    "subs": null,
+    "synonyms": []
+  },
+  "iron-treads": {
+    "number": 990,
+    "display": "Iron Treads",
+    "subs": null,
+    "synonyms": []
+  },
+  "iron-bundle": {
+    "number": 991,
+    "display": "Iron Bundle",
+    "subs": null,
+    "synonyms": []
+  },
+  "iron-hands": {
+    "number": 992,
+    "display": "Iron Hands",
+    "subs": null,
+    "synonyms": []
+  },
+  "iron-jugulis": {
+    "number": 993,
+    "display": "Iron Jugulis",
+    "subs": null,
+    "synonyms": []
+  },
+  "iron-moth": {
+    "number": 994,
+    "display": "Iron Moth",
+    "subs": null,
+    "synonyms": []
+  },
+  "iron-thorns": {
+    "number": 995,
+    "display": "Iron Thorns",
+    "subs": null,
+    "synonyms": []
+  },
+  "frigibax": {
+    "number": 996,
+    "display": "Frigibax",
+    "subs": null,
+    "synonyms": []
+  },
+  "arctibax": {
+    "number": 997,
+    "display": "Arctibax",
+    "subs": null,
+    "synonyms": []
+  },
+  "baxcalibur": {
+    "number": 998,
+    "display": "Baxcalibur",
+    "subs": [
+      {
+        "name": "Mega Baxcalibur",
+        "synonyms": []
+      }
+    ],
+    "synonyms": [],
+    "core": true
+  },
+  "gimmighoul": {
+    "number": 999,
+    "display": "Gimmighoul",
+    "subs": [
+      {
+        "name": "Gimmighoul (Chest Form)",
+        "synonyms": [
+          "Chest Form Gimmighoul",
+          "Chest Gimmighoul",
+          "Gimmighoul Chest"
+        ]
+      },
+      {
+        "name": "Gimmighoul (Roaming Form)",
+        "synonyms": [
+          "Roaming Form Gimmighoul",
+          "Roaming Gimmighoul",
+          "Gimmighoul Roaming"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "gholdengo": {
+    "number": 1000,
+    "display": "Gholdengo",
+    "subs": null,
+    "synonyms": []
+  },
+  "wo-chien": {
+    "number": 1001,
+    "display": "Wo-Chien",
+    "subs": null,
+    "synonyms": []
+  },
+  "chien-pao": {
+    "number": 1002,
+    "display": "Chien-Pao",
+    "subs": null,
+    "synonyms": []
+  },
+  "ting-lu": {
+    "number": 1003,
+    "display": "Ting-Lu",
+    "subs": null,
+    "synonyms": []
+  },
+  "chi-yu": {
+    "number": 1004,
+    "display": "Chi-Yu",
+    "subs": null,
+    "synonyms": []
+  },
+  "roaring-moon": {
+    "number": 1005,
+    "display": "Roaring Moon",
+    "subs": null,
+    "synonyms": []
+  },
+  "iron-valiant": {
+    "number": 1006,
+    "display": "Iron Valiant",
+    "subs": null,
+    "synonyms": []
+  },
+  "koraidon": {
+    "number": 1007,
+    "display": "Koraidon",
+    "subs": null,
+    "synonyms": []
+  },
+  "miraidon": {
+    "number": 1008,
+    "display": "Miraidon",
+    "subs": null,
+    "synonyms": []
+  },
+  "walking-wake": {
+    "number": 1009,
+    "display": "Walking Wake",
+    "subs": null,
+    "synonyms": []
+  },
+  "iron-leaves": {
+    "number": 1010,
+    "display": "Iron Leaves",
+    "subs": null,
+    "synonyms": []
+  },
+  "dipplin": {
+    "number": 1011,
+    "display": "Dipplin",
+    "subs": null,
+    "synonyms": []
+  },
+  "poltchageist": {
+    "number": 1012,
+    "display": "Poltchageist",
+    "subs": [
+      {
+        "name": "Poltchageist (Phony Form)",
+        "synonyms": [
+          "Poltchageist Phony Form",
+          "Phony Form Poltchageist",
+          "Phony Poltchageist",
+          "Poltchageist Phony"
+        ]
+      },
+      {
+        "name": "Poltchageist (Antique Form)",
+        "synonyms": [
+          "Poltchageist Antique Form",
+          "Antique Form Poltchageist",
+          "Antique Poltchageist",
+          "Poltchageist Antique"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "sinistcha": {
+    "number": 1013,
+    "display": "Sinistcha",
+    "subs": [
+      {
+        "name": "Sinistcha (Phony Form)",
+        "synonyms": [
+          "Sinistcha Phony Form",
+          "Phony Form Sinistcha",
+          "Phony Sinistcha",
+          "Sinistcha Phony"
+        ]
+      },
+      {
+        "name": "Sinistcha (Antique Form)",
+        "synonyms": [
+          "Sinistcha Antique Form",
+          "Antique Form Sinistcha",
+          "Antique Sinistcha",
+          "Sinistcha Antique"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "okidogi": {
+    "number": 1014,
+    "display": "Okidogi",
+    "subs": null,
+    "synonyms": []
+  },
+  "munkidori": {
+    "number": 1015,
+    "display": "Munkidori",
+    "subs": null,
+    "synonyms": []
+  },
+  "fezandipiti": {
+    "number": 1016,
+    "display": "Fezandipiti",
+    "subs": null,
+    "synonyms": []
+  },
+  "ogerpon": {
+    "number": 1017,
+    "display": "Ogerpon",
+    "subs": [
+      {
+        "name": "Ogerpon (Teal Mask)",
+        "synonyms": [
+          "Teal Mask Ogerpon"
+        ]
+      },
+      {
+        "name": "Ogerpon (Teal Mask) Terastallized",
+        "synonyms": [
+          "Terastallized Ogerpon Teal Mask",
+          "Teal Mask Ogerpon Terastallized",
+          "Ogerpon Terastallized Teal Mask"
+        ]
+      },
+      {
+        "name": "Ogerpon (Wellspring Mask)",
+        "synonyms": [
+          "Wellspring Mask Ogerpon"
+        ]
+      },
+      {
+        "name": "Ogerpon (Wellspring Mask) Terastallized",
+        "synonyms": [
+          "Terastallized Ogerpon Wellspring Mask",
+          "Wellspring Mask Ogerpon Terastallized",
+          "Ogerpon Terastallized Wellspring Mask"
+        ]
+      },
+      {
+        "name": "Ogerpon (Hearthflame Mask)",
+        "synonyms": [
+          "Hearthflame Mask Ogerpon"
+        ]
+      },
+      {
+        "name": "Ogerpon (Hearthflame Mask) Terastallized",
+        "synonyms": [
+          "Terastallized Ogerpon Hearthflame Mask",
+          "Hearthflame Mask Ogerpon Terastallized",
+          "Ogerpon Terastallized Hearthflame Mask"
+        ]
+      },
+      {
+        "name": "Ogerpon (Cornerstone Mask)",
+        "synonyms": [
+          "Cornerstone Mask Ogerpon"
+        ]
+      },
+      {
+        "name": "Ogerpon (Cornerstone Mask) Terastallized",
+        "synonyms": [
+          "Terastallized Ogerpon Cornerstone Mask",
+          "Cornerstone Mask Ogerpon Terastallized",
+          "Ogerpon Terastallized Cornerstone Mask"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "archaludon": {
+    "number": 1018,
+    "display": "Archaludon",
+    "subs": null,
+    "synonyms": []
+  },
+  "hydrapple": {
+    "number": 1019,
+    "display": "Hydrapple",
+    "subs": null,
+    "synonyms": []
+  },
+  "gouging-fire": {
+    "number": 1020,
+    "display": "Gouging Fire",
+    "subs": null,
+    "synonyms": []
+  },
+  "raging-bolt": {
+    "number": 1021,
+    "display": "Raging Bolt",
+    "subs": null,
+    "synonyms": []
+  },
+  "iron-boulder": {
+    "number": 1022,
+    "display": "Iron Boulder",
+    "subs": null,
+    "synonyms": []
+  },
+  "iron-crown": {
+    "number": 1023,
+    "display": "Iron Crown",
+    "subs": null,
+    "synonyms": []
+  },
+  "terapagos": {
+    "number": 1024,
+    "display": "Terapagos",
+    "subs": [
+      {
+        "name": "Terapagos (Normal Form)",
+        "synonyms": [
+          "Normal Form Terapagos",
+          "Normal Terapagos",
+          "Terapagos Normal"
+        ]
+      },
+      {
+        "name": "Terapagos (Terastal Form)",
+        "synonyms": [
+          "Terastal Form Terapagos",
+          "Terastal Terapagos",
+          "Terapagos Terastal"
+        ]
+      },
+      {
+        "name": "Terapagos (Stellar Form)",
+        "synonyms": [
+          "Stellar Form Terapagos",
+          "Stellar Terapagos",
+          "Terapagos Stellar"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
+  },
+  "pecharunt": {
+    "number": 1025,
+    "display": "Pecharunt",
+    "subs": null,
+    "synonyms": []
+  },
+  "browt": {
+    "number": 1026,
+    "display": "Browt",
+    "subs": null,
+    "synonyms": []
+  },
+  "gecqua": {
+    "number": 1027,
+    "display": "Gecqua",
+    "subs": null,
+    "synonyms": []
+  },
+  "pombon": {
+    "number": 1028,
+    "display": "Pombon",
+    "subs": null,
+    "synonyms": []
+  }
+}

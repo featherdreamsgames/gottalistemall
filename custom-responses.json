@@ -1,0 +1,217 @@
+{
+  "example-entry": {
+    "name": "Pikablu",
+    "synonyms": ["Pikablue"],
+    "response": "... I'll allow it.",
+    "color": null
+  },
+  "black-belt": {
+    "name": "Black Belt",
+    "synonyms": ["Black Door", "Brycen-Man", "Demon", "F-00", "Humanoid", "MT", "M.T. 2", "Monica", "Monster", "Transport", "UFO", "UFO 2", "White Door"],
+    "response": "No, but you get a Gold Pokéstar for creativity.",
+    "color": null
+  },
+  "missingno": {
+    "name": "MissingNo.",
+    "synonyms": ["missingno", "'M"],
+    "response": "G̶̦͔͔͈̱̖͖̠̈͗̓͂͛̇͑͗̀̅̀o̴̥̓̉̍̀͗͌̎͂͝͝ǫ̴̢̡̨̧̟͕̥̟̹̝͍͈̎̿̌̌̄̎̋͂̚̚͜͠͝ͅd̷̹͖̺̿̏̆̑̋̽͐̂́̈̈́̀̎̄͗͘̚ ̶̪̐̓ͅt̸̼̻͕̝̘̃̅̏̈́͒́̀̐r̴̲̖̟̭̼̈̀͐̃͌̀̓̍̉͋͝͝y̸͖͈͎̟̞̏̈.̵̨̰͙̘̭̘̥̜̭͉̭̣̀͊̾́̅̍̄͒ͅ",
+    "color": null
+  },
+  "unown": {
+    "name": "Unown A",
+    "synonyms": [
+      "A Unown", "Unown B", "B Unown", "Unown C", "C Unown", "Unown D", "D Unown",
+      "Unown E", "E Unown", "Unown F", "F Unown", "Unown G", "G Unown", "Unown H", "H Unown",
+      "Unown I", "I Unown", "Unown J", "J Unown", "Unown K", "K Unown", "Unown L", "L Unown",
+      "Unown M", "M Unown", "Unown N", "N Unown", "Unown O", "O Unown", "Unown P", "P Unown",
+      "Unown Q", "Q Unown", "Unown R", "R Unown", "Unown S", "S Unown", "Unown T", "T Unown",
+      "Unown U", "U Unown", "Unown V", "V Unown", "Unown W", "W Unown", "Unown X", "X Unown",
+      "Unown Y", "Y Unown", "Unown Z", "Z Unown", "Unown ?", "? Unown", "Unown Question Mark",
+      "Question Mark Unown", "Unown !", "! Unown", "Unown Exclamation Mark", "Exclamation Mark Unown"
+    ],
+    "response": "I won't make you enter all 28 of them.",
+    "color": null
+  },
+  "arceus": {
+    "name": "Normal Arceus",
+    "synonyms": [
+      "Arceus Normal", "Fire Arceus", "Arceus Fire", "Water Arceus", "Arceus Water",
+      "Electric Arceus", "Arceus Electric", "Grass Arceus", "Arceus Grass", "Ice Arceus", "Arceus Ice",
+      "Fighting Arceus", "Arceus Fighting", "Poison Arceus", "Arceus Poison", "Ground Arceus", "Arceus Ground",
+      "Flying Arceus", "Arceus Flying", "Psychic Arceus", "Arceus Psychic", "Bug Arceus", "Arceus Bug",
+      "Rock Arceus", "Arceus Rock", "Ghost Arceus", "Arceus Ghost", "Dragon Arceus", "Arceus Dragon",
+      "Dark Arceus", "Arceus Dark", "Steel Arceus", "Arceus Steel", "Fairy Arceus", "Arceus Fairy"
+    ],
+    "response": "I'll spare you entering all 18 types.",
+    "color": null
+  },
+  "silvally": {
+    "name": "Type: Normal Silvally",
+    "synonyms": [
+      "Silvally Type: Normal", "Type: Normal", "Type: Fire Silvally", "Silvally Type: Fire", "Type: Fire",
+      "Type: Water Silvally", "Silvally Type: Water", "Type: Water", "Type: Electric Silvally", "Silvally Type: Electric", "Type: Electric",
+      "Type: Grass Silvally", "Silvally Type: Grass", "Type: Grass", "Type: Ice Silvally", "Silvally Type: Ice", "Type: Ice",
+      "Type: Fighting Silvally", "Silvally Type: Fighting", "Type: Fighting", "Type: Poison Silvally", "Silvally Type: Poison", "Type: Poison",
+      "Type: Ground Silvally", "Silvally Type: Ground", "Type: Ground", "Type: Flying Silvally", "Silvally Type: Flying", "Type: Flying",
+      "Type: Psychic Silvally", "Silvally Type: Psychic", "Type: Psychic", "Type: Bug Silvally", "Silvally Type: Bug", "Type: Bug",
+      "Type: Rock Silvally", "Silvally Type: Rock", "Type: Rock", "Type: Ghost Silvally", "Silvally Type: Ghost", "Type: Ghost",
+      "Type: Dragon Silvally", "Silvally Type: Dragon", "Type: Dragon", "Type: Dark Silvally", "Silvally Type: Dark", "Type: Dark",
+      "Type: Steel Silvally", "Silvally Type: Steel", "Type: Steel", "Type: Fairy Silvally", "Silvally Type: Fairy", "Type: Fairy"
+    ],
+    "response": "I'll spare you entering all 18 types.",
+    "color": null
+  },
+  "vivillon": {
+    "name": "Vivillon (Icy Snow Pattern)",
+    "synonyms": [
+      "Vivillon Icy Snow Pattern", "Icy Snow Pattern Vivillon", "Icy Snow Vivillon", "Vivillon Icy Snow",
+      "Vivillon (Polar Pattern)", "Vivillon Polar Pattern", "Polar Pattern Vivillon", "Polar Vivillon", "Vivillon Polar",
+      "Vivillon (Tundra Pattern)", "Vivillon Tundra Pattern", "Tundra Pattern Vivillon", "Tundra Vivillon", "Vivillon Tundra",
+      "Vivillon (Continental Pattern)", "Vivillon Continental Pattern", "Continental Pattern Vivillon", "Continental Vivillon", "Vivillon Continental",
+      "Vivillon (Garden Pattern)", "Vivillon Garden Pattern", "Garden Pattern Vivillon", "Garden Vivillon", "Vivillon Garden",
+      "Vivillon (Elegant Pattern)", "Vivillon Elegant Pattern", "Elegant Pattern Vivillon", "Elegant Vivillon", "Vivillon Elegant",
+      "Vivillon (Meadow Pattern)", "Vivillon Meadow Pattern", "Meadow Pattern Vivillon", "Meadow Vivillon", "Vivillon Meadow",
+      "Vivillon (Modern Pattern)", "Vivillon Modern Pattern", "Modern Pattern Vivillon", "Modern Vivillon", "Vivillon Modern",
+      "Vivillon (Marine Pattern)", "Vivillon Marine Pattern", "Marine Pattern Vivillon", "Marine Vivillon", "Vivillon Marine",
+      "Vivillon (Archipelago Pattern)", "Vivillon Archipelago Pattern", "Archipelago Pattern Vivillon", "Archipelago Vivillon", "Vivillon Archipelago",
+      "Vivillon (High Plains Pattern)", "Vivillon High Plains Pattern", "High Plains Pattern Vivillon", "High Plains Vivillon", "Vivillon High Plains",
+      "Vivillon (Sandstorm Pattern)", "Vivillon Sandstorm Pattern", "Sandstorm Pattern Vivillon", "Sandstorm Vivillon", "Vivillon Sandstorm",
+      "Vivillon (River Pattern)", "Vivillon River Pattern", "River Pattern Vivillon", "River Vivillon", "Vivillon River",
+      "Vivillon (Monsoon Pattern)", "Vivillon Monsoon Pattern", "Monsoon Pattern Vivillon", "Monsoon Vivillon", "Vivillon Monsoon",
+      "Vivillon (Savanna Pattern)", "Vivillon Savanna Pattern", "Savanna Pattern Vivillon", "Savanna Vivillon", "Vivillon Savanna",
+      "Vivillon (Sun Pattern)", "Vivillon Sun Pattern", "Sun Pattern Vivillon", "Sun Vivillon", "Vivillon Sun",
+      "Vivillon (Ocean Pattern)", "Vivillon Ocean Pattern", "Ocean Pattern Vivillon", "Ocean Vivillon", "Vivillon Ocean",
+      "Vivillon (Jungle Pattern)", "Vivillon Jungle Pattern", "Jungle Pattern Vivillon", "Jungle Vivillon", "Vivillon Jungle",
+      "Vivillon (Fancy Pattern)", "Vivillon Fancy Pattern", "Fancy Pattern Vivillon", "Fancy Vivillon", "Vivillon Fancy",
+      "Vivillon (Poké Ball Pattern)", "Vivillon Poké Ball Pattern", "Poké Ball Pattern Vivillon", "Poké Ball Vivillon", "Vivillon Poké Ball",
+      "Vivillon Pokeball Pattern", "Pokeball Pattern Vivillon", "Pokeball Vivillon", "Vivillon Pokeball"
+    ],
+    "response": "How many patterns can you name?",
+    "color": null
+  },
+  "furfrou": {
+    "name": "Furfrou (Heart Trim)",
+    "synonyms": [
+      "Furfrou Heart Trim", "Heart Trim Furfrou", "Heart Furfrou", "Furfrou Heart",
+      "Furfrou (Star Trim)", "Furfrou Star Trim", "Star Trim Furfrou", "Star Furfrou", "Furfrou Star",
+      "Furfrou (Diamond Trim)", "Furfrou Diamond Trim", "Diamond Trim Furfrou", "Diamond Furfrou", "Furfrou Diamond",
+      "Furfrou (Debutante Trim)", "Furfrou Debutante Trim", "Debutante Trim Furfrou", "Debutante Furfrou", "Furfrou Debutante",
+      "Furfrou (Matron Trim)", "Furfrou Matron Trim", "Matron Trim Furfrou", "Matron Furfrou", "Furfrou Matron",
+      "Furfrou (Dandy Trim)", "Furfrou Dandy Trim", "Dandy Trim Furfrou", "Dandy Furfrou", "Furfrou Dandy",
+      "Furfrou (La Reine Trim)", "Furfrou La Reine Trim", "La Reine Trim Furfrou", "La Reine Furfrou", "Furfrou La Reine",
+      "Furfrou (Kabuki Trim)", "Furfrou Kabuki Trim", "Kabuki Trim Furfrou", "Kabuki Furfrou", "Furfrou Kabuki",
+      "Furfrou (Pharaoh Trim)", "Furfrou Pharaoh Trim", "Pharaoh Trim Furfrou", "Pharaoh Furfrou", "Furfrou Pharaoh",
+      "Natural Form Furfrou", "Furfrou Natural Form"
+    ],
+    "response": "How many trims can you name?",
+    "color": null
+  },
+  "alcremie": {
+    "name": "Alcremie",
+    "response": "I can't give 63 points for Alcremie's forms, sorry.",
+    "color": null
+  },
+  "starmobile": {
+    "name": "Starmobile",
+    "synonyms": [
+      "Segin Starmobile",
+      "Schedar Starmobile",
+      "Navi Starmobile",
+      "Ruchbah Starmobile",
+      "Caph Starmobile"
+    ],
+    "response": "Hasta la vistar!",
+    "color": null
+  },
+  "digimon": {
+    "name": "Agumon",
+    "synonyms": [
+      "Gabumon", "Patamon", "Gatomon", "Tailmon", "Biyomon", "Tentomon", "Palmon", "Gomamon",
+      "Greymon", "MetalGreymon", "WarGreymon", "Garurumon", "WereGarurumon", "MetalGarurumon",
+      "Angemon", "Angewomon", "MagnaAngemon", "Devimon", "Myotismon", "Piedmon", "Apocalymon",
+      "Omnimon", "Omegamon", "Imperialdramon", "Magnamon", "Veemon", "V-mon", "ExVeemon",
+      "Guilmon", "Growlmon", "Gallantmon", "Dukemon", "Renamon", "Kyubimon", "Sakuyamon",
+      "Terriermon", "Lopmon", "Leomon", "BlackWarGreymon", "Alphamon", "Beelzemon", "Lucemon"
+    ],
+    "response": "Wrong franchise.",
+    "color": null
+  },
+  "pokemon-humans": {
+    "name": "Ash Ketchum",
+    "synonyms": [
+      "Ash", "Satoshi", "Misty", "Kasumi", "Brock", "Takeshi", "Gary Oak", "Shigeru", "Professor Oak",
+      "Professor Samuel Oak", "Delia", "Delia Ketchum", "Jessie", "James",
+      "Giovanni", "Professor Elm", "Lance", "Cynthia", "Steven Stone", "Wallace", "Ghetsis",
+      "Red", "Blue", "Green", "Leaf", "Gold", "Ethan", "Kris", "Lyra", "May", "Brendan",
+      "Dawn", "Lucas", "Hilda", "Hilbert", "Rosa", "Nate", "Serena", "Calem", "Clemont", "Bonnie",
+      "Lillie", "Gladion", "Lusamine", "Kukui", "Professor Kukui", "Leon", "Hop", "Marnie", "Bede",
+      "Sonia", "Raihan", "Cynthia", "Iris", "Alder", "Diantha", "Nemona", "Arven", "Penny", "Geeta"
+    ],
+    "response": "That's a human, silly.",
+    "color": null
+  },
+  "nurse-joy-officer-jenny": {
+    "name": "Nurse Joy",
+    "synonyms": [
+      "Officer Jenny"
+    ],
+    "response": "That's a human... I think?",
+    "color": null
+  },
+  "starter-pokemon": {
+    "name": "Bulbasaur",
+    "synonyms": [
+      "Charmander", "Squirtle",
+      "Chikorita", "Cyndaquil", "Totodile",
+      "Treecko", "Torchic", "Mudkip",
+      "Turtwig", "Chimchar", "Piplup",
+      "Snivy", "Tepig", "Oshawott",
+      "Chespin", "Fennekin", "Froakie",
+      "Rowlet", "Litten", "Popplio",
+      "Grookey", "Scorbunny", "Sobble",
+      "Sprigatito", "Fuecoco", "Quaxly",
+      "Pikachu", "Eevee", "Partner Pikachu", "Partner Eevee"
+    ],
+    "response": "I choose you!",
+    "firstOnly": true,
+    "color": null
+  },
+  "normal-animals": {
+    "name": "Dog",
+    "synonyms": [
+      "Cat", "Horse", "Cow", "Sheep", "Goat", "Pig", "Chicken", "Rooster", "Duck", "Goose",
+      "Turkey", "Rabbit", "Bunny", "Hamster", "Guinea Pig", "Mouse", "Rat", "Squirrel", "Deer", "Moose",
+      "Bear", "Wolf", "Fox", "Raccoon", "Skunk", "Otter", "Beaver", "Badger", "Hedgehog", "Mole",
+      "Bat", "Owl", "Eagle", "Hawk", "Falcon", "Parrot", "Pigeon", "Crow", "Raven", "Swan",
+      "Frog", "Toad", "Lizard", "Snake", "Turtle", "Tortoise", "Alligator", "Crocodile", "Shark", "Whale",
+      "Dolphin", "Sea Lion", "Octopus", "Squid", "Crab", "Lobster", "Shrimp", "Jellyfish", "Starfish"
+    ],
+    "response": "What a strange creature that sounds like.",
+    "color": null
+  },
+  "common-misspellings": {
+    "name": "Seal",
+    "synonyms": [
+      "Onyx",
+      "Feraligator",
+      "Toxitricity",
+      "Ninetails",
+      "Regiice"
+    ],
+    "response": "A common misspelling, try again.",
+    "color": null
+  },
+  "pokopia": {
+    "name": "Professor Tangrowth",
+    "synonyms": [
+      "DJ Rotom",
+      "Chef Dente",
+      "Peakychu",
+      "Tinkmaster",
+      "Mosslax",
+      "Smearguru"
+    ],
+    "response": "The creator of this site also enjoys Pokopia, but that's an individual, not a species.",
+    "color": null
+  }
+}

@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Term Game</title>
+<style>
+body { font-family: Arial,sans-serif; background:#000; color:#fff; }
+h2 { margin-bottom:10px; }
+#topPanel { margin-bottom:15px; }
+#results { margin-top:20px; color:#ccc; }
+input { background:#111; color:#fff; border:1px solid #555; padding:6px; }
+button { background:#222; color:#fff; border:1px solid #555; padding:6px 10px; cursor:pointer; margin-right:5px; }
+button:hover { background:#333; }
+.warning { color:#ff5555; margin-top:5px; }
+.success { color:#55ff55; margin-top:5px; }
+.info { color:#aaa; margin-top:5px; }
+
+/* List display styles */
+.root-block { margin-top:10px; }
+.root-entry { font-weight:700; }
+.children { margin-left:20px; }
+.child-block { margin-top:2px; }
+.sub-entry { color:#aaa; }
+.subcategory-entry { color:#aaa; font-weight:700; }
+.core-entry { color:#666; }
+
+.modal { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); justify-content:center; align-items:center; }
+.modal-content { background:#111; border:1px solid #555; padding:25px 35px; border-radius:8px; text-align:center; }
+</style>
+</head>
+<body>
+
+<h2>Enter a Term</h2>
+
+<div id="topPanel">
+  <div><strong>Score:</strong> <span id="score">0</span></div>
+  <div><strong>Time left:</strong> <span id="timer">60</span>s</div>
+  <div id="message"></div>
+</div>
+
+<input type="text" id="inputField" autocomplete="off">
+<button id="submitBtn">Submit</button>
+<button id="finishBtn">Finish</button>
+<button id="restartBtn">Start Over</button>
+
+<div id="results"></div>
+
+<div id="gameOverModal" class="modal">
+  <div class="modal-content">
+    <h2>Game Over</h2>
+    <p>Your final score: <span id="finalScore"></span></p>
+    <button id="modalRestartBtn">Start Over</button>
+  </div>
+</div>
+
+<script>
+
+// -------------------------
+// LOAD TERMS FROM `terms.json`
+// -------------------------
+function normalize(str){
+  return String(str || '')
+    .trim()
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9!?]+/g, '');
+}
+
+// Final processed lookup tables
+let terms = {};
+let lookup = {};      // maps normalized synonym -> canonical key
+let subDisplays = {}; // variant display names
+let parentMap = {};   // maps normalized sub -> immediate parent (category key or another sub)
+
+// Custom responses
+let customResponses = {};
+let customLookup = {};  // maps normalized input -> custom response object
+let shownResponses = new Set(); // track shown custom single responses
+let sequences = []; // sequence definitions
+let shownSequences = new Set(); // track shown sequence responses per round
+let enteredHistory = []; // ordered list of accepted canonical entries per round
+
+function buildCustomResponses(raw){
+  customResponses = {};
+  customLookup = {};
+  shownResponses = new Set();
+
+  for(let key in raw){
+    let entry = raw[key];
+    entry._id = key;
+    customResponses[key] = entry;
+    
+    // Add the main name (if present)
+    if(entry.name) customLookup[normalize(entry.name)] = entry;
+    
+    // Add all synonyms
+    (entry.synonyms || []).forEach(s=>{
+      customLookup[normalize(s)] = entry;
+    });
+  }
+}
+
+function buildSequences(raw){
+  sequences = [];
+  shownSequences = new Set();
+
+  for(const key in raw){
+    const entry = raw[key] || {};
+    const rawGroups = Array.isArray(entry.termGroups) ? entry.termGroups : [];
+    if(rawGroups.length === 0) continue;
+
+    const expandedGroups = [];
+    const allowedTerms = new Set();
+
+    for(const group of rawGroups){
+      const rawTerms = Array.isArray(group && group.terms) ? group.terms : [];
+      const normalizedTerms = [];
+
+      for(const term of rawTerms){
+        const normalized = normalize(String(term));
+        if(!normalized) continue;
+        const canonical = lookup[normalized] || normalized;
+        normalizedTerms.push(canonical);
+        allowedTerms.add(canonical);
+      }
+
+      if(normalizedTerms.length === 0) continue;
+
+      const repeatCountRaw = Number(group && group.count);
+      const repeatCount = Number.isFinite(repeatCountRaw) && repeatCountRaw > 0
+        ? Math.floor(repeatCountRaw)
+        : 1;
+
+      for(let i = 0; i < repeatCount; i++){
+        expandedGroups.push(new Set(normalizedTerms));
+      }
+    }
+
+    if(expandedGroups.length === 0) continue;
+
+    const invalidModeRaw = String(entry.invalidMode || entry.invalidHandling || 'break').toLowerCase();
+    const invalidMode = (invalidModeRaw === 'ignore' || invalidModeRaw === 'include')
+      ? invalidModeRaw
+      : 'break';
+
+    const numberRaw = Number(entry.number);
+    const number = Number.isFinite(numberRaw) && numberRaw > 0
+      ? Math.min(Math.floor(numberRaw), expandedGroups.length)
+      : expandedGroups.length;
+
+    sequences.push({
+      id: key,
+      ordered: entry.ordered === true,
+      invalidMode,
+      number,
+      includeVariants: entry.includeVariants === true,
+      groups: expandedGroups,
+      allowedTerms,
+      response: entry.response || '',
+      color: entry.color || null
+    });
+  }
+}
+
+function getAncestorSet(value){
+  const ancestors = new Set();
+  let cur = value;
+  while(parentMap[cur]){
+    cur = parentMap[cur];
+    ancestors.add(cur);
+  }
+  return ancestors;
+}
+
+function resolveSequenceBaseTerm(sequence, value){
+  if(sequence.allowedTerms.has(value)) return value;
+  if(!sequence.includeVariants) return null;
+
+  let cur = value;
+  while(parentMap[cur]){
+    cur = parentMap[cur];
+    if(sequence.allowedTerms.has(cur)) return cur;
+  }
+  return null;
+}
+
+function collapseConsecutiveVariantRepeats(sequence, history){
+  if(!sequence.includeVariants || history.length < 2) return history;
+
+  const collapsed = [];
+  let previousBase = null;
+  let previousWasVariant = false;
+
+  for(const value of history){
+    const base = resolveSequenceBaseTerm(sequence, value);
+    const isVariant = (base !== null) && (value !== base);
+
+    if(
+      collapsed.length > 0 &&
+      base !== null &&
+      previousBase !== null &&
+      base === previousBase &&
+      (isVariant || previousWasVariant)
+    ){
+      continue;
+    }
+
+    collapsed.push(value);
+    previousBase = base;
+    previousWasVariant = isVariant;
+  }
+
+  return collapsed;
+}
+
+function sequenceAcceptsValue(sequence, value){
+  return resolveSequenceBaseTerm(sequence, value) !== null;
+}
+
+function groupMatchesValue(sequence, group, value){
+  if(group.has(value)) return true;
+  if(!sequence.includeVariants) return false;
+  const ancestors = getAncestorSet(value);
+  for(const ancestor of ancestors){
+    if(group.has(ancestor)) return true;
+  }
+  return false;
+}
+
+function getHistoryForSequence(sequence){
+  let sequenceHistory;
+
+  if(sequence.invalidMode === 'include'){
+    sequenceHistory = enteredHistory;
+  } else if(sequence.invalidMode === 'ignore'){
+    sequenceHistory = enteredHistory.filter(v => sequenceAcceptsValue(sequence, v));
+  } else {
+    let lastBreak = -1;
+    for(let i = 0; i < enteredHistory.length; i++){
+      if(!sequenceAcceptsValue(sequence, enteredHistory[i])){
+        lastBreak = i;
+      }
+    }
+    sequenceHistory = enteredHistory.slice(lastBreak + 1);
+  }
+
+  return collapseConsecutiveVariantRepeats(sequence, sequenceHistory);
+}
+
+function matchesSequenceTail(sequence, history){
+  const expected = sequence.groups;
+  const needed = sequence.number || expected.length;
+  if(history.length < needed) return false;
+
+  const tail = history.slice(history.length - needed);
+
+  const windows = [];
+  if(needed >= expected.length){
+    windows.push(expected);
+  } else {
+    for(let start = 0; start + needed <= expected.length; start++){
+      windows.push(expected.slice(start, start + needed));
+    }
+  }
+
+  if(sequence.ordered){
+    for(const windowGroups of windows){
+      let ok = true;
+      for(let i = 0; i < needed; i++){
+        if(!groupMatchesValue(sequence, windowGroups[i], tail[i])){
+          ok = false;
+          break;
+        }
+      }
+      if(ok) return true;
+    }
+    return false;
+  }
+
+  const allGroups = expected;
+  const usedGroups = new Set();
+
+  function assignValue(valueIndex){
+    if(valueIndex >= tail.length) return true;
+    const value = tail[valueIndex];
+
+    for(let groupIndex = 0; groupIndex < allGroups.length; groupIndex++){
+      if(usedGroups.has(groupIndex)) continue;
+      if(!groupMatchesValue(sequence, allGroups[groupIndex], value)) continue;
+      usedGroups.add(groupIndex);
+      if(assignValue(valueIndex + 1)) return true;
+      usedGroups.delete(groupIndex);
+    }
+
+    return false;
+  }
+
+  return assignValue(0);
+}
+
+function getTriggeredSequence(){
+  for(const sequence of sequences){
+    const usageKey = `response:${String(sequence.response || '').trim().toLowerCase()}`;
+    if(shownSequences.has(usageKey)) continue;
+    const sequenceHistory = getHistoryForSequence(sequence);
+    if(matchesSequenceTail(sequence, sequenceHistory)){
+      shownSequences.add(usageKey);
+      return sequence;
+    }
+  }
+  return null;
+}
+
+function resetCustomTracking(){
+  shownResponses = new Set();
+  shownSequences = new Set();
+  enteredHistory = [];
+}
+
+function shouldTriggerCustomEntry(customEntry, isFirstAcceptedEntry){
+  if(customEntry && customEntry.firstOnly === true && !isFirstAcceptedEntry){
+    return false;
+  }
+  return true;
+}
+
+function buildLookupFromRawTerms(raw){
+  terms = {};
+  lookup = {};
+  subDisplays = {};
+  parentMap = {};
+  subOrder = {};
+
+  function processSub(subItem, parentKey, categoryKey){
+    const subName = typeof subItem === 'string' ? subItem : (subItem && subItem.name) || '';
+    const subSyns = (subItem && subItem.synonyms) || [];
+    const normSub = normalize(subName);
+
+    // record immediate parent (parentKey is either a category key or another normSub)
+    parentMap[normSub] = parentKey;
+
+    // store display name and lookup
+    subDisplays[normSub] = subName;
+    lookup[normSub] = normSub;
+
+    // If this sub itself contains nested subs, treat it as its own category
+    const hasNestedSubs = Array.isArray(subItem && subItem.subs) && subItem.subs.length > 0;
+      if(hasNestedSubs){
+      // respect an explicit core flag on the sub object; otherwise default to false
+      const explicitCore = (typeof (subItem && subItem.core) === 'boolean') ? subItem.core : false;
+      terms[normSub] = {
+        display: subName || normSub,
+        core: explicitCore,
+        single: false,
+        subs: []
+      ,
+        // mark this as a promoted sub-category (so we can delay showing full UI)
+        promoted: true
+      };
+    }
+
+    // add synonyms for the sub
+    (subSyns || []).forEach(s=>{
+      lookup[normalize(s)] = normSub;
+    });
+
+    // gender extras
+    if(/♀|♂|\bmale\b|\bfemale\b/i.test(subName)){
+      const base = subName.replace(/♂|♀/g,'').replace(/\b(male|female)\b/i,'').trim();
+      const extras = [
+        `${base} Male`, `${base} Female`, `${base} M`, `${base} F`, `${base} ♂`, `${base} ♀`,
+        `Male ${base}`, `Female ${base}`, `M ${base}`, `F ${base}`, `♂ ${base}`, `♀ ${base}`
+      ];
+      extras.forEach(s=> lookup[normalize(s)] = normSub );
+    }
+
+    // descriptor shorthands
+    const descMatch = subName.match(/^(.*?)\s+(.+?)\s+(Size|Form|Forme|Style)$/i);
+    if(descMatch){
+      const namePart = descMatch[1].trim();
+      const variantPart = descMatch[2].trim();
+      const s1 = `${namePart} ${variantPart}`;
+      const s2 = `${variantPart} ${namePart}`;
+      lookup[normalize(s1)] = normSub;
+      lookup[normalize(s2)] = normSub;
+    }
+
+    // if this sub has nested subs, process them (parent becomes this normSub)
+    if(hasNestedSubs){
+      subItem.subs.forEach(child => {
+        const childNorm = processSub(child, normSub, categoryKey);
+        // if we created a terms entry for this sub, register the child as its subs
+        if(terms[normSub]) terms[normSub].subs.push(childNorm);
+      });
+    }
+
+    return normSub;
+  }
+
+  for(let key in raw){
+    let entry = raw[key];
+    let normCategory = key; // terms.json keys are already normalized
+
+    const hasSubs = Array.isArray(entry.subs) && entry.subs.length>0;
+    const explicitCore = (typeof entry.core === 'boolean') ? entry.core : null;
+    const grantAll = entry.grantAll === true;
+    terms[normCategory] = {
+      display: entry.display || normCategory,
+      core: (explicitCore !== null) ? explicitCore : (hasSubs ? false : true),
+      single: hasSubs ? false : true,
+      subs: [],
+      grantAll: grantAll
+    };
+
+    lookup[normCategory] = normCategory;
+    lookup[normalize(normCategory)] = normCategory;
+
+    // Also map normalized display for punctuation-insensitive matching
+    if(entry.display){
+      lookup[normalize(entry.display)] = normCategory;
+    }
+
+    // Category synonyms
+    (entry.synonyms || []).forEach(s=>{
+      lookup[normalize(s)] = normCategory;
+    });
+
+    // process top-level subs
+    (entry.subs || []).forEach(subItem=>{
+      const normSub = processSub(subItem, normCategory, normCategory);
+      // record as a top-level sub for this category
+      terms[normCategory].subs.push(normSub);
+    });
+  }
+
+  // capture display order for each parent based on terms.json order
+  for(let key in terms){
+    if(Array.isArray(terms[key].subs)){
+      subOrder[key] = terms[key].subs.slice();
+    } else {
+      subOrder[key] = [];
+    }
+  }
+
+  // initialize game now that terms are available
+  resetGame();
+}
+
+// Fetch and build
+Promise.all([
+  fetch('terms.json').then(r=>r.ok ? r.json() : Promise.reject('HTTP '+r.status)),
+  fetch('custom-responses.json').then(r=>r.ok ? r.json() : ({})), // custom responses are optional
+  fetch('sequences.json').then(r=>r.ok ? r.json() : ({})) // sequences are optional
+])
+  .then(([termsData, customData, sequencesData]) => {
+    buildLookupFromRawTerms(termsData);
+    buildCustomResponses(customData);
+    buildSequences(sequencesData);
+  })
+  .catch(err=>{
+    console.error('Failed to load data files:', err);
+    setMessage('Failed to load data files', 'warning');
+  });
+
+// Add a single-term display (no category header)
+function addSingleTerm(key){
+  const div = document.createElement('div');
+  div.className = 'single-term';
+  div.textContent = terms[key].display;
+  const container = document.getElementById('single-results') || document.getElementById('results');
+  container.appendChild(div);
+}
+
+// -------------------------
+// GAME STATE
+// -------------------------
+let score, timerStarted, timeLeft, timerInterval;
+let listState;
+let subOrder;
+
+function rollShiny(){
+  return Math.random() < (1 / 4096);
+}
+
+function randomBrightShinyColor(){
+  let hue = Math.floor(Math.random() * 360);
+  while(hue <= 20 || hue >= 345){
+    hue = Math.floor(Math.random() * 360);
+  }
+  const saturation = 85 + Math.floor(Math.random() * 16);
+  const lightness = 58 + Math.floor(Math.random() * 10);
+  return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+}
+
+function isShinyKey(key){
+  if(!(key in listState.shinyByKey)){
+    listState.shinyByKey[key] = rollShiny();
+  }
+  return listState.shinyByKey[key];
+}
+
+function shinyColorForKey(key){
+  if(!isShinyKey(key)) return null;
+  if(!(key in listState.shinyColorByKey)){
+    listState.shinyColorByKey[key] = randomBrightShinyColor();
+  }
+  return listState.shinyColorByKey[key];
+}
+
+function applyShinyStyling(state){
+  const target = state.header || state.entry;
+  if(!target) return;
+  if(state.isShiny){
+    target.style.color = state.shinyColor;
+  } else {
+    target.style.color = '';
+  }
+}
+
+function setEntryNonShiny(state){
+  if(!state) return;
+  state.isShiny = false;
+  state.shinyColor = null;
+  listState.shinyByKey[state.key] = false;
+  listState.shinyColorByKey[state.key] = null;
+  applyShinyStyling(state);
+  if(state.coreEntry){
+    state.coreEntry.textContent = '- (Standard)';
+  }
+}
+
+function enteredStateForKey(value, rootKey){
+  return (value === rootKey) ? listState.roots[value] : listState.nodes[value];
+}
+
+// -------------------------
+// UI HELPERS
+// -------------------------
+function setMessage(text,type="warning",color=null){
+  const el=document.getElementById("message");
+  el.textContent=text;
+  el.className=type;
+  if(color){
+    el.style.color=color;
+  } else {
+    el.style.color='';
+  }
+}
+
+function setShinyMessage(color){
+  const el=document.getElementById("message");
+  el.innerHTML = '<strong>It\'s a shiny!</strong>';
+  el.className='success';
+  el.style.color = color || '';
+}
+
+function startTimer(){
+  if(timerStarted) return;
+  timerStarted=true;
+  timerInterval=setInterval(()=>{
+    timeLeft--;
+    document.getElementById("timer").textContent=timeLeft;
+    if(timeLeft<=0) endGame();
+  },1000);
+}
+
+function addTime(sec){
+  timeLeft+=sec;
+  document.getElementById("timer").textContent=timeLeft;
+}
+
+function endGame(){
+  clearInterval(timerInterval);
+  document.getElementById("inputField").disabled=true;
+  document.getElementById("submitBtn").disabled=true;
+  document.getElementById("finishBtn").disabled=true;
+  document.getElementById("finalScore").textContent=score;
+  document.getElementById("gameOverModal").style.display="flex";
+}
+
+function closeModal(){
+  document.getElementById("gameOverModal").style.display="none";
+}
+
+// -------------------------
+// DISPLAY
+// -------------------------
+function displayForKey(key){
+  return (terms[key] && terms[key].display) || subDisplays[key] || key;
+}
+
+function recomputeScore(){
+  let total = 0;
+  const counted = new Set();
+
+  const allStates = [];
+  for(const key in listState.roots){
+    allStates.push(listState.roots[key]);
+  }
+  for(const key in listState.nodes){
+    allStates.push(listState.nodes[key]);
+  }
+
+  for(const state of allStates){
+    const key = state.key;
+    const term = terms[key];
+    const isLeaf = isLeafData(key);
+    const isCore = !!(term && term.core);
+
+    if(isCore || isLeaf){
+      // Core nodes and leaf nodes always count
+      if(!counted.has(key)){
+        total += 1;
+        counted.add(key);
+      }
+    } else {
+      // Non-core, non-leaf: only counts if no visible children yet
+      if(!state.hasChildren && !counted.has(key)){
+        total += 1;
+        counted.add(key);
+      }
+    }
+  }
+
+  return total;
+}
+
+function isLeafData(key){
+  if(!terms[key]) return true;
+  const order = subOrder[key] || [];
+  return order.length === 0;
+}
+
+function getPathToRoot(key){
+  const path = [key];
+  let cur = key;
+  while(parentMap[cur]){
+    cur = parentMap[cur];
+    path.push(cur);
+  }
+  return path.reverse();
+}
+
+function ensureRoot(rootKey){
+  if(listState.roots[rootKey]) return { state:listState.roots[rootKey], created:false };
+
+  const block = document.createElement('div');
+  block.className = 'root-block';
+
+  const header = document.createElement('div');
+  header.className = 'root-entry';
+  header.textContent = displayForKey(rootKey);
+
+  const children = document.createElement('div');
+  children.className = 'children';
+
+  block.appendChild(header);
+  block.appendChild(children);
+
+  const container = document.getElementById('results');
+  container.insertBefore(block, container.firstChild);
+
+  const state = {
+    key: rootKey,
+    block,
+    header,
+    children,
+    hasChildren: false,
+    coreEntry: null,
+    parentKey: null,
+    entered: false,
+    scoredLeaf: false,
+    scoredCore: false,
+    isShiny: isShinyKey(rootKey),
+    shinyColor: shinyColorForKey(rootKey)
+  };
+  applyShinyStyling(state);
+  listState.roots[rootKey] = state;
+  return { state, created:true };
+}
+
+function getParentState(key){
+  if(listState.roots[key]) return listState.roots[key];
+  return listState.nodes[key] || null;
+}
+
+function getOrderIndex(parentKey, childKey){
+  const order = subOrder[parentKey] || [];
+  const idx = order.indexOf(childKey);
+  return idx === -1 ? Number.MAX_SAFE_INTEGER : idx;
+}
+
+function insertChildBlock(parentState, childBlock, childKey){
+  const container = parentState.children;
+  const newIndex = getOrderIndex(parentState.key, childKey);
+  const existing = Array.from(container.querySelectorAll(':scope > .child-block'));
+
+  for(const node of existing){
+    const existingKey = node.getAttribute('data-key');
+    const existingIndex = getOrderIndex(parentState.key, existingKey);
+    if(existingIndex > newIndex){
+      container.insertBefore(childBlock, node);
+      return;
+    }
+  }
+  container.appendChild(childBlock);
+}
+
+function ensureCoreEntry(parentState){
+  if(parentState.coreEntry) return false;
+  const term = terms[parentState.key];
+  if(!term || !term.core) return false;
+
+  const core = document.createElement('div');
+  core.className = 'core-entry';
+  core.textContent = parentState.isShiny ? '- (Shiny Standard)' : '- (Standard)';
+  parentState.children.insertBefore(core, parentState.children.firstChild);
+  parentState.coreEntry = core;
+  return true;
+}
+
+function markParentHasChild(parentState){
+  if(parentState.hasChildren) return false;
+  parentState.hasChildren = true;
+  if(parentState.entry){
+    parentState.entry.classList.remove('sub-entry');
+    parentState.entry.classList.add('subcategory-entry');
+  }
+  return ensureCoreEntry(parentState);
+}
+
+function ensureNodeEntry(parentKey, childKey){
+  if(listState.nodes[childKey]){
+    return { state:listState.nodes[childKey], created:false, coreCreated:false, parentHadChildren:false, parentEntered:false };
+  }
+
+  const parentState = getParentState(parentKey);
+  if(!parentState){
+    return { state:null, created:false };
+  }
+
+  const childBlock = document.createElement('div');
+  childBlock.className = 'child-block';
+  childBlock.setAttribute('data-key', childKey);
+
+  const entry = document.createElement('div');
+  entry.className = 'sub-entry';
+  entry.textContent = '- ' + displayForKey(childKey);
+
+  const children = document.createElement('div');
+  children.className = 'children';
+
+  childBlock.appendChild(entry);
+  childBlock.appendChild(children);
+
+  insertChildBlock(parentState, childBlock, childKey);
+
+  const state = {
+    key: childKey,
+    block: childBlock,
+    entry,
+    children,
+    hasChildren: false,
+    coreEntry: null,
+    parentKey,
+    entered: false,
+    scoredLeaf: false,
+    scoredCore: false,
+    isShiny: isShinyKey(childKey),
+    shinyColor: shinyColorForKey(childKey)
+  };
+  applyShinyStyling(state);
+  listState.nodes[childKey] = state;
+
+  const parentHadChildren = parentState.hasChildren;
+  const parentEntered = !!parentState.entered;
+  const coreCreated = markParentHasChild(parentState);
+
+  return { state, created:true, coreCreated, parentHadChildren, parentEntered };
+}
+
+// -------------------------
+// GAME LOGIC
+// -------------------------
+function findParent(term){
+  // Prefer direct terms membership (covers promoted sub-categories and normal categories)
+  for(let key in terms){
+    if(Array.isArray(terms[key].subs) && terms[key].subs.includes(term)){
+      return key;
+    }
+  }
+
+  // Fallback: climb parentMap until reaching a promoted category key
+  let p = parentMap[term];
+  if(!p) return null;
+  while(p && !terms[p]){
+    p = parentMap[p];
+  }
+  return p || null;
+}
+
+function handleSubmit(){
+  const inputField=document.getElementById("inputField");
+  let rawInput = inputField.value;
+  let value=normalize(rawInput);
+  setMessage("");
+
+  if(!value){
+    inputField.value="";
+    return;
+  }
+
+  // Track original input for custom responses
+  const originalInput = value;
+
+  // debugging: record lookup resolution
+  const lookupBefore = lookup[value];
+  console.debug('handleSubmit input', { rawInput, normalized:value, lookupBefore });
+  value = lookup[value] || value;
+
+  if(!terms[value] && !subDisplays[value]){
+    // Check for custom response on failed lookup
+    if(customLookup[originalInput]){
+      let customEntry = customLookup[originalInput];
+      const isFirstAcceptedEntry = enteredHistory.length === 0;
+      if(shouldTriggerCustomEntry(customEntry, isFirstAcceptedEntry)){
+        setMessage(customEntry.response, 'warning', customEntry.color);
+      } else {
+        setMessage("Not in list!");
+      }
+      inputField.value="";
+      return;
+    }
+    setMessage("Not in list!");
+    inputField.value="";
+    return;
+  }
+
+  const path = getPathToRoot(value);
+  const rootKey = path[0];
+  const existingRoot = listState.roots[rootKey];
+  const existingNode = listState.nodes[value];
+  if((value === rootKey && existingRoot && existingRoot.entered) || (value !== rootKey && existingNode && existingNode.entered)){
+    setMessage("Already entered!");
+    inputField.value="";
+    return;
+  }
+
+  const createdKeys = [];
+  const createdInfo = {};
+  const rootResult = ensureRoot(rootKey);
+  if(rootResult.created){
+    createdKeys.push(rootKey);
+  }
+
+  for(let i = 1; i < path.length; i++){
+    const parentKey = path[i - 1];
+    const childKey = path[i];
+    const childResult = ensureNodeEntry(parentKey, childKey);
+    if(childResult.created){
+      createdKeys.push(childKey);
+      createdInfo[childKey] = {
+        parentKey,
+        parentHadChildren: childResult.parentHadChildren,
+        parentEntered: childResult.parentEntered
+      };
+    }
+  }
+
+  // Mark explicit entry
+  if(value === rootKey){
+    const rootState = listState.roots[rootKey];
+    if(rootState) rootState.entered = true;
+  } else {
+    const nodeState = listState.nodes[value];
+    if(nodeState) nodeState.entered = true;
+  }
+
+  enteredHistory.push(value);
+  const isFirstAcceptedEntry = enteredHistory.length === 1;
+
+  // Handle grantAll: if any ancestor has grantAll AND we entered a sub (not the root itself)
+  if(value !== rootKey){
+    for(let i = 0; i < path.length; i++){
+      const ancestorKey = path[i];
+      const ancestorTerm = terms[ancestorKey];
+      if(ancestorTerm && ancestorTerm.grantAll && Array.isArray(ancestorTerm.subs)){
+        // Grant all subs of this ancestor
+        for(const siblingKey of ancestorTerm.subs){
+          const siblingPath = getPathToRoot(siblingKey);
+          // Ensure the sibling and its path are visible
+          for(let j = 1; j < siblingPath.length; j++){
+            const parentKey = siblingPath[j - 1];
+            const childKey = siblingPath[j];
+            const childResult = ensureNodeEntry(parentKey, childKey);
+            if(childResult.created){
+              createdKeys.push(childKey);
+              createdInfo[childKey] = {
+                parentKey,
+                parentHadChildren: childResult.parentHadChildren,
+                parentEntered: childResult.parentEntered
+              };
+            }
+          }
+          // Mark sibling as entered
+          const siblingState = listState.nodes[siblingKey];
+          if(siblingState) siblingState.entered = true;
+        }
+      }
+    }
+  }
+
+  const newScore = recomputeScore();
+  const delta = newScore - score;
+  score = newScore;
+  const sequenceMatch = getTriggeredSequence();
+
+  if(delta === 0){
+    // Input was accepted but did not score (e.g., first child under a
+    // non-core parent already entered). Provide a neutral hint instead.
+    let parentLabel = "";
+    if(path.length > 1){
+      const parentKey = path[path.length - 2];
+      parentLabel = displayForKey(parentKey);
+    }
+    const msg = parentLabel
+      ? `Made ${parentLabel} more specific. Enter more subtypes for points.`
+      : "Made the category more specific. Enter more subtypes for points.";
+    const enteredState = enteredStateForKey(value, rootKey);
+    if(sequenceMatch){
+      setMessage(sequenceMatch.response, 'success', sequenceMatch.color);
+    } else if(enteredState && enteredState.isShiny){
+      setShinyMessage(enteredState.shinyColor);
+    } else {
+      setMessage(msg, "info");
+    }
+    inputField.value="";
+    return;
+  }
+
+  if(delta > 0){
+    startTimer();
+    addTime(6);
+    const enteredState = enteredStateForKey(value, rootKey);
+
+    // Check for custom response on successful entry
+    if(customLookup[originalInput]){
+      let customEntry = customLookup[originalInput];
+      if(shouldTriggerCustomEntry(customEntry, isFirstAcceptedEntry) && !shownResponses.has(customEntry._id)){
+        setEntryNonShiny(enteredState);
+        setMessage(customEntry.response, 'success', customEntry.color);
+        shownResponses.add(customEntry._id);
+      }
+    }
+
+    if(sequenceMatch){
+      setMessage(sequenceMatch.response, 'success', sequenceMatch.color);
+    }
+
+    if(!sequenceMatch && enteredState && enteredState.isShiny){
+      setShinyMessage(enteredState.shinyColor);
+    }
+  }
+
+  document.getElementById("score").textContent=score;
+  inputField.value="";
+}
+
+function resetGame(){
+  score=0;
+  timerStarted=false;
+  timeLeft=60;
+  clearInterval(timerInterval);
+
+  listState={ roots:{}, nodes:{} };
+  listState.shinyByKey = {};
+  listState.shinyColorByKey = {};
+  resetCustomTracking();
+
+  document.getElementById("score").textContent=score;
+  document.getElementById("timer").textContent=timeLeft;
+  document.getElementById("results").innerHTML = '';
+  document.getElementById("inputField").disabled=false;
+  document.getElementById("submitBtn").disabled=false;
+  document.getElementById("finishBtn").disabled=false;
+  document.getElementById("inputField").value="";
+  closeModal();
+}
+
+document.getElementById("submitBtn").addEventListener("click",handleSubmit);
+document.getElementById("inputField").addEventListener("keydown",e=>{
+  if(e.key==="Enter") handleSubmit();
+});
+document.getElementById("restartBtn").addEventListener("click",resetGame);
+document.getElementById("modalRestartBtn").addEventListener("click",resetGame);
+document.getElementById("finishBtn").addEventListener("click",endGame);
+
+resetGame();
+
+</script>
+</body>
+</html>
