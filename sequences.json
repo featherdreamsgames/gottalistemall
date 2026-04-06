@@ -299,13 +299,13 @@
       { "terms": ["Incineroar"], "count": 1 },
       { "terms": ["Lucario"], "count": 1 },
       { "terms": ["Greninja"], "count": 1 },
-      { "terms": ["Pichu"], "count": 1 },
+      { "terms": ["Pichu"], "count": 1 }
     ],
     "ordered": false,
     "number": 9,
     "invalidMode": "ignore",
     "includeVariants": true,
-    "response": "Everyone is here! That's every Pokémon in Smash Bros."
+    "response": "Everyone is here! That's every playable Pokémon in Smash Bros."
   }
 }
 
