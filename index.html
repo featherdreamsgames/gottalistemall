@@ -882,6 +882,9 @@ async function copyCurrentList(){
     }
   }
 
+  lines.push('');
+  lines.push('Try it out yourself: http://www.gottalistemall.com');
+
   if(lines.length === 0){
     setMessage('Nothing to copy yet.', 'warning');
     return;
