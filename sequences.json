@@ -259,8 +259,7 @@
       { "terms": ["Tsareena"], "count": 1 },
       { "terms": ["Gallade"], "count": 1 },
       { "terms": ["Meowscarada"], "count": 1 },
-      { "terms": ["Floragato"], "count": 1 },
-      { "terms": ["Mismagius"], "count": 1 }
+      { "terms": ["Floragato"], "count": 1 }
     ],
     "ordered": false,
     "number": 5,
@@ -287,5 +286,26 @@
     "invalidMode": "ignore",
     "includeVariants": true,
     "response": "What's your favorite Eeveelution?"
+  },
+  "smashbros": {
+    "termGroups": [
+      { "terms": ["Pikachu"], "count": 1 },
+      { "terms": ["Jigglypuff"], "count": 1 },
+      { "terms": ["Mewtwo"], "count": 1 },
+      { "terms": ["Squirtle"], "count": 1 },
+      { "terms": ["Ivysaur"], "count": 1 },
+      { "terms": ["Charizard"], "count": 1 },
+      { "terms": ["Mewtwo"], "count": 1 },
+      { "terms": ["Incineroar"], "count": 1 },
+      { "terms": ["Lucario"], "count": 1 },
+      { "terms": ["Greninja"], "count": 1 },
+      { "terms": ["Pichu"], "count": 1 },
+    ],
+    "ordered": false,
+    "number": 9,
+    "invalidMode": "ignore",
+    "includeVariants": true,
+    "response": "Everyone is here! That's every Pokémon in Smash Bros."
   }
 }
+
