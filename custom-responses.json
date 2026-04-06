@@ -29,7 +29,7 @@
       "Unown Y", "Y Unown", "Unown Z", "Z Unown", "Unown ?", "? Unown", "Unown Question Mark",
       "Question Mark Unown", "Unown !", "! Unown", "Unown Exclamation Mark", "Exclamation Mark Unown"
     ],
-    "response": "I won't make you enter all 28 of them.",
+    "response": "I'll give you the alphabet for free.",
     "color": null
   },
   "arceus": {
@@ -211,7 +211,19 @@
       "Mosslax",
       "Smearguru"
     ],
-    "response": "The creator of this site also enjoys Pokopia, but that's an individual, not a species.",
+    "response": "I also enjoy Pokopia, but that's an individual, not a species.",
+    "color": null
+  },
+    "pokopia": {
+    "name": "Mr. Windychu",
+    "synonyms": [
+      "Ms. Wavychu",
+      "Captain Pikachu",
+      "Surfing Pikachu",
+      "Ash's Pikachu",
+      "Satoshi's Pikachu"
+    ],
+    "response": "If we start counting individual Pikachu, we'll be there all day...",
     "color": null
   }
 }

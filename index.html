@@ -2,15 +2,20 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Term Game</title>
+<title>Gotta list 'em all!</title>
 <style>
-body { font-family: Arial,sans-serif; background:#000; color:#fff; }
-h2 { margin-bottom:10px; }
+body { font-family: Arial,sans-serif; background:#000; color:#dce9ff; margin:0; min-height:100vh; display:flex; justify-content:center; }
+#pageWrap { width:min(980px, 100%); margin-top:32px; padding:0 20px 30px 20px; text-align:left; }
+h2 { margin:0 0 26px 0; }
+#subtitle { margin:-16px 0 14px 0; color:#aaa; }
+#entryRow { margin-top:14px; }
+#titleSpacer { height:16px; }
 #topPanel { margin-bottom:15px; }
 #results { margin-top:20px; color:#ccc; }
-input { background:#111; color:#fff; border:1px solid #555; padding:6px; }
-button { background:#222; color:#fff; border:1px solid #555; padding:6px 10px; cursor:pointer; margin-right:5px; }
+input { background:#111; color:#dce9ff; border:1px solid #555; padding:6px; }
+button { background:#222; color:#dce9ff; border:1px solid #555; padding:6px 10px; cursor:pointer; margin-right:5px; }
 button:hover { background:#333; }
+button:disabled { background:#111; color:#777; border-color:#333; cursor:not-allowed; opacity:1; }
 .warning { color:#ff5555; margin-top:5px; }
 .success { color:#55ff55; margin-top:5px; }
 .info { color:#aaa; margin-top:5px; }
@@ -26,22 +31,73 @@ button:hover { background:#333; }
 
 .modal { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); justify-content:center; align-items:center; }
 .modal-content { background:#111; border:1px solid #555; padding:25px 35px; border-radius:8px; text-align:center; }
+#feedbackTopRight {
+  position:fixed;
+  bottom:12px;
+  right:12px;
+  font-size:14px;
+}
+#feedbackTopRight a { color:#9ecbff; text-decoration:underline; }
+
+#themeToggleWrap {
+  position:fixed;
+  bottom:12px;
+  left:12px;
+  z-index:20;
+}
+
+body.light-theme {
+  background:#f5f5f5;
+  color:#111;
+}
+body.light-theme #results { color:#333; }
+body.light-theme input { background:#fff; color:#111; border-color:#999; }
+body.light-theme button { background:#e9e9e9; color:#111; border-color:#999; }
+body.light-theme button:hover { background:#dcdcdc; }
+body.light-theme button:disabled { background:#f2f2f2; color:#8a8a8a; border-color:#c6c6c6; }
+body.light-theme .info { color:#555; }
+body.light-theme .sub-entry { color:#555; }
+body.light-theme .subcategory-entry { color:#444; }
+body.light-theme .core-entry { color:#777; }
+body.light-theme .modal { background:rgba(0,0,0,0.45); }
+body.light-theme .modal-content { background:#fff; border-color:#bbb; color:#111; }
+body.light-theme #feedbackTopRight a { color:#0b57d0; }
+body.light-theme #howToModal ul { color:#555 !important; }
 </style>
 </head>
 <body>
 
-<h2>Enter a Term</h2>
+<div id="feedbackTopRight">Submit feedback to <a href="mailto:gottalistemall@gmail.com">gottalistemall@gmail.com</a></div>
+<div id="themeToggleWrap"><button id="themeToggleBtn">Light Theme</button></div>
+
+<div id="pageWrap">
+
+<h2>Gotta list 'em all!</h2>
+<div id="subtitle">How many Pokémon can you name?</div>
+<div id="titleSpacer"></div>
+
+<div id="entryRow">
+  <input type="text" id="inputField" autocomplete="off">
+  <button id="submitBtn">Submit</button>
+  <button id="finishBtn">Finish</button>
+  <button id="restartBtn">Start Over</button>
+  <button id="howToBtn">How to Play</button>
+</div>
 
 <div id="topPanel">
-  <div><strong>Score:</strong> <span id="score">0</span></div>
-  <div><strong>Time left:</strong> <span id="timer">60</span>s</div>
+  <div><strong id="scoreLabel">Score:</strong> <span id="score">0</span></div>
+  <div id="timerRow"><strong>Time left:</strong> <span id="timer">1:00</span></div>
   <div id="message"></div>
 </div>
 
-<input type="text" id="inputField" autocomplete="off">
-<button id="submitBtn">Submit</button>
-<button id="finishBtn">Finish</button>
-<button id="restartBtn">Start Over</button>
+<div id="sortPanel" style="display:none; margin-top:10px;">
+  <strong>Sort:</strong>
+  <button onclick="applySort('newest')">Entry Order (Newest First)</button>
+  <button onclick="applySort('oldest')">Entry Order (Oldest First)</button>
+  <button onclick="applySort('pokedex')">Pokédex #</button>
+  <button onclick="applySort('alpha')">Alphabetical</button>
+  <button onclick="copyCurrentList()">Copy to Clipboard</button>
+</div>
 
 <div id="results"></div>
 
@@ -49,7 +105,28 @@ button:hover { background:#333; }
   <div class="modal-content">
     <h2>Game Over</h2>
     <p>Your final score: <span id="finalScore"></span></p>
-    <button id="modalRestartBtn">Start Over</button>
+    <button id="modalCloseBtn">Close</button>
+  </div>
+</div>
+
+<div id="howToModal" class="modal">
+  <div class="modal-content" style="text-align:left; max-width:520px;">
+    <h2 style="text-align:center;">How to Play</h2>
+    <ul style="color:#aaa; margin:0; padding-left:20px; line-height:1.7;">
+      <li>List as many Pokémon as you can.</li>
+      <li>English names only.</li>
+      <li>Valid entries:
+        <ul style="padding-left:20px;">
+          <li>Species (Pikachu, Bulbasaur, Charizard)</li>
+          <li>Variants (Alolan Vulpix, East Sea Gastrodon)</li>
+          <li>Transformations (Mega Lucario, Primal Groudon)</li>
+          <li>Formes (Zen Mode Darmanitan, Sunshine Form Cherrim)</li>
+        </ul>
+      </li>
+    </ul>
+    <div style="text-align:center; margin-top:14px;">
+      <button id="howToCloseBtn">Close</button>
+    </div>
   </div>
 </div>
 
@@ -410,7 +487,8 @@ function buildLookupFromRawTerms(raw){
       core: (explicitCore !== null) ? explicitCore : (hasSubs ? false : true),
       single: hasSubs ? false : true,
       subs: [],
-      grantAll: grantAll
+      grantAll: grantAll,
+      number: entry.number != null ? entry.number : null
     };
 
     lookup[normCategory] = normCategory;
@@ -478,9 +556,10 @@ function addSingleTerm(key){
 let score, timerStarted, timeLeft, timerInterval;
 let listState;
 let subOrder;
+let rootInsertionOrder = [];
 
 function rollShiny(){
-  return Math.random() < (1 / 4096);
+  return Math.random() < (1 / 1024);
 }
 
 function randomBrightShinyColor(){
@@ -555,19 +634,27 @@ function setShinyMessage(color){
   el.style.color = color || '';
 }
 
+function formatTime(sec){
+  const m=Math.floor(sec/60);
+  const s=sec%60;
+  return m+':'+(s<10?'0':'')+s;
+}
+
 function startTimer(){
   if(timerStarted) return;
   timerStarted=true;
+  document.getElementById("howToBtn").disabled=true;
+  closeHowToModal();
   timerInterval=setInterval(()=>{
     timeLeft--;
-    document.getElementById("timer").textContent=timeLeft;
+    document.getElementById("timer").textContent=formatTime(timeLeft);
     if(timeLeft<=0) endGame();
   },1000);
 }
 
 function addTime(sec){
   timeLeft+=sec;
-  document.getElementById("timer").textContent=timeLeft;
+  document.getElementById("timer").textContent=formatTime(timeLeft);
 }
 
 function endGame(){
@@ -575,12 +662,144 @@ function endGame(){
   document.getElementById("inputField").disabled=true;
   document.getElementById("submitBtn").disabled=true;
   document.getElementById("finishBtn").disabled=true;
+  document.getElementById("howToBtn").disabled=false;
+  document.getElementById("scoreLabel").textContent="Final Score:";
+  document.getElementById("timerRow").style.display="none";
   document.getElementById("finalScore").textContent=score;
   document.getElementById("gameOverModal").style.display="flex";
+  setMessage("");
+
+  // Show Pokédex numbers on root entries
+  for(const key in listState.roots){
+    const state = listState.roots[key];
+    const num = terms[key] && terms[key].number;
+    if(num != null && state.header){
+      const padded = String(num).padStart(4, '0');
+      state.header.textContent = `#${padded} ${displayForKey(key)}`;
+    }
+  }
+
+  // Show sort buttons
+  document.getElementById("sortPanel").style.display = '';
+}
+
+function applySort(mode){
+  const container = document.getElementById('results');
+  const blocks = Array.from(container.querySelectorAll(':scope > .root-block'));
+
+  blocks.sort((a, b) => {
+    const keyA = a.getAttribute('data-key');
+    const keyB = b.getAttribute('data-key');
+    if(mode === 'newest'){
+      return rootInsertionOrder.indexOf(keyB) - rootInsertionOrder.indexOf(keyA);
+    } else if(mode === 'oldest'){
+      return rootInsertionOrder.indexOf(keyA) - rootInsertionOrder.indexOf(keyB);
+    } else if(mode === 'pokedex'){
+      const numA = (terms[keyA] && terms[keyA].number != null) ? terms[keyA].number : 99999;
+      const numB = (terms[keyB] && terms[keyB].number != null) ? terms[keyB].number : 99999;
+      return numA - numB;
+    } else if(mode === 'alpha'){
+      return displayForKey(keyA).localeCompare(displayForKey(keyB));
+    }
+    return 0;
+  });
+
+  for(const block of blocks){
+    container.appendChild(block);
+  }
+}
+
+function collectChildLines(childContainer, depth, lines){
+  const childBlocks = Array.from(childContainer.querySelectorAll(':scope > .child-block'));
+  for(const childBlock of childBlocks){
+    const childKey = childBlock.getAttribute('data-key');
+    const childState = childKey ? listState.nodes[childKey] : null;
+    const entry = childBlock.querySelector(':scope > .sub-entry, :scope > .subcategory-entry');
+    if(entry){
+      const label = entry.textContent.replace(/^\s*-\s*/, '').trim();
+      if(label && label !== '(Standard)' && label !== '(Shiny Standard)'){
+        const indent = '  '.repeat(Math.max(0, depth - 1));
+        const bullet = depth === 1 ? '•' : (depth === 2 ? '◦' : '-');
+        const shinySuffix = (childState && childState.isShiny) ? ' (Shiny)' : '';
+        lines.push(indent + bullet + ' ' + label + shinySuffix);
+      }
+    }
+
+    const nestedChildren = childBlock.querySelector(':scope > .children');
+    if(nestedChildren){
+      collectChildLines(nestedChildren, depth + 1, lines);
+    }
+  }
+}
+
+async function copyCurrentList(){
+  const lines = [];
+  const rootBlocks = Array.from(document.querySelectorAll('#results > .root-block'));
+
+  for(const rootBlock of rootBlocks){
+    const rootKey = rootBlock.getAttribute('data-key');
+    const rootState = rootKey ? listState.roots[rootKey] : null;
+    const header = rootBlock.querySelector(':scope > .root-entry');
+    if(header){
+      const rootLabel = header.textContent.trim();
+      if(rootLabel){
+        const shinySuffix = (rootState && rootState.isShiny) ? ' (Shiny)' : '';
+        lines.push(rootLabel + shinySuffix);
+      }
+    }
+
+    const childContainer = rootBlock.querySelector(':scope > .children');
+    if(childContainer){
+      collectChildLines(childContainer, 1, lines);
+    }
+  }
+
+  if(lines.length === 0){
+    setMessage('Nothing to copy yet.', 'warning');
+    return;
+  }
+
+  const text = lines.join('\n');
+
+  try{
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      await navigator.clipboard.writeText(text);
+    } else {
+      const temp = document.createElement('textarea');
+      temp.value = text;
+      document.body.appendChild(temp);
+      temp.select();
+      document.execCommand('copy');
+      document.body.removeChild(temp);
+    }
+    setMessage('Copied list to clipboard.', 'success');
+  } catch(err){
+    console.error('Copy failed:', err);
+    setMessage('Failed to copy list.', 'warning');
+  }
 }
 
 function closeModal(){
   document.getElementById("gameOverModal").style.display="none";
+}
+
+function openHowToModal(){
+  document.getElementById("howToModal").style.display="flex";
+}
+
+function closeHowToModal(){
+  document.getElementById("howToModal").style.display="none";
+}
+
+function updateThemeToggleLabel(){
+  const btn = document.getElementById("themeToggleBtn");
+  const isLight = document.body.classList.contains("light-theme");
+  btn.textContent = isLight ? "Dark Theme" : "Light Theme";
+}
+
+function toggleTheme(){
+  document.body.classList.toggle("light-theme");
+  updateThemeToggleLabel();
 }
 
 // -------------------------
@@ -647,6 +866,7 @@ function ensureRoot(rootKey){
 
   const block = document.createElement('div');
   block.className = 'root-block';
+  block.setAttribute('data-key', rootKey);
 
   const header = document.createElement('div');
   header.className = 'root-entry';
@@ -677,6 +897,7 @@ function ensureRoot(rootKey){
   };
   applyShinyStyling(state);
   listState.roots[rootKey] = state;
+  rootInsertionOrder.push(rootKey);
   return { state, created:true };
 }
 
@@ -800,6 +1021,13 @@ function findParent(term){
   return p || null;
 }
 
+function shouldGrantAllSub(ancestorKey, siblingKey){
+  if(ancestorKey === 'unown'){
+    return siblingKey !== 'unown?' && siblingKey !== 'unown!';
+  }
+  return true;
+}
+
 function handleSubmit(){
   const inputField=document.getElementById("inputField");
   let rawInput = inputField.value;
@@ -888,6 +1116,7 @@ function handleSubmit(){
       if(ancestorTerm && ancestorTerm.grantAll && Array.isArray(ancestorTerm.subs)){
         // Grant all subs of this ancestor
         for(const siblingKey of ancestorTerm.subs){
+          if(!shouldGrantAllSub(ancestorKey, siblingKey)) continue;
           const siblingPath = getPathToRoot(siblingKey);
           // Ensure the sibling and its path are visible
           for(let j = 1; j < siblingPath.length; j++){
@@ -972,32 +1201,44 @@ function resetGame(){
   timerStarted=false;
   timeLeft=60;
   clearInterval(timerInterval);
+  rootInsertionOrder = [];
 
   listState={ roots:{}, nodes:{} };
   listState.shinyByKey = {};
   listState.shinyColorByKey = {};
   resetCustomTracking();
 
+  document.getElementById("sortPanel").style.display = 'none';
+
+  document.getElementById("scoreLabel").textContent="Score:";
+  document.getElementById("timerRow").style.display="";
   document.getElementById("score").textContent=score;
-  document.getElementById("timer").textContent=timeLeft;
+  document.getElementById("timer").textContent=formatTime(timeLeft);
   document.getElementById("results").innerHTML = '';
   document.getElementById("inputField").disabled=false;
   document.getElementById("submitBtn").disabled=false;
   document.getElementById("finishBtn").disabled=false;
+  document.getElementById("howToBtn").disabled=false;
   document.getElementById("inputField").value="";
   closeModal();
+  closeHowToModal();
 }
 
 document.getElementById("submitBtn").addEventListener("click",handleSubmit);
 document.getElementById("inputField").addEventListener("keydown",e=>{
   if(e.key==="Enter") handleSubmit();
 });
+document.getElementById("howToBtn").addEventListener("click",openHowToModal);
+document.getElementById("howToCloseBtn").addEventListener("click",closeHowToModal);
 document.getElementById("restartBtn").addEventListener("click",resetGame);
-document.getElementById("modalRestartBtn").addEventListener("click",resetGame);
+document.getElementById("modalCloseBtn").addEventListener("click",closeModal);
 document.getElementById("finishBtn").addEventListener("click",endGame);
+document.getElementById("themeToggleBtn").addEventListener("click",toggleTheme);
 
 resetGame();
+updateThemeToggleLabel();
 
 </script>
+</div>
 </body>
 </html>
