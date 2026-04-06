@@ -53,17 +53,25 @@ button:disabled { background:#111; color:#777; border-color:#333; cursor:not-all
   bottom:12px;
   left:12px;
   z-index:20;
+  display:flex;
+  align-items:center;
+  gap:8px;
 }
+
+#sortPanel .copy-btn { margin-right:12px; }
+#sortPanel .sort-label { margin-right:6px; }
 
 body.light-theme {
   background:#f5f5f5;
   color:#111;
 }
+body.light-theme #subtitle { color:#555; }
 body.light-theme #results { color:#333; }
 body.light-theme input { background:#fff; color:#111; border-color:#999; }
 body.light-theme button { background:#e9e9e9; color:#111; border-color:#999; }
 body.light-theme button:hover { background:#dcdcdc; }
 body.light-theme button:disabled { background:#f2f2f2; color:#8a8a8a; border-color:#c6c6c6; }
+body.light-theme .success { color:#2d7a2d; }
 body.light-theme .info { color:#555; }
 body.light-theme .sub-entry { color:#555; }
 body.light-theme .subcategory-entry { color:#444; }
@@ -72,6 +80,33 @@ body.light-theme .modal { background:rgba(0,0,0,0.45); }
 body.light-theme .modal-content { background:#fff; border-color:#bbb; color:#111; }
 body.light-theme #feedbackTopRight a { color:#0b57d0; }
 body.light-theme #howToModal ul { color:#555 !important; }
+
+#howToModal .howto-list,
+#howToModal .howto-sublist {
+  list-style:none;
+  margin:0;
+  padding-left:20px;
+}
+
+#howToModal .howto-list > li,
+#howToModal .howto-sublist > li {
+  position:relative;
+  padding-left:16px;
+}
+
+#howToModal .howto-list > li::before,
+#howToModal .howto-sublist > li::before {
+  position:absolute;
+  left:0;
+}
+
+#howToModal .howto-list > li::before {
+  content:'•';
+}
+
+#howToModal .howto-sublist > li::before {
+  content:'◦';
+}
 </style>
 </head>
 <body>
@@ -81,7 +116,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <div id="feedbackTopRight">Submit feedback to <a href="mailto:gottalistemall@gmail.com">gottalistemall@gmail.com</a></div>
-<div id="themeToggleWrap"><button id="themeToggleBtn">Light Theme</button></div>
+<div id="themeToggleWrap">
+  <button id="themeToggleBtn">Light Theme</button>
+</div>
 
 <div id="pageWrap">
 
@@ -104,12 +141,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <div id="sortPanel" style="display:none; margin-top:10px;">
-  <strong>Sort:</strong>
+  <button class="copy-btn" onclick="copyCurrentList()">Copy results to clipboard</button>
+  <strong class="sort-label">Sort:</strong>
   <button onclick="applySort('newest')">Entry Order (Newest First)</button>
   <button onclick="applySort('oldest')">Entry Order (Oldest First)</button>
   <button onclick="applySort('pokedex')">Pokédex #</button>
   <button onclick="applySort('alpha')">Alphabetical</button>
-  <button onclick="copyCurrentList()">Copy to Clipboard</button>
 </div>
 
 <div id="results"></div>
@@ -125,11 +162,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div id="howToModal" class="modal">
   <div class="modal-content" style="text-align:left; max-width:520px;">
     <h2 style="text-align:center;">How to Play</h2>
-    <ul style="color:#aaa; margin:0; padding-left:20px; line-height:1.7;">
+    <ul class="howto-list" style="color:#aaa; line-height:1.7;">
       <li>List as many Pokémon as you can.</li>
       <li>English names only.</li>
       <li>Valid entries:
-        <ul style="padding-left:20px;">
+        <ul class="howto-sublist">
           <li>Species (Pikachu, Bulbasaur, Charizard)</li>
           <li>Variants (Alolan Vulpix, East Sea Gastrodon)</li>
           <li>Transformations (Mega Lucario, Primal Groudon)</li>
@@ -248,7 +285,8 @@ function buildSequences(raw){
       groups: expandedGroups,
       allowedTerms,
       response: entry.response || '',
-      color: entry.color || null
+      color: entry.color || null,
+      lightColor: entry.lightColor || null
     });
   }
 }
@@ -600,13 +638,49 @@ function shinyColorForKey(key){
   return listState.shinyColorByKey[key];
 }
 
+function themedShinyColor(color){
+  if(!color) return color;
+  if(!document.body.classList.contains('light-theme')) return color;
+
+  const match = String(color).match(/^hsl\(\s*(\d+)\s*,\s*(\d+)%\s*,\s*(\d+)%\s*\)$/i);
+  if(!match) return color;
+
+  const hue = Number(match[1]);
+  const saturation = Number(match[2]);
+  const lightness = Number(match[3]);
+
+  let adjustedSaturation = Math.min(100, Math.max(72, saturation));
+  let adjustedLightness = Math.max(34, Math.min(46, lightness - 18));
+
+  if(hue >= 20 && hue <= 85){
+    adjustedSaturation = Math.min(88, adjustedSaturation);
+    adjustedLightness = Math.max(28, adjustedLightness - 8);
+  }
+
+  if(hue >= 86 && hue <= 170){
+    adjustedSaturation = Math.min(90, adjustedSaturation);
+    adjustedLightness = Math.max(30, adjustedLightness - 6);
+  }
+
+  return `hsl(${hue}, ${adjustedSaturation}%, ${adjustedLightness}%)`;
+}
+
 function applyShinyStyling(state){
   const target = state.header || state.entry;
   if(!target) return;
   if(state.isShiny){
-    target.style.color = state.shinyColor;
+    target.style.color = themedShinyColor(state.shinyColor);
   } else {
     target.style.color = '';
+  }
+}
+
+function refreshShinyStyles(){
+  for(const key in listState.roots){
+    applyShinyStyling(listState.roots[key]);
+  }
+  for(const key in listState.nodes){
+    applyShinyStyling(listState.nodes[key]);
   }
 }
 
@@ -618,7 +692,7 @@ function setEntryNonShiny(state){
   listState.shinyColorByKey[state.key] = null;
   applyShinyStyling(state);
   if(state.coreEntry){
-    state.coreEntry.textContent = '- (Standard)';
+    state.coreEntry.textContent = formatCoreLabel(state, false);
   }
 }
 
@@ -640,11 +714,18 @@ function setMessage(text,type="warning",color=null){
   }
 }
 
+function messageColorForTheme(color, lightColor=null){
+  if(document.body.classList.contains('light-theme')){
+    return lightColor || color;
+  }
+  return color;
+}
+
 function setShinyMessage(color){
   const el=document.getElementById("message");
   el.innerHTML = '<strong>It\'s a shiny!</strong>';
   el.className='success';
-  el.style.color = color || '';
+  el.style.color = themedShinyColor(color) || '';
 }
 
 function formatTime(sec){
@@ -657,6 +738,7 @@ function startTimer(){
   if(timerStarted) return;
   timerStarted=true;
   document.getElementById("howToBtn").disabled=true;
+  document.getElementById("finishBtn").disabled=false;
   closeHowToModal();
   timerInterval=setInterval(()=>{
     timeLeft--;
@@ -722,6 +804,33 @@ function applySort(mode){
   }
 }
 
+function bulletForDepth(depth){
+  return depth === 1 ? '•' : (depth === 2 ? '◦' : '-');
+}
+
+function stripLeadingBullet(text){
+  return String(text || '').replace(/^\s*[•◦-]\s*/, '').trim();
+}
+
+function formatBulletLabel(depth, label){
+  return bulletForDepth(depth) + ' ' + label;
+}
+
+function stateDepth(state){
+  let depth = 0;
+  let cur = state;
+  while(cur && cur.parentKey){
+    depth += 1;
+    cur = getParentState(cur.parentKey);
+  }
+  return depth;
+}
+
+function formatCoreLabel(parentState, shiny){
+  const depth = stateDepth(parentState) + 1;
+  return formatBulletLabel(depth, shiny ? '(Shiny Standard)' : '(Standard)');
+}
+
 function collectChildLines(childContainer, depth, lines){
   const childBlocks = Array.from(childContainer.querySelectorAll(':scope > .child-block'));
   for(const childBlock of childBlocks){
@@ -729,10 +838,10 @@ function collectChildLines(childContainer, depth, lines){
     const childState = childKey ? listState.nodes[childKey] : null;
     const entry = childBlock.querySelector(':scope > .sub-entry, :scope > .subcategory-entry');
     if(entry){
-      const label = entry.textContent.replace(/^\s*-\s*/, '').trim();
+      const label = stripLeadingBullet(entry.textContent);
       if(label && label !== '(Standard)' && label !== '(Shiny Standard)'){
         const indent = '  '.repeat(Math.max(0, depth - 1));
-        const bullet = depth === 1 ? '•' : (depth === 2 ? '◦' : '-');
+        const bullet = bulletForDepth(depth);
         const shinySuffix = (childState && childState.isShiny) ? ' (Shiny)' : '';
         lines.push(indent + bullet + ' ' + label + shinySuffix);
       }
@@ -748,6 +857,9 @@ function collectChildLines(childContainer, depth, lines){
 async function copyCurrentList(){
   const lines = [];
   const rootBlocks = Array.from(document.querySelectorAll('#results > .root-block'));
+
+  lines.push(`Score: ${score}`);
+  lines.push('');
 
   for(const rootBlock of rootBlocks){
     const rootKey = rootBlock.getAttribute('data-key');
@@ -813,6 +925,7 @@ function updateThemeToggleLabel(){
 function toggleTheme(){
   document.body.classList.toggle("light-theme");
   updateThemeToggleLabel();
+  refreshShinyStyles();
 }
 
 // -------------------------
@@ -948,7 +1061,7 @@ function ensureCoreEntry(parentState){
 
   const core = document.createElement('div');
   core.className = 'core-entry';
-  core.textContent = parentState.isShiny ? '- (Shiny Standard)' : '- (Standard)';
+  core.textContent = formatCoreLabel(parentState, parentState.isShiny);
   parentState.children.insertBefore(core, parentState.children.firstChild);
   parentState.coreEntry = core;
   return true;
@@ -980,7 +1093,7 @@ function ensureNodeEntry(parentKey, childKey){
 
   const entry = document.createElement('div');
   entry.className = 'sub-entry';
-  entry.textContent = '- ' + displayForKey(childKey);
+  entry.textContent = formatBulletLabel(stateDepth(parentState) + 1, displayForKey(childKey));
 
   const children = document.createElement('div');
   children.className = 'children';
@@ -1066,7 +1179,7 @@ function handleSubmit(){
       let customEntry = customLookup[originalInput];
       const isFirstAcceptedEntry = enteredHistory.length === 0;
       if(shouldTriggerCustomEntry(customEntry, isFirstAcceptedEntry)){
-        setMessage(customEntry.response, 'warning', customEntry.color);
+        setMessage(customEntry.response, 'warning', messageColorForTheme(customEntry.color, customEntry.lightColor));
       } else {
         setMessage("Not in list!");
       }
@@ -1171,7 +1284,7 @@ function handleSubmit(){
       : "Made the category more specific. Enter more subtypes for points.";
     const enteredState = enteredStateForKey(value, rootKey);
     if(sequenceMatch){
-      setMessage(sequenceMatch.response, 'success', sequenceMatch.color);
+      setMessage(sequenceMatch.response, 'success', messageColorForTheme(sequenceMatch.color, sequenceMatch.lightColor));
     } else if(enteredState && enteredState.isShiny){
       setShinyMessage(enteredState.shinyColor);
     } else {
@@ -1191,13 +1304,13 @@ function handleSubmit(){
       let customEntry = customLookup[originalInput];
       if(shouldTriggerCustomEntry(customEntry, isFirstAcceptedEntry) && !shownResponses.has(customEntry._id)){
         setEntryNonShiny(enteredState);
-        setMessage(customEntry.response, 'success', customEntry.color);
+        setMessage(customEntry.response, 'success', messageColorForTheme(customEntry.color, customEntry.lightColor));
         shownResponses.add(customEntry._id);
       }
     }
 
     if(sequenceMatch){
-      setMessage(sequenceMatch.response, 'success', sequenceMatch.color);
+      setMessage(sequenceMatch.response, 'success', messageColorForTheme(sequenceMatch.color, sequenceMatch.lightColor));
     }
 
     if(!sequenceMatch && enteredState && enteredState.isShiny){
@@ -1230,7 +1343,7 @@ function resetGame(){
   document.getElementById("results").innerHTML = '';
   document.getElementById("inputField").disabled=false;
   document.getElementById("submitBtn").disabled=false;
-  document.getElementById("finishBtn").disabled=false;
+  document.getElementById("finishBtn").disabled=true;
   document.getElementById("howToBtn").disabled=false;
   document.getElementById("inputField").value="";
   closeModal();

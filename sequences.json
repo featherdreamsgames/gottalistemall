@@ -267,7 +267,8 @@
     "invalidMode": "ignore",
     "includeVariants": true,
     "response": "♡ I'm sensing a theme here~ ♡",
-    "color": "pink"
+    "color": "pink",
+    "lightColor": "#9c1f5d"
   },
   "eeveelutions": {
     "termGroups": [
