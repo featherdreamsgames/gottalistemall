@@ -1,0 +1,20 @@
+{
+  "milestones": [
+    { "score": 10, "label": "Old enough to set off on your journey" },
+    { "score": 25, "label": "Pikachu's dex number" },
+    { "score": 31, "label": "Maximum EVs" },
+    { "score": 50, "label": "Ready for the Poké Cup" },
+    { "score": 100, "label": "Maximum level" },
+    { "score": 108, "label": "Spirit number" },
+    { "score": 151, "label": "As many as the Kanto dex" },
+    { "score": 251, "label": "As many as the Johto dex" },
+    { "score": 386, "label": "As many as the Hoenn dex" },
+    { "score": 493, "label": "As many as the Sinnoh dex" },
+    { "score": 649, "label": "As many as the Unova dex" },
+    { "score": 721, "label": "As many as the Kalos dex" },
+    { "score": 809, "label": "As many as the Alola dex" },
+    { "score": 905, "label": "As many as the Galar dex" },
+    { "score": 1025, "label": "As many as the Paldea dex!" },
+    { "score": 1455, "label": "Gotta list 'em all!" }
+  ]
+}

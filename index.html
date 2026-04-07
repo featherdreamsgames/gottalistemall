@@ -29,6 +29,7 @@ h2 { margin:0 0 26px 0; }
 #entryRow { margin-top:14px; }
 #titleSpacer { height:16px; }
 #topPanel { margin-top:10px; margin-bottom:15px; display:flex; flex-direction:column; gap:6px; }
+#milestoneRow { color:#aaa; }
 #results { margin-top:20px; color:#ccc; }
 input { background:#111; color:#dce9ff; border:1px solid #555; padding:6px; }
 button { background:#222; color:#dce9ff; border:1px solid #555; padding:6px 10px; cursor:pointer; margin-right:5px; }
@@ -86,6 +87,7 @@ body.light-theme button:hover { background:#dcdcdc; }
 body.light-theme button:disabled { background:#f2f2f2; color:#8a8a8a; border-color:#c6c6c6; }
 body.light-theme .success { color:#2d7a2d; }
 body.light-theme .info { color:#555; }
+body.light-theme #milestoneRow { color:#555; }
 body.light-theme .sub-entry { color:#555; }
 body.light-theme .subcategory-entry { color:#444; }
 body.light-theme .core-entry { color:#777; }
@@ -151,8 +153,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <div id="topPanel">
-  <div><strong id="scoreLabel">Score:</strong> <span id="score">0</span></div>
   <div id="timerRow"><strong>Time left:</strong> <span id="timer">1:00</span></div>
+  <div><strong id="scoreLabel">Score:</strong> <span id="score">0</span></div>
+  <div id="milestoneRow"><strong>Next milestone:</strong> <span id="milestoneText">-</span></div>
   <div id="message"></div>
 </div>
 
@@ -231,6 +234,7 @@ let shownResponses = new Set(); // track shown custom single responses
 let sequences = []; // sequence definitions
 let shownSequences = new Set(); // track shown sequence responses per round
 let enteredHistory = []; // ordered list of accepted canonical entries per round
+let milestones = []; // sorted milestone definitions
 
 function buildCustomResponses(raw){
   customResponses = {};
@@ -313,6 +317,38 @@ function buildSequences(raw){
       lightColor: entry.lightColor || null
     });
   }
+}
+
+function buildMilestones(raw){
+  const source = Array.isArray(raw && raw.milestones)
+    ? raw.milestones
+    : (Array.isArray(raw) ? raw : []);
+
+  const parsed = [];
+  const seen = new Set();
+
+  for(const item of source){
+    let scoreValue = null;
+    let labelValue = '';
+
+    if(typeof item === 'number'){
+      scoreValue = item;
+    } else if(item && typeof item === 'object'){
+      scoreValue = Number(item.score);
+      labelValue = String(item.label || '').trim();
+    }
+
+    if(!Number.isFinite(scoreValue) || scoreValue <= 0) continue;
+    const scoreInt = Math.floor(scoreValue);
+    if(seen.has(scoreInt)) continue;
+    seen.add(scoreInt);
+
+    parsed.push({ score: scoreInt, label: labelValue });
+  }
+
+  parsed.sort((a, b) => a.score - b.score);
+  milestones = parsed;
+  updateMilestoneDisplay();
 }
 
 function getAncestorSet(value){
@@ -610,12 +646,14 @@ function buildLookupFromRawTerms(raw){
 Promise.all([
   fetch('terms.json').then(r=>r.ok ? r.json() : Promise.reject('HTTP '+r.status)),
   fetch('custom-responses.json').then(r=>r.ok ? r.json() : ({})), // custom responses are optional
-  fetch('sequences.json').then(r=>r.ok ? r.json() : ({})) // sequences are optional
+  fetch('sequences.json').then(r=>r.ok ? r.json() : ({})), // sequences are optional
+  fetch('milestones.json').then(r=>r.ok ? r.json() : ({})) // milestones are optional
 ])
-  .then(([termsData, customData, sequencesData]) => {
+  .then(([termsData, customData, sequencesData, milestonesData]) => {
     buildLookupFromRawTerms(termsData);
     buildCustomResponses(customData);
     buildSequences(sequencesData);
+    buildMilestones(milestonesData);
   })
   .catch(err=>{
     console.error('Failed to load data files:', err);
@@ -766,6 +804,24 @@ function formatTime(sec){
   return m+':'+(s<10?'0':'')+s;
 }
 
+function updateMilestoneDisplay(){
+  const el = document.getElementById("milestoneText");
+  if(!el) return;
+  if(!milestones.length){
+    el.textContent = "No milestones configured";
+    return;
+  }
+
+  const next = milestones.find(m => m.score > score);
+  if(!next){
+    el.textContent = "All milestones reached";
+    return;
+  }
+
+  const labelPart = next.label ? ` - ${next.label}` : '';
+  el.textContent = `${score}/${next.score}${labelPart}`;
+}
+
 function startTimer(){
   if(timerStarted) return;
   timerStarted=true;
@@ -787,10 +843,13 @@ function addTime(sec){
   document.getElementById("timer").textContent=formatTime(timeLeft);
 }
 
-function applyTimerMode(){
+function applyTimerMode(shouldPersist = true){
   const toggle = document.getElementById("noTimerToggle");
   timerEnabled = !toggle.checked;
   document.getElementById("timerRow").style.display = timerEnabled ? "" : "none";
+  if(shouldPersist){
+    saveTimerPreference();
+  }
   if(timerEnabled){
     document.getElementById("timer").textContent = formatTime(timeLeft);
   }
@@ -905,6 +964,11 @@ async function copyCurrentList(){
 
   const timerSuffix = timerEnabled ? '' : ' (Timer off)';
   lines.push(`Score: ${score}${timerSuffix}`);
+  const reachedMilestone = milestones.filter(m => m.score <= score).pop();
+  if(reachedMilestone){
+    const reachedLabel = reachedMilestone.label ? ` - ${reachedMilestone.label}` : '';
+    lines.push(`Milestone reached: ${reachedMilestone.score}${reachedLabel}`);
+  }
   lines.push('');
 
   for(const rootBlock of rootBlocks){
@@ -965,16 +1029,67 @@ function closeHowToModal(){
   document.getElementById("howToModal").style.display="none";
 }
 
+const THEME_STORAGE_KEY = "gottalistemall.theme";
+const TIMER_STORAGE_KEY = "gottalistemall.timerMode";
+
 function updateThemeToggleLabel(){
   const btn = document.getElementById("themeToggleBtn");
   const isLight = document.body.classList.contains("light-theme");
   btn.textContent = isLight ? "Dark Theme" : "Light Theme";
 }
 
+function saveThemePreference(){
+  try {
+    const isLight = document.body.classList.contains("light-theme");
+    localStorage.setItem(THEME_STORAGE_KEY, isLight ? "light" : "dark");
+  } catch (err) {
+    // Ignore storage errors (private mode / blocked storage)
+  }
+}
+
+function loadThemePreference(){
+  try {
+    const saved = localStorage.getItem(THEME_STORAGE_KEY);
+    if(saved === "light"){
+      document.body.classList.add("light-theme");
+    } else if(saved === "dark"){
+      document.body.classList.remove("light-theme");
+    }
+  } catch (err) {
+    // Ignore storage errors (private mode / blocked storage)
+  }
+  updateThemeToggleLabel();
+  refreshShinyStyles();
+}
+
+function saveTimerPreference(){
+  try {
+    const noTimer = document.getElementById("noTimerToggle").checked;
+    localStorage.setItem(TIMER_STORAGE_KEY, noTimer ? "off" : "on");
+  } catch (err) {
+    // Ignore storage errors (private mode / blocked storage)
+  }
+}
+
+function loadTimerPreference(){
+  try {
+    const saved = localStorage.getItem(TIMER_STORAGE_KEY);
+    if(saved === "off"){
+      document.getElementById("noTimerToggle").checked = true;
+    } else if(saved === "on"){
+      document.getElementById("noTimerToggle").checked = false;
+    }
+  } catch (err) {
+    // Ignore storage errors (private mode / blocked storage)
+  }
+  applyTimerMode(false);
+}
+
 function toggleTheme(){
   document.body.classList.toggle("light-theme");
   updateThemeToggleLabel();
   refreshShinyStyles();
+  saveThemePreference();
 }
 
 // -------------------------
@@ -1456,6 +1571,7 @@ function handleSubmit(){
   }
 
   document.getElementById("score").textContent=score;
+  updateMilestoneDisplay();
   inputField.value="";
 }
 
@@ -1476,9 +1592,10 @@ function resetGame(){
 
   document.getElementById("scoreLabel").textContent="Score:";
   document.getElementById("noTimerToggle").disabled=false;
-  applyTimerMode();
+  applyTimerMode(false);
   document.getElementById("score").textContent=score;
   document.getElementById("timer").textContent=formatTime(timeLeft);
+  updateMilestoneDisplay();
   document.getElementById("results").innerHTML = '';
   document.getElementById("inputField").disabled=false;
   document.getElementById("submitBtn").disabled=false;
@@ -1513,7 +1630,8 @@ document.getElementById("themeToggleBtn").addEventListener("click",toggleTheme);
 document.getElementById("noTimerToggle").addEventListener("change",applyTimerMode);
 
 resetGame();
-updateThemeToggleLabel();
+loadTimerPreference();
+loadThemePreference();
 
 </script>
 </div>
