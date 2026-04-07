@@ -46,7 +46,8 @@ button:disabled { background:#111; color:#777; border-color:#333; cursor:not-all
 .child-block { margin-top:2px; }
 .sub-entry { color:#aaa; }
 .subcategory-entry { color:#aaa; font-weight:700; }
-.core-entry { color:#666; }
+.core-entry { color:#aaa; }
+.core-standard { color:#555; }
 
 .modal { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); justify-content:center; align-items:center; }
 .modal-content { background:#111; border:1px solid #555; padding:25px 35px; border-radius:8px; text-align:center; }
@@ -55,6 +56,11 @@ button:disabled { background:#111; color:#777; border-color:#333; cursor:not-all
   bottom:12px;
   right:12px;
   font-size:14px;
+  text-align:right;
+}
+#feedbackTopRight .inspiration {
+  display:block;
+  margin-bottom:4px;
 }
 #feedbackTopRight a { color:#9ecbff; text-decoration:underline; }
 
@@ -90,7 +96,8 @@ body.light-theme .info { color:#555; }
 body.light-theme #milestoneRow { color:#555; }
 body.light-theme .sub-entry { color:#555; }
 body.light-theme .subcategory-entry { color:#444; }
-body.light-theme .core-entry { color:#777; }
+body.light-theme .core-entry { color:#555; }
+body.light-theme .core-standard { color:#8c8c8c; }
 body.light-theme .modal { background:rgba(0,0,0,0.45); }
 body.light-theme .modal-content { background:#fff; border-color:#bbb; color:#111; }
 body.light-theme #feedbackTopRight a { color:#0b57d0; }
@@ -130,7 +137,10 @@ body.light-theme #howToModal ul { color:#555 !important; }
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<div id="feedbackTopRight">Submit feedback to <a href="mailto:gottalistemall@gmail.com">gottalistemall@gmail.com</a></div>
+<div id="feedbackTopRight">
+  <span class="inspiration">Inspired by <a href="https://rose.systems/animalist/" target="_blank" rel="noopener noreferrer">list animals until failure</a></span>
+  Submit feedback to <a href="mailto:gottalistemall@gmail.com">gottalistemall@gmail.com</a>
+</div>
 <div id="themeToggleWrap">
   <button id="themeToggleBtn">Light Theme</button>
   <span id="noTimerWrap">
@@ -184,7 +194,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <ul class="howto-list" style="color:#aaa; line-height:1.7;">
       <li>List as many Pokémon as you can.</li>
       <li>English names only.</li>
-      <li>Game Pokémon only; anime, manga, and TCG-specific forms are not included.</li>
       <li>You have one minute.</li>
       <li>Each successful entry gives you 6 additional seconds.</li>
       <li>Valid entries:
@@ -193,6 +202,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li>Variants (Alolan Vulpix, East Sea Gastrodon)</li>
           <li>Transformations (Mega Lucario, Primal Groudon)</li>
           <li>Formes (Zen Mode Darmanitan, Sunshine Form Cherrim)</li>
+          <li>Mainline and Legends games only.</li>
           <li>Exact spelling.</li>
           <li>Try whatever you can think of. You might find some surprises.</li>
           <li>Up to date as of the Winds and Waves teaser.</li>
@@ -764,7 +774,7 @@ function setEntryNonShiny(state){
   listState.shinyColorByKey[state.key] = null;
   applyShinyStyling(state);
   if(state.coreEntry){
-    state.coreEntry.textContent = formatCoreLabel(state, false);
+    renderCoreEntryLabel(state.coreEntry, state, false);
   }
 }
 
@@ -943,9 +953,18 @@ function stateDepth(state){
   return depth;
 }
 
-function formatCoreLabel(parentState, shiny){
+function renderCoreEntryLabel(entryEl, parentState, shiny){
   const depth = stateDepth(parentState) + 1;
-  return formatBulletLabel(depth, shiny ? '(Shiny Standard)' : '(Standard)');
+  const nameLabel = displayForKey(parentState.key);
+  const standardLabel = shiny ? '(Shiny Standard)' : '(Standard)';
+
+  entryEl.textContent = '';
+  entryEl.appendChild(document.createTextNode(formatBulletLabel(depth, nameLabel) + ' '));
+
+  const standardEl = document.createElement('span');
+  standardEl.className = 'core-standard';
+  standardEl.textContent = standardLabel;
+  entryEl.appendChild(standardEl);
 }
 
 function collectChildLines(childContainer, depth, lines){
@@ -1261,7 +1280,7 @@ function ensureCoreEntry(parentState){
 
   const core = document.createElement('div');
   core.className = 'core-entry';
-  core.textContent = formatCoreLabel(parentState, parentState.isShiny);
+  renderCoreEntryLabel(core, parentState, parentState.isShiny);
   parentState.children.insertBefore(core, parentState.children.firstChild);
   parentState.coreEntry = core;
   return true;
@@ -1461,7 +1480,9 @@ function handleSubmit(){
   const rootKey = path[0];
   const existingRoot = listState.roots[rootKey];
   const existingNode = listState.nodes[value];
-  if((value === rootKey && existingRoot && existingRoot.entered) || (value !== rootKey && existingNode && existingNode.entered)){
+  const rootAlreadyRepresented = existingRoot && (existingRoot.entered || existingRoot.hasChildren);
+  const nodeAlreadyRepresented = existingNode && (existingNode.entered || existingNode.hasChildren);
+  if((value === rootKey && rootAlreadyRepresented) || (value !== rootKey && nodeAlreadyRepresented)){
     setMessage("Already entered!");
     inputField.value="";
     return;

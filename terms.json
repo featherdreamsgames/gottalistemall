@@ -9826,14 +9826,98 @@
   "koraidon": {
     "number": 1007,
     "display": "Koraidon",
-    "subs": null,
-    "synonyms": []
+    "subs": [
+      {
+        "name": "Koraidon Apex Build",
+        "synonyms": [
+          "Apex Build Koraidon",
+          "Koraidon Apex",
+          "Apex Koraidon"
+        ]
+      },
+      {
+        "name": "Koraidon Limited Build",
+        "synonyms": [
+          "Limited Build Koraidon",
+          "Koraidon Limited",
+          "Limited Koraidon"
+        ]
+      },
+      {
+        "name": "Koraidon Sprinting Build",
+        "synonyms": [
+          "Sprinting Build Koraidon",
+          "Koraidon Sprinting",
+          "Sprinting Koraidon"
+        ]
+      },
+      {
+        "name": "Koraidon Swimming Build",
+        "synonyms": [
+          "Swimming Build Koraidon",
+          "Koraidon Swimming",
+          "Swimming Koraidon"
+        ]
+      },
+      {
+        "name": "Koraidon Gliding Build",
+        "synonyms": [
+          "Gliding Build Koraidon",
+          "Koraidon Gliding",
+          "Gliding Koraidon"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
   },
   "miraidon": {
     "number": 1008,
     "display": "Miraidon",
-    "subs": null,
-    "synonyms": []
+    "subs": [
+      {
+        "name": "Miraidon Ultimate Mode",
+        "synonyms": [
+          "Ultimate Mode Miraidon",
+          "Miraidon Ultimate",
+          "Ultimate Miraidon"
+        ]
+      },
+      {
+        "name": "Miraidon Low-Power Mode",
+        "synonyms": [
+          "Low-Power Mode Miraidon",
+          "Miraidon Low-Power",
+          "Low-Power Miraidon"
+        ]
+      },
+      {
+        "name": "Miraidon Drive Mode",
+        "synonyms": [
+          "Drive Mode Miraidon",
+          "Miraidon Drive",
+          "Drive Miraidon"
+        ]
+      },
+      {
+        "name": "Miraidon Aquatic Mode",
+        "synonyms": [
+          "Aquatic Mode Miraidon",
+          "Miraidon Aquatic",
+          "Aquatic Miraidon"
+        ]
+      },
+      {
+        "name": "Miraidon Glide Mode",
+        "synonyms": [
+          "Glide Mode Miraidon",
+          "Miraidon Glide",
+          "Glide Miraidon"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": false
   },
   "walking-wake": {
     "number": 1009,
