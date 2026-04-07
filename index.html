@@ -155,7 +155,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div id="topPanel">
   <div id="timerRow"><strong>Time left:</strong> <span id="timer">1:00</span></div>
   <div><strong id="scoreLabel">Score:</strong> <span id="score">0</span></div>
-  <div id="milestoneRow"><strong>Next milestone:</strong> <span id="milestoneText">-</span></div>
+  <div id="milestoneRow"><strong id="milestoneLabel">Next milestone:</strong> <span id="milestoneText">-</span></div>
   <div id="message"></div>
 </div>
 
@@ -195,9 +195,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li>Formes (Zen Mode Darmanitan, Sunshine Form Cherrim)</li>
           <li>Exact spelling.</li>
           <li>Try whatever you can think of. You might find some surprises.</li>
+          <li>Up to date as of the Winds and Waves teaser.</li>
         </ul>
       </li>
       <li>Press up to retrieve your last entry.</li>
+      <li>If you think a Pokémon is missing, please submit feedback.</li>
     </ul>
     <div style="text-align:center; margin-top:14px;">
       <button id="howToCloseBtn">Close</button>
@@ -805,8 +807,19 @@ function formatTime(sec){
 }
 
 function updateMilestoneDisplay(){
+  const labelEl = document.getElementById("milestoneLabel");
   const el = document.getElementById("milestoneText");
-  if(!el) return;
+  if(!el || !labelEl) return;
+
+  const maxMilestoneScore = milestones.length > 0 ? milestones[milestones.length - 1].score : Infinity;
+  if(score >= maxMilestoneScore){
+    labelEl.style.display = "none";
+    el.textContent = "You're a Pokémon master!";
+    return;
+  }
+
+  labelEl.style.display = "";
+
   if(!milestones.length){
     el.textContent = "No milestones configured";
     return;
@@ -964,10 +977,15 @@ async function copyCurrentList(){
 
   const timerSuffix = timerEnabled ? '' : ' (Timer off)';
   lines.push(`Score: ${score}${timerSuffix}`);
-  const reachedMilestone = milestones.filter(m => m.score <= score).pop();
-  if(reachedMilestone){
+  const maxMilestoneScore = milestones.length > 0 ? milestones[milestones.length - 1].score : Infinity;
+  if(score >= maxMilestoneScore){
+    lines.push("I'm a Pokémon master!");
+  } else {
+    const reachedMilestone = milestones.filter(m => m.score <= score).pop();
+    if(reachedMilestone){
     const reachedLabel = reachedMilestone.label ? ` - ${reachedMilestone.label}` : '';
     lines.push(`Milestone reached: ${reachedMilestone.score}${reachedLabel}`);
+    }
   }
   lines.push('');
 

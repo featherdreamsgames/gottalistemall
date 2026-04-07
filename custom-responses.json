@@ -1,8 +1,14 @@
 {
-  "example-entry": {
+  "pikablu": {
     "name": "Pikablu",
     "synonyms": ["Pikablue"],
     "response": "... I'll allow it.",
+    "color": null
+  },
+  "gorochu": {
+    "name": "Gorochu",
+    "synonyms": [],
+    "response": "I can't accept it, but you know your stuff!",
     "color": null
   },
   "black-belt": {
