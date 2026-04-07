@@ -142,6 +142,22 @@
     "response": "Wrong franchise.",
     "color": null
   },
+  "yugioh": {
+    "name": "Blue Eyes White Dragon",
+    "synonyms": [
+      "Blue Eyes White Dragon", "Blue-Eyes White Dragon", "Dark Magician", "Dark Magician Girl", "Red Eyes Black Dragon", "Red-Eyes Black Dragon", "Exodia", "Exodia the Forbidden One",
+      "Kuriboh", "Celtic Guardian", "Summoned Skull", "Magician of Black Chaos",
+      "Slifer the Sky Dragon", "Obelisk the Tormentor", "The Winged Dragon of Ra",
+      "Blue Eyes Ultimate Dragon", "Blue-Eyes Ultimate Dragon", "Five Headed Dragon",
+      "Power Tool Dragon", "Stardust Dragon", "Ancient Gear Golem", "Cyber Dragon",
+      "Magician's Valkyria", "Advanced Ritual Art", "Pot of Duality",
+      "Mirror Force Dragon", "Blue Eyes Shining Dragon", "Blue-Eyes Shining Dragon",
+      "Magician of Eternity", "Dark Cavalry", "Polymerization Dragon",
+      "YuGiOh", "Yu-Gi-Oh"
+    ],
+    "response": "You've activated my trap card!",
+    "color": null
+  },
   "palworld": {
     "name": "Lamball",
     "synonyms": [
