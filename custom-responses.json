@@ -142,6 +142,33 @@
     "response": "Wrong franchise.",
     "color": null
   },
+  "palworld": {
+    "name": "Lamball",
+    "synonyms": [
+      "Cattiva", "Chikipi", "Lifmunk", "Foxparks", "Fuack", "Sparkit", "Tanzee", "Rooby",
+      "Pengullet", "Jolthog", "Gumoss", "Vixy", "Hoocrates", "Teafant", "Depresso", "Cremis",
+      "Daedream", "Rushoar", "Nox", "Fuddler", "Killamari", "Mau", "Celaray", "Direhowl",
+      "Tocotoco", "Flopie", "Mozzarina", "Bristla", "Gobfin", "Hangyu", "Mossanda", "Woolipop",
+      "Caprity", "Melpaca", "Eikthyrdeer", "Nitewing", "Ribbuny", "Incineram", "Cinnamoth",
+      "Arsox", "Dumud", "Cawgnito", "Leezpunk", "Loupmoon", "Galeclaw", "Robinquill", "Gorirat",
+      "Beegarde", "Elizabee", "Grintale", "Swee", "Sweepa", "Chillet", "Univolt", "Foxcicle",
+      "Pyrin", "Reindrix", "Rayhound", "Kitsun", "Dazzi", "Lunaris", "Dinossom", "Surfent",
+      "Maraith", "Digtoise", "Tombat", "Lovander", "Flambelle", "Vanwyrm", "Bushi", "Beakon",
+      "Ragnahawk", "Katress", "Wixen", "Verdash", "Vaelet", "Sibelyx", "Elphidran", "Kelpsea",
+      "Azurobe", "Cryolinx", "Blazehowl", "Relaxaurus", "Broncherry", "Petallia", "Reptyro",
+      "Kingpaca", "Mammorest", "Wumpo", "Warsect", "Fenglope", "Felbat", "Quivern", "Blazamut",
+      "Helzephyr", "Astegon", "Menasting", "Anubis", "Jormuntide", "Suzaku", "Grizzbolt", "Lyleen",
+      "Faleris", "Orserk", "Shadowbeak", "Paladius", "Necromus", "Frostallion", "Jetragon",
+      "Bellanoir", "Selyne", "Croajiro", "Lullu", "Shroomer", "Kikit", "Sootseer", "Prixter",
+      "Knocklem", "Yakumo", "Dogen", "Dazemu", "Mimog", "Xenovader", "Xenogard", "Xenolord",
+      "Nitemary", "Starryon", "Silvegis", "Smokie", "Celesdir", "Omascul", "Splatterina",
+      "Tarantriss", "Azurmane", "Bastigor", "Prunelia", "Nyafia", "Gildane", "Herbil", "Icelyn",
+      "Frostplume", "Palumba", "Braloha", "Munchill", "Polapup", "Turtacle", "Jellroy", "Jelliette",
+      "Gloopie", "Finsider", "Ghangler", "Whalaska", "Neptilius", "Hartalis"
+    ],
+    "response": "The Nintendo lawyers are on their way.",
+    "color": null
+  },
   "pokemon-humans": {
     "name": "Ash Ketchum",
     "synonyms": [
