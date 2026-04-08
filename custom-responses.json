@@ -274,5 +274,11 @@
     ],
     "response": "If we start counting individual Pikachu, we'll be there all day...",
     "color": null
+  },
+  "ghost": {
+    "name": "Ghost",
+    "synonyms": [],
+    "response": "Maybe if you had the Silph Scope.",
+    "color": null
   }
 }

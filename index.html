@@ -782,15 +782,22 @@ function enteredStateForKey(value, rootKey){
   return (value === rootKey) ? listState.roots[value] : listState.nodes[value];
 }
 
+let currentMessageDarkColor = null;
+let currentMessageLightColor = null;
+
 // -------------------------
 // UI HELPERS
 // -------------------------
-function setMessage(text,type="warning",color=null){
+function setMessage(text,type="warning",color=null,lightColor=null){
   const el=document.getElementById("message");
   el.textContent=text;
   el.className=type;
-  if(color){
-    el.style.color=color;
+  currentMessageDarkColor = color || null;
+  currentMessageLightColor = lightColor || null;
+
+  const themedColor = messageColorForTheme(currentMessageDarkColor, currentMessageLightColor);
+  if(themedColor){
+    el.style.color=themedColor;
   } else {
     el.style.color='';
   }
@@ -807,7 +814,21 @@ function setShinyMessage(color){
   const el=document.getElementById("message");
   el.innerHTML = '<strong>It\'s a shiny!</strong>';
   el.className='success';
+  currentMessageDarkColor = null;
+  currentMessageLightColor = null;
   el.style.color = themedShinyColor(color) || '';
+}
+
+function refreshMessageThemeColor(){
+  const el=document.getElementById("message");
+  if(!el) return;
+
+  const themedColor = messageColorForTheme(currentMessageDarkColor, currentMessageLightColor);
+  if(themedColor){
+    el.style.color = themedColor;
+  } else {
+    el.style.color = '';
+  }
 }
 
 function formatTime(sec){
@@ -1126,6 +1147,7 @@ function toggleTheme(){
   document.body.classList.toggle("light-theme");
   updateThemeToggleLabel();
   refreshShinyStyles();
+  refreshMessageThemeColor();
   saveThemePreference();
 }
 
@@ -1459,7 +1481,7 @@ function handleSubmit(){
       let customEntry = customLookup[originalInput];
       const isFirstAcceptedEntry = enteredHistory.length === 0;
       if(shouldTriggerCustomEntry(customEntry, isFirstAcceptedEntry)){
-        setMessage(customEntry.response, 'warning', messageColorForTheme(customEntry.color, customEntry.lightColor));
+        setMessage(customEntry.response, 'warning', customEntry.color, customEntry.lightColor);
       } else {
         setMessage("I don't recognize that one.");
       }
@@ -1575,7 +1597,7 @@ function handleSubmit(){
       : "Made the category more specific. Enter more subtypes for points.";
     const enteredState = enteredStateForKey(value, rootKey);
     if(sequenceMatch){
-      setMessage(sequenceMatch.response, 'success', messageColorForTheme(sequenceMatch.color, sequenceMatch.lightColor));
+      setMessage(sequenceMatch.response, 'success', sequenceMatch.color, sequenceMatch.lightColor);
     } else if(enteredState && enteredState.isShiny){
       setShinyMessage(enteredState.shinyColor);
     } else {
@@ -1595,13 +1617,13 @@ function handleSubmit(){
       let customEntry = customLookup[originalInput];
       if(shouldTriggerCustomEntry(customEntry, isFirstAcceptedEntry) && !shownResponses.has(customEntry._id)){
         setEntryNonShiny(enteredState);
-        setMessage(customEntry.response, 'success', messageColorForTheme(customEntry.color, customEntry.lightColor));
+        setMessage(customEntry.response, 'success', customEntry.color, customEntry.lightColor);
         shownResponses.add(customEntry._id);
       }
     }
 
     if(sequenceMatch){
-      setMessage(sequenceMatch.response, 'success', messageColorForTheme(sequenceMatch.color, sequenceMatch.lightColor));
+      setMessage(sequenceMatch.response, 'success', sequenceMatch.color, sequenceMatch.lightColor);
     }
 
     if(!sequenceMatch && enteredState && enteredState.isShiny){

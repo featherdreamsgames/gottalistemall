@@ -305,6 +305,19 @@
     "invalidMode": "ignore",
     "includeVariants": true,
     "response": "Everyone is here! That's every playable Pokémon in Smash Bros."
+  },
+  "teamrocket": {
+    "termGroups": [
+      { "terms": ["Ekans", "Arbok"], "count": 1 },
+      { "terms": ["Koffing", "Weezing"], "count": 1 },
+      { "terms": ["Meowth"], "count": 1 }
+    ],
+    "ordered": false,
+    "number": 3,
+    "invalidMode": "break",
+    "response": "We're blasting off again!",
+    "color": "#c084fc",
+    "lightColor": "#7c3aed"
   }
 }
 
