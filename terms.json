@@ -605,6 +605,12 @@
           "Meowth Galar",
           "Galar Meowth"
         ]
+      },
+      {
+        "name": "Gigantamax Meowth",
+        "synonyms": [
+          "Meowth Gigantamax"
+        ]
       }
     ],
     "synonyms": [],
@@ -1478,6 +1484,12 @@
       {
         "name": "Partner Eevee",
         "synonyms": []
+      },
+      {
+        "name": "Gigantamax Eevee",
+        "synonyms": [
+          "Eevee Gigantamax"
+        ]
       }
     ],
     "synonyms": [],
@@ -5189,8 +5201,16 @@
   "garbodor": {
     "number": 569,
     "display": "Garbodor",
-    "subs": null,
-    "synonyms": []
+    "subs": [
+      {
+        "name": "Gigantamax Garbodor",
+        "synonyms": [
+          "Garbodor Gigantamax"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
   },
   "zorua": {
     "number": 570,
@@ -8080,8 +8100,16 @@
   "melmetal": {
     "number": 809,
     "display": "Melmetal",
-    "subs": null,
-    "synonyms": []
+    "subs": [
+      {
+        "name": "Gigantamax Melmetal",
+        "synonyms": [
+          "Melmetal Gigantamax"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
   },
   "grookey": {
     "number": 810,
@@ -8214,8 +8242,16 @@
   "orbeetle": {
     "number": 826,
     "display": "Orbeetle",
-    "subs": null,
-    "synonyms": []
+    "subs": [
+      {
+        "name": "Gigantamax Orbeetle",
+        "synonyms": [
+          "Orbeetle Gigantamax"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
   },
   "nickit": {
     "number": 827,
@@ -8262,8 +8298,16 @@
   "drednaw": {
     "number": 834,
     "display": "Drednaw",
-    "subs": null,
-    "synonyms": []
+    "subs": [
+      {
+        "name": "Gigantamax Drednaw",
+        "synonyms": [
+          "Drednaw Gigantamax"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
   },
   "yamper": {
     "number": 835,
@@ -8292,8 +8336,16 @@
   "coalossal": {
     "number": 839,
     "display": "Coalossal",
-    "subs": null,
-    "synonyms": []
+    "subs": [
+      {
+        "name": "Gigantamax Coalossal",
+        "synonyms": [
+          "Coalossal Gigantamax"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
   },
   "applin": {
     "number": 840,
@@ -8604,8 +8656,16 @@
   "alcremie": {
     "number": 869,
     "display": "Alcremie",
-    "subs": null,
-    "synonyms": []
+    "subs": [
+      {
+        "name": "Gigantamax Alcremie",
+        "synonyms": [
+          "Alcremie Gigantamax"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
   },
   "falinks": {
     "number": 870,
@@ -8884,8 +8944,17 @@
   "zarude": {
     "number": 893,
     "display": "Zarude",
-    "subs": null,
-    "synonyms": []
+    "subs": [
+      {
+        "name": "Zarude (Dada)",
+        "synonyms": [
+          "Dada Zarude",
+          "Zarude Dada"
+        ]
+      }
+    ],
+    "synonyms": [],
+    "core": true
   },
   "regieleki": {
     "number": 894,

@@ -784,16 +784,18 @@ function enteredStateForKey(value, rootKey){
 
 let currentMessageDarkColor = null;
 let currentMessageLightColor = null;
+let currentMessageBold = false;
 
 // -------------------------
 // UI HELPERS
 // -------------------------
-function setMessage(text,type="warning",color=null,lightColor=null){
+function setMessage(text,type="warning",color=null,lightColor=null,bold=false){
   const el=document.getElementById("message");
   el.textContent=text;
   el.className=type;
   currentMessageDarkColor = color || null;
   currentMessageLightColor = lightColor || null;
+  currentMessageBold = bold === true;
 
   const themedColor = messageColorForTheme(currentMessageDarkColor, currentMessageLightColor);
   if(themedColor){
@@ -801,6 +803,7 @@ function setMessage(text,type="warning",color=null,lightColor=null){
   } else {
     el.style.color='';
   }
+  el.style.fontWeight = currentMessageBold ? '700' : '';
 }
 
 function messageColorForTheme(color, lightColor=null){
@@ -816,7 +819,9 @@ function setShinyMessage(color){
   el.className='success';
   currentMessageDarkColor = null;
   currentMessageLightColor = null;
+  currentMessageBold = false;
   el.style.color = themedShinyColor(color) || '';
+  el.style.fontWeight = '';
 }
 
 function refreshMessageThemeColor(){
@@ -829,6 +834,7 @@ function refreshMessageThemeColor(){
   } else {
     el.style.color = '';
   }
+  el.style.fontWeight = currentMessageBold ? '700' : '';
 }
 
 function formatTime(sec){
@@ -1481,7 +1487,7 @@ function handleSubmit(){
       let customEntry = customLookup[originalInput];
       const isFirstAcceptedEntry = enteredHistory.length === 0;
       if(shouldTriggerCustomEntry(customEntry, isFirstAcceptedEntry)){
-        setMessage(customEntry.response, 'warning', customEntry.color, customEntry.lightColor);
+        setMessage(customEntry.response, 'warning', customEntry.color, customEntry.lightColor, customEntry.bold);
       } else {
         setMessage("I don't recognize that one.");
       }
@@ -1617,7 +1623,7 @@ function handleSubmit(){
       let customEntry = customLookup[originalInput];
       if(shouldTriggerCustomEntry(customEntry, isFirstAcceptedEntry) && !shownResponses.has(customEntry._id)){
         setEntryNonShiny(enteredState);
-        setMessage(customEntry.response, 'success', customEntry.color, customEntry.lightColor);
+        setMessage(customEntry.response, 'success', customEntry.color, customEntry.lightColor, customEntry.bold);
         shownResponses.add(customEntry._id);
       }
     }

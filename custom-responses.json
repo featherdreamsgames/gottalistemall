@@ -280,5 +280,105 @@
     "synonyms": [],
     "response": "Maybe if you had the Silph Scope.",
     "color": null
+  },
+  "porygon": {
+    "name": "Porygon",
+    "synonyms": [],
+    "response": "My favorite!",
+    "color": "#8fd3ff"
+  },
+  "egg": {
+    "name": "Egg",
+    "synonyms": [],
+    "response": "Hatch it first.",
+    "color": null
+  },
+  "snorlax": {
+    "name": "Snorlax",
+    "synonyms": [],
+    "response": "SNORE",
+    "bold": true,
+    "color": null
+  },
+  "bidoof": {
+    "name": "Bidoof",
+    "synonyms": [],
+    "response": "The almighty!",
+    "color": null
+  },
+  "seaking": {
+    "name": "Seaking",
+    "synonyms": [],
+    "response": "Heck yeah, Seaking!",
+    "color": null
+  },
+  "mudkip": {
+    "name": "Mudkip",
+    "synonyms": [],
+    "response": "So I herd u liek Mudkips?",
+    "color": null
+  },
+  "regirock": {
+    "name": "Regirock",
+    "synonyms": [],
+    "response": "ÜN ÜN ÜN",
+    "color": null
+  },
+  "kricketune": {
+    "name": "Kricketune",
+    "synonyms": [],
+    "response": "DELELELELE WHOOOOOP!",
+    "color": null
+  },
+  "surskit": {
+    "name": "Surskit",
+    "synonyms": [],
+    "response": "a!",
+    "color": null
+  },
+  "omastar": {
+    "name": "Omastar",
+    "synonyms": ["Omanyte"],
+    "response": "GLORY TO LORD HELIX!",
+    "color": null
+  },
+  "dada-zarude": {
+    "name": "Dada Zarude",
+    "synonyms": [],
+    "response": "Wow, you know your stuff!",
+    "color": null
+  },
+  "own-tempo-rockruff": {
+    "name": "Own Tempo Rockruff",
+    "synonyms": [],
+    "response": "Wow, you know your stuff!",
+    "color": null
+  },
+  "zubat": {
+    "name": "Zubat",
+    "synonyms": [],
+    "response": "Anyone got a Repel?",
+    "color": null
+  },
+  "voltorb": {
+    "name": "Voltorb",
+    "synonyms": [],
+    "response": "... used Selfdestruct!",
+    "color": null
+  },
+  "furret": {
+    "name": "Furret",
+    "synonyms": [],
+    "response": "he walk",
+    "color": null
+  },
+  "browt": {
+    "name": "Browt",
+    "synonyms": [
+      "Pombon",
+      "Gecqua"
+    ],
+    "response": "You keep up with the news!",
+    "color": null
   }
 }
