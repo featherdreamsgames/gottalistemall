@@ -1902,7 +1902,14 @@
     "display": "Marill",
     "subs": null,
     "synonyms": [
-      "Pikablu", "Pikablue"
+      {
+        "value": "Pikablu",
+        "strict": true
+      },
+      {
+        "value": "Pikablue",
+        "strict": true
+      }
     ]
   },
   "azumarill": {
@@ -8946,11 +8953,7 @@
     "display": "Zarude",
     "subs": [
       {
-        "name": "Zarude (Dada)",
-        "synonyms": [
-          "Dada Zarude",
-          "Zarude Dada"
-        ]
+        "name": "Dada Zarude"
       }
     ],
     "synonyms": [],

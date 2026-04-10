@@ -236,6 +236,7 @@ function normalize(str){
 // Final processed lookup tables
 let terms = {};
 let lookup = {};      // maps normalized synonym -> canonical key
+let strictLookup = new Set(); // normalized aliases that should not participate in fuzzy matching
 let subDisplays = {}; // variant display names
 let parentMap = {};   // maps normalized sub -> immediate parent (category key or another sub)
 
@@ -247,6 +248,25 @@ let sequences = []; // sequence definitions
 let shownSequences = new Set(); // track shown sequence responses per round
 let enteredHistory = []; // ordered list of accepted canonical entries per round
 let milestones = []; // sorted milestone definitions
+
+function getTermSynonymValue(synonym){
+  if(typeof synonym === 'string') return synonym;
+  if(synonym && typeof synonym === 'object') return String(synonym.value || synonym.name || '');
+  return '';
+}
+
+function isStrictTermSynonym(synonym){
+  return !!(synonym && typeof synonym === 'object' && synonym.strict === true);
+}
+
+function addLookupAlias(alias, canonical, strict=false){
+  const normalizedAlias = normalize(alias);
+  if(!normalizedAlias) return;
+  lookup[normalizedAlias] = canonical;
+  if(strict){
+    strictLookup.add(normalizedAlias);
+  }
+}
 
 function buildCustomResponses(raw){
   customResponses = {};
@@ -528,6 +548,7 @@ function shouldTriggerCustomEntry(customEntry, isFirstAcceptedEntry){
 function buildLookupFromRawTerms(raw){
   terms = {};
   lookup = {};
+  strictLookup = new Set();
   subDisplays = {};
   parentMap = {};
   subOrder = {};
@@ -542,7 +563,7 @@ function buildLookupFromRawTerms(raw){
 
     // store display name and lookup
     subDisplays[normSub] = subName;
-    lookup[normSub] = normSub;
+    addLookupAlias(normSub, normSub);
 
     // If this sub itself contains nested subs, treat it as its own category
     const hasNestedSubs = Array.isArray(subItem && subItem.subs) && subItem.subs.length > 0;
@@ -562,7 +583,9 @@ function buildLookupFromRawTerms(raw){
 
     // add synonyms for the sub
     (subSyns || []).forEach(s=>{
-      lookup[normalize(s)] = normSub;
+      const synonymValue = getTermSynonymValue(s);
+      if(!synonymValue) return;
+      addLookupAlias(synonymValue, normSub, isStrictTermSynonym(s));
     });
 
     // gender extras: only add aliases that match this sub's own gender
@@ -588,8 +611,8 @@ function buildLookupFromRawTerms(raw){
       const variantPart = descMatch[2].trim();
       const s1 = `${namePart} ${variantPart}`;
       const s2 = `${variantPart} ${namePart}`;
-      lookup[normalize(s1)] = normSub;
-      lookup[normalize(s2)] = normSub;
+      addLookupAlias(s1, normSub);
+      addLookupAlias(s2, normSub);
     }
 
     // if this sub has nested subs, process them (parent becomes this normSub)
@@ -620,17 +643,19 @@ function buildLookupFromRawTerms(raw){
       number: entry.number != null ? entry.number : null
     };
 
-    lookup[normCategory] = normCategory;
-    lookup[normalize(normCategory)] = normCategory;
+    addLookupAlias(normCategory, normCategory);
+    addLookupAlias(normalize(normCategory), normCategory);
 
     // Also map normalized display for punctuation-insensitive matching
     if(entry.display){
-      lookup[normalize(entry.display)] = normCategory;
+      addLookupAlias(entry.display, normCategory);
     }
 
     // Category synonyms
     (entry.synonyms || []).forEach(s=>{
-      lookup[normalize(s)] = normCategory;
+      const synonymValue = getTermSynonymValue(s);
+      if(!synonymValue) return;
+      addLookupAlias(synonymValue, normCategory, isStrictTermSynonym(s));
     });
 
     // process top-level subs
@@ -1445,6 +1470,7 @@ function getAlmostSuggestion(normalizedInput){
   for(const alias in lookup){
     if(!Object.prototype.hasOwnProperty.call(lookup, alias)) continue;
     if(alias === normalizedInput) continue;
+    if(strictLookup.has(alias)) continue;
     if(Math.abs(alias.length - normalizedInput.length) > maxDistance) continue;
 
     const distance = boundedLevenshtein(normalizedInput, alias, maxDistance);
@@ -1457,7 +1483,18 @@ function getAlmostSuggestion(normalizedInput){
   }
 
   if(!best || !best.canonical) return null;
-  return displayForKey(best.canonical);
+  return {
+    canonical: best.canonical,
+    display: displayForKey(best.canonical)
+  };
+}
+
+function formatCloseEnoughMessage(almostSuggestion, customEntry=null){
+  const base = `Close enough! (${almostSuggestion.display})`;
+  if(customEntry && customEntry.response){
+    return `${base} ${customEntry.response}`;
+  }
+  return base;
 }
 
 function handleSubmit(){
@@ -1475,18 +1512,21 @@ function handleSubmit(){
 
   // Track original input for custom responses
   const originalInput = value;
+  const customEntry = customLookup[originalInput] || null;
 
   // debugging: record lookup resolution
   const lookupBefore = lookup[value];
   console.debug('handleSubmit input', { rawInput, normalized:value, lookupBefore });
   value = lookup[value] || value;
+  let almostSuggestion = null;
 
   if(!terms[value] && !subDisplays[value]){
-    // Check for custom response on failed lookup
-    if(customLookup[originalInput]){
-      let customEntry = customLookup[originalInput];
+    almostSuggestion = getAlmostSuggestion(originalInput);
+    if(almostSuggestion){
+      value = almostSuggestion.canonical;
+    } else {
       const isFirstAcceptedEntry = enteredHistory.length === 0;
-      if(shouldTriggerCustomEntry(customEntry, isFirstAcceptedEntry)){
+      if(customEntry && shouldTriggerCustomEntry(customEntry, isFirstAcceptedEntry)){
         setMessage(customEntry.response, 'warning', customEntry.color, customEntry.lightColor, customEntry.bold);
       } else {
         setMessage("I don't recognize that one.");
@@ -1494,14 +1534,6 @@ function handleSubmit(){
       inputField.value="";
       return;
     }
-    const suggestion = getAlmostSuggestion(originalInput);
-    if(suggestion){
-      setMessage("Almost!", "info");
-    } else {
-      setMessage("I don't recognize that one.");
-    }
-    inputField.value="";
-    return;
   }
 
   const path = getPathToRoot(value);
@@ -1511,7 +1543,11 @@ function handleSubmit(){
   const rootAlreadyRepresented = existingRoot && (existingRoot.entered || existingRoot.hasChildren);
   const nodeAlreadyRepresented = existingNode && (existingNode.entered || existingNode.hasChildren);
   if((value === rootKey && rootAlreadyRepresented) || (value !== rootKey && nodeAlreadyRepresented)){
-    setMessage("Already entered!");
+    if(almostSuggestion){
+      setMessage(formatCloseEnoughMessage(almostSuggestion, customEntry), "info", customEntry && customEntry.color, customEntry && customEntry.lightColor, customEntry && customEntry.bold);
+    } else {
+      setMessage("Already entered!");
+    }
     inputField.value="";
     return;
   }
@@ -1606,6 +1642,11 @@ function handleSubmit(){
       setMessage(sequenceMatch.response, 'success', sequenceMatch.color, sequenceMatch.lightColor);
     } else if(enteredState && enteredState.isShiny){
       setShinyMessage(enteredState.shinyColor);
+    } else if(almostSuggestion){
+      setMessage(formatCloseEnoughMessage(almostSuggestion, customEntry), "success", customEntry && customEntry.color, customEntry && customEntry.lightColor, customEntry && customEntry.bold);
+      if(customEntry && !shownResponses.has(customEntry._id)){
+        shownResponses.add(customEntry._id);
+      }
     } else {
       setMessage(msg, "info");
     }
@@ -1617,15 +1658,17 @@ function handleSubmit(){
     startTimer();
     addTime(6);
     const enteredState = enteredStateForKey(value, rootKey);
+    const customEntryShouldShow = customEntry
+      && shouldTriggerCustomEntry(customEntry, isFirstAcceptedEntry)
+      && !shownResponses.has(customEntry._id);
 
     // Check for custom response on successful entry
-    if(customLookup[originalInput]){
-      let customEntry = customLookup[originalInput];
-      if(shouldTriggerCustomEntry(customEntry, isFirstAcceptedEntry) && !shownResponses.has(customEntry._id)){
-        setEntryNonShiny(enteredState);
+    if(customEntryShouldShow){
+      setEntryNonShiny(enteredState);
+      if(!almostSuggestion){
         setMessage(customEntry.response, 'success', customEntry.color, customEntry.lightColor, customEntry.bold);
-        shownResponses.add(customEntry._id);
       }
+      shownResponses.add(customEntry._id);
     }
 
     if(sequenceMatch){
@@ -1634,6 +1677,14 @@ function handleSubmit(){
 
     if(!sequenceMatch && enteredState && enteredState.isShiny){
       setShinyMessage(enteredState.shinyColor);
+    } else if(!sequenceMatch && almostSuggestion){
+      setMessage(
+        formatCloseEnoughMessage(almostSuggestion, customEntryShouldShow ? customEntry : null),
+        "success",
+        customEntryShouldShow ? customEntry.color : null,
+        customEntryShouldShow ? customEntry.lightColor : null,
+        customEntryShouldShow ? customEntry.bold : false
+      );
     }
   }
 

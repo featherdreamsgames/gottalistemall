@@ -238,18 +238,6 @@
     "response": "What a strange creature that sounds like.",
     "color": null
   },
-  "common-misspellings": {
-    "name": "Seal",
-    "synonyms": [
-      "Onyx",
-      "Feraligator",
-      "Toxitricity",
-      "Ninetails",
-      "Regiice"
-    ],
-    "response": "A common misspelling, try again.",
-    "color": null
-  },
   "pokopia": {
     "name": "Professor Tangrowth",
     "synonyms": [
@@ -270,7 +258,8 @@
       "Captain Pikachu",
       "Surfing Pikachu",
       "Ash's Pikachu",
-      "Satoshi's Pikachu"
+      "Satoshi's Pikachu",
+      "Sparky"
     ],
     "response": "If we start counting individual Pikachu, we'll be there all day...",
     "color": null
