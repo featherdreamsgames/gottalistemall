@@ -198,9 +198,8 @@ body.light-theme #howToModal ul { color:#555 !important; }
     min-width:0;
   }
 
-  #entryRow input {
-    grid-column:1 / -1;
-  }
+  #inputField { grid-column:1; }
+  #repeatLastBtn { grid-column:2; }
 
   #sortPanel {
     display:flex;
@@ -291,6 +290,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div id="entryRow">
   <input type="text" id="inputField" autocomplete="off">
+  <button id="repeatLastBtn" type="button">Repeat Last</button>
   <button id="submitBtn">Submit</button>
   <button id="finishBtn">Finish</button>
   <button id="restartBtn">Start Over</button>
@@ -1253,6 +1253,15 @@ function closeHowToModal(){
   document.getElementById("howToModal").style.display="none";
 }
 
+function repeatLastEntry(){
+  if(!lastSubmittedInput) return;
+  const input = document.getElementById("inputField");
+  input.value = lastSubmittedInput;
+  const end = input.value.length;
+  input.setSelectionRange(end, end);
+  input.focus();
+}
+
 const THEME_STORAGE_KEY = "gottalistemall.theme";
 const TIMER_STORAGE_KEY = "gottalistemall.timerMode";
 
@@ -1868,12 +1877,10 @@ document.getElementById("inputField").addEventListener("keydown",e=>{
 
   if(e.key === "ArrowUp" && lastSubmittedInput){
     e.preventDefault();
-    const input = e.currentTarget;
-    input.value = lastSubmittedInput;
-    const end = input.value.length;
-    input.setSelectionRange(end, end);
+    repeatLastEntry();
   }
 });
+document.getElementById("repeatLastBtn").addEventListener("click",repeatLastEntry);
 document.getElementById("howToBtn").addEventListener("click",openHowToModal);
 document.getElementById("howToCloseBtn").addEventListener("click",closeHowToModal);
 document.getElementById("restartBtn").addEventListener("click",resetGame);
